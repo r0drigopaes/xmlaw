@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='jsim.jmessage.NodeProps' uid='-7322283402435529831'>
+<field name='nodeType' type='int'/>
+<field name='numOfTokens' type='int'/>
+<field name='alpha' type='java.lang.Double'/>
+<field name='beta' type='java.lang.Double'/>
+<field name='gamma' type='java.lang.Double'/>
+<field name='nodeName' type='java.lang.String'/>
+<field name='stream' type='java.lang.Integer'/>
+<field name='timeDist' type='java.lang.String'/>
+</class>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+<class name='java.lang.Integer' uid='1360826667806852920' super='java.lang.Number'>
+<field name='value' type='int'/>
+</class>
+<class name='jsim.jmessage.DBConnectionInfo' uid='-4436913034187897049'>
+<field name='driverClassName' type='java.lang.String'/>
+<field name='framework' type='java.lang.String'/>
+<field name='passwd' type='java.lang.String'/>
+<field name='url' type='java.lang.String'/>
+<field name='username' type='java.lang.String'/>
+</class>
+<class name='jsim.jmessage.Store' uid='-6292887518843050290' super='jsim.jmessage.Message'>
+<field name='agentData' type='jsim.jmessage.Simulate'/>
+<field name='modelData' type='jsim.jmessage.ModelData'/>
+<field name='scenarioID' type='java.lang.Integer'/>
+</class>
+<class name='jsim.jmessage.NodeProps[]' uid='5933875885965565856'>
+</class>
+<class name='jsim.jmessage.ModelData' uid='-8234208208924284028'>
+<field name='modelName' type='java.lang.String'/>
+<field name='props' type='jsim.jmessage.NodeProps[]'/>
+<field name='stats' type='jsim.jmessage.NodeStats[]'/>
+</class>
+<class name='jsim.jmessage.Simulate' uid='675650800527491650' super='jsim.jmessage.Message'>
+<field name='agentName' type='java.lang.String'/>
+<field name='batchSize' type='java.lang.Integer'/>
+<field name='confidenceLevel' type='java.lang.Double'/>
+<field name='numOfBatches' type='java.lang.Integer'/>
+<field name='numOfReplications' type='java.lang.Integer'/>
+<field name='relativePrecision' type='java.lang.Double'/>
+<field name='replicationSize' type='java.lang.Integer'/>
+<field name='transientPeriod' type='java.lang.Double'/>
+</class>
+<class name='jsim.jmessage.NodeStats' uid='6865934528700823025'>
+<field name='oDeviation' type='java.lang.Double'/>
+<field name='oInterval' type='java.lang.Double'/>
+<field name='oMaxValue' type='java.lang.Double'/>
+<field name='oMeanValue' type='java.lang.Double'/>
+<field name='oMinValue' type='java.lang.Double'/>
+<field name='oNoSamples' type='java.lang.Integer'/>
+<field name='oObsDeviation' type='java.lang.Double'/>
+<field name='oObsInterval' type='java.lang.Double'/>
+<field name='oObsMaxValue' type='java.lang.Double'/>
+<field name='oObsMeanValue' type='java.lang.Double'/>
+<field name='oObsMinValue' type='java.lang.Double'/>
+<field name='oObsNoSamples' type='java.lang.Integer'/>
+<field name='oObsPrecision' type='java.lang.Double'/>
+<field name='oPrecision' type='java.lang.Double'/>
+<field name='tDeviation' type='java.lang.Double'/>
+<field name='tInterval' type='java.lang.Double'/>
+<field name='tMaxValue' type='java.lang.Double'/>
+<field name='tMeanValue' type='java.lang.Double'/>
+<field name='tMinValue' type='java.lang.Double'/>
+<field name='tNoSamples' type='java.lang.Integer'/>
+<field name='tObsDeviation' type='java.lang.Double'/>
+<field name='tObsInterval' type='java.lang.Double'/>
+<field name='tObsMaxValue' type='java.lang.Double'/>
+<field name='tObsMeanValue' type='java.lang.Double'/>
+<field name='tObsMinValue' type='java.lang.Double'/>
+<field name='tObsNoSamples' type='java.lang.Integer'/>
+<field name='tObsPrecision' type='java.lang.Double'/>
+<field name='tPrecision' type='java.lang.Double'/>
+</class>
+<class name='jsim.jmessage.NodeStats[]' uid='-8934604376653189663'>
+</class>
+<class name='java.lang.Number' uid='-8742448824652078965'>
+</class>
+<class name='java.lang.Double' uid='-9172774392245257468' super='java.lang.Number'>
+<field name='value' type='double'/>
+</class>
+</classes>
+<object class='jsim.jmessage.Store' id='i6'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>Store</value>
+</super>
+<object class='jsim.jmessage.Simulate' id='i10' name='agentData'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>agent data</value>
+</super>
+<value type='java.lang.String' name='agentName'>ReplicationAgent</value>
+<null name='batchSize'/>
+<null name='confidenceLevel'/>
+<null name='numOfBatches'/>
+<object class='java.lang.Integer' id='i15' name='numOfReplications'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>1</value>
+</object>
+<null name='relativePrecision'/>
+<object class='java.lang.Integer' id='i16' name='replicationSize'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>10</value>
+</object>
+<object class='java.lang.Double' id='i18' name='transientPeriod'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>500000.0</value>
+</object>
+</object>
+<object class='jsim.jmessage.ModelData' id='i22' name='modelData'>
+<value type='java.lang.String' name='modelName'>FoodCourt</value>
+<array class='jsim.jmessage.NodeProps[]' id='i25' length='7' name='props'>
+<object class='jsim.jmessage.NodeProps' id='i27'>
+<value type='int' name='nodeType'>1</value>
+<value type='int' name='numOfTokens'>5</value>
+<object class='java.lang.Double' id='i28' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2000.0</value>
+</object>
+<object class='java.lang.Double' id='i29' name='beta'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>MRegister1</value>
+<object class='java.lang.Integer' id='i31' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Uniform</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i33'>
+<value type='int' name='nodeType'>4</value>
+<value type='int' name='numOfTokens'>0</value>
+<object class='java.lang.Double' id='i34' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.1</value>
+</object>
+<null name='beta'/>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>MExit</value>
+<object class='java.lang.Integer' id='i36' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Bernoulli</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i38'>
+<value type='int' name='nodeType'>3</value>
+<value type='int' name='numOfTokens'>100</value>
+<object class='java.lang.Double' id='i39' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1500.0</value>
+</object>
+<object class='java.lang.Double' id='i40' name='beta'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>Wendys</value>
+<object class='java.lang.Integer' id='i42' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Uniform</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i44'>
+<value type='int' name='nodeType'>1</value>
+<value type='int' name='numOfTokens'>2</value>
+<object class='java.lang.Double' id='i45' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2000.0</value>
+</object>
+<object class='java.lang.Double' id='i46' name='beta'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>WRegister</value>
+<object class='java.lang.Integer' id='i48' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Uniform</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i50'>
+<value type='int' name='nodeType'>4</value>
+<value type='int' name='numOfTokens'>0</value>
+<object class='java.lang.Double' id='i51' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.1</value>
+</object>
+<null name='beta'/>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>WExit</value>
+<object class='java.lang.Integer' id='i53' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Bernoulli</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i55'>
+<value type='int' name='nodeType'>1</value>
+<value type='int' name='numOfTokens'>6</value>
+<object class='java.lang.Double' id='i56' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2000.0</value>
+</object>
+<object class='java.lang.Double' id='i57' name='beta'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>MRegister2</value>
+<object class='java.lang.Integer' id='i59' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Uniform</value>
+</object>
+<object class='jsim.jmessage.NodeProps' id='i61'>
+<value type='int' name='nodeType'>3</value>
+<value type='int' name='numOfTokens'>100</value>
+<object class='java.lang.Double' id='i62' name='alpha'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1500.0</value>
+</object>
+<object class='java.lang.Double' id='i63' name='beta'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null name='gamma'/>
+<value type='java.lang.String' name='nodeName'>McDonalds</value>
+<object class='java.lang.Integer' id='i65' name='stream'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<value type='java.lang.String' name='timeDist'>Uniform</value>
+</object>
+</array>
+<array class='jsim.jmessage.NodeStats[]' id='i68' length='7' name='stats'>
+<object class='jsim.jmessage.NodeStats' id='i70'>
+<object class='java.lang.Double' id='i71' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i72' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i73' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i74' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i75' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i76' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i77' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i78' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i79' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i80' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i81' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i82' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i83' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>4</value>
+</object>
+<object class='java.lang.Double' id='i84' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i85' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i86' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i87' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i88' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i89' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>42</value>
+</object>
+<null name='tObsPrecision'/>
+<null name='tPrecision'/>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i90'>
+<object class='java.lang.Double' id='i91' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i92' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i93' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i94' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i95' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i96' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i97' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i98' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>152.66739819</value>
+</object>
+<object class='java.lang.Double' id='i99' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>115.14970319</value>
+</object>
+<object class='java.lang.Double' id='i100' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4654.0550307</value>
+</object>
+<object class='java.lang.Double' id='i101' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4248.0854092</value>
+</object>
+<object class='java.lang.Double' id='i102' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4068.7778703</value>
+</object>
+<object class='java.lang.Integer' id='i103' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>10</value>
+</object>
+<object class='java.lang.Double' id='i104' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>559.74272134</value>
+</object>
+<object class='java.lang.Double' id='i105' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>111.64949808</value>
+</object>
+<object class='java.lang.Double' id='i106' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>5277.4678656</value>
+</object>
+<object class='java.lang.Double' id='i107' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4248.0854092</value>
+</object>
+<object class='java.lang.Double' id='i108' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>3325.9223356</value>
+</object>
+<object class='java.lang.Integer' id='i109' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>100</value>
+</object>
+<object class='java.lang.Double' id='i110' name='tObsPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0262823101</value>
+</object>
+<object class='java.lang.Double' id='i111' name='tPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0271062589</value>
+</object>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i112'>
+<object class='java.lang.Double' id='i113' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i114' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i115' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i116' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i117' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i118' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i119' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i120' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>179.97165796</value>
+</object>
+<object class='java.lang.Double' id='i121' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>146.76934062</value>
+</object>
+<object class='java.lang.Double' id='i122' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1802.4133487</value>
+</object>
+<object class='java.lang.Double' id='i123' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1560.4464757</value>
+</object>
+<object class='java.lang.Double' id='i124' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1277.9142792</value>
+</object>
+<object class='java.lang.Integer' id='i125' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>9</value>
+</object>
+<object class='java.lang.Double' id='i126' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>549.24066172</value>
+</object>
+<object class='java.lang.Double' id='i127' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>111.29636095</value>
+</object>
+<object class='java.lang.Double' id='i128' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2463.9113358</value>
+</object>
+<object class='java.lang.Double' id='i129' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1579.3437681</value>
+</object>
+<object class='java.lang.Double' id='i130' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>538.08271979</value>
+</object>
+<object class='java.lang.Integer' id='i131' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>97</value>
+</object>
+<object class='java.lang.Double' id='i132' name='tObsPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0704700035</value>
+</object>
+<object class='java.lang.Double' id='i133' name='tPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0940559916</value>
+</object>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i134'>
+<object class='java.lang.Double' id='i135' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.1352786876</value>
+</object>
+<object class='java.lang.Double' id='i136' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>7.0849281047</value>
+</object>
+<object class='java.lang.Double' id='i137' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1.0</value>
+</object>
+<object class='java.lang.Double' id='i138' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.018648074</value>
+</object>
+<object class='java.lang.Double' id='i139' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i140' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>140114</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i141' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0379928141</value>
+</object>
+<object class='java.lang.Double' id='i142' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>48.089524854</value>
+</object>
+<object class='java.lang.Double' id='i143' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>39.217663121</value>
+</object>
+<object class='java.lang.Double' id='i144' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>146.15534811</value>
+</object>
+<object class='java.lang.Double' id='i145' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>29.031931549</value>
+</object>
+<object class='java.lang.Double' id='i146' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i147' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>9</value>
+</object>
+<object class='java.lang.Double' id='i148' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>125.15646644</value>
+</object>
+<object class='java.lang.Double' id='i149' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>25.361303769</value>
+</object>
+<object class='java.lang.Double' id='i150' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>729.52006139</value>
+</object>
+<object class='java.lang.Double' id='i151' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>26.936843706</value>
+</object>
+<object class='java.lang.Double' id='i152' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i153' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>97</value>
+</object>
+<object class='java.lang.Double' id='i154' name='tObsPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.9415098534</value>
+</object>
+<object class='java.lang.Double' id='i155' name='tPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1.350845811</value>
+</object>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i156'>
+<object class='java.lang.Double' id='i157' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i158' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i159' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i160' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i161' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i162' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i163' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i164' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>207.20290362</value>
+</object>
+<object class='java.lang.Double' id='i165' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>168.97679269</value>
+</object>
+<object class='java.lang.Double' id='i166' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4680.6882988</value>
+</object>
+<object class='java.lang.Double' id='i167' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4304.1064559</value>
+</object>
+<object class='java.lang.Double' id='i168' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>3971.643665</value>
+</object>
+<object class='java.lang.Integer' id='i169' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>9</value>
+</object>
+<object class='java.lang.Double' id='i170' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>608.93477624</value>
+</object>
+<object class='java.lang.Double' id='i171' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>123.3925843</value>
+</object>
+<object class='java.lang.Double' id='i172' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>5850.1754295</value>
+</object>
+<object class='java.lang.Double' id='i173' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4279.2490623</value>
+</object>
+<object class='java.lang.Double' id='i174' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>3324.3183588</value>
+</object>
+<object class='java.lang.Integer' id='i175' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>97</value>
+</object>
+<object class='java.lang.Double' id='i176' name='tObsPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0288351022</value>
+</object>
+<object class='java.lang.Double' id='i177' name='tPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0392594361</value>
+</object>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i178'>
+<object class='java.lang.Double' id='i179' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i180' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i181' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i182' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i183' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i184' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i185' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i186' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i187' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i188' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i189' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i190' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i191' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>5</value>
+</object>
+<object class='java.lang.Double' id='i192' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i193' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i194' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i195' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i196' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i197' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>58</value>
+</object>
+<null name='tObsPrecision'/>
+<null name='tPrecision'/>
+</object>
+<object class='jsim.jmessage.NodeStats' id='i198'>
+<object class='java.lang.Double' id='i199' name='oDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i200' name='oInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i201' name='oMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i202' name='oMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i203' name='oMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Integer' id='i204' name='oNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<null name='oObsDeviation'/>
+<null name='oObsInterval'/>
+<null name='oObsMaxValue'/>
+<null name='oObsMeanValue'/>
+<null name='oObsMinValue'/>
+<null name='oObsNoSamples'/>
+<null name='oObsPrecision'/>
+<object class='java.lang.Double' id='i205' name='oPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i206' name='tDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>143.38565909</value>
+</object>
+<object class='java.lang.Double' id='i207' name='tInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>108.14893213</value>
+</object>
+<object class='java.lang.Double' id='i208' name='tMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1757.3363852</value>
+</object>
+<object class='java.lang.Double' id='i209' name='tMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1525.1553756</value>
+</object>
+<object class='java.lang.Double' id='i210' name='tMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1323.7935126</value>
+</object>
+<object class='java.lang.Integer' id='i211' name='tNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>10</value>
+</object>
+<object class='java.lang.Double' id='i212' name='tObsDeviation'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>571.4598501</value>
+</object>
+<object class='java.lang.Double' id='i213' name='tObsInterval'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>113.98666388</value>
+</object>
+<object class='java.lang.Double' id='i214' name='tObsMaxValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2487.6142898</value>
+</object>
+<object class='java.lang.Double' id='i215' name='tObsMeanValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1525.1553756</value>
+</object>
+<object class='java.lang.Double' id='i216' name='tObsMinValue'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>560.65000689</value>
+</object>
+<object class='java.lang.Integer' id='i217' name='tObsNoSamples'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>100</value>
+</object>
+<object class='java.lang.Double' id='i218' name='tObsPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0747377386</value>
+</object>
+<object class='java.lang.Double' id='i219' name='tPrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0709101078</value>
+</object>
+</object>
+</array>
+</object>
+<object class='java.lang.Integer' id='i220' name='scenarioID'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>6</value>
+</object>
+</object>
+<object class='jsim.jmessage.DBConnectionInfo' id='i222'>
+<value type='java.lang.String' name='driverClassName'>COM.cloudscape.core.RmiJdbcDriver</value>
+<value type='java.lang.String' name='framework'>rmijdbc</value>
+<value type='java.lang.String' name='passwd'></value>
+<value type='java.lang.String' name='url'>jdbc:cloudscape:rmi://chief.cs.uga.edu:2001/JsimDB</value>
+<null name='username'/>
+</object>
+</koml>

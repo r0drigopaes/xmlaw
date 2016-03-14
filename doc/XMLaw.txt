@@ -1,0 +1,31 @@
+Law -0*..n-> Scene
+Law -0*..n-> Action
+Law -0..*-> Norm
+Law -0..*-> Clock
+
+Scene -0*..n-> Action (falta no schema)
+Scene -0..*-> Clock
+Scene -0..*-> Norm
+Scene - entrance 0..* -> Agent
+Scene - creation 0..* -> Agent
+Scene - 1 - Protocol
+
+Protocol - 1..* - State
+Protocol - 0..* - Transition
+
+Transition - 1 to - State
+Transition - 1 from - State
+
+Transition - 1 - Event (falta no schema)
+
+Transition - - Norm (falta no schema)
+
+Transition - - Constraint (ativação condicional de transição / ciclo de vida = ativar)
+
+Agent --> Message
+Agent -role-> Scene (acho q não entra no modelo)
+
+
+Norm
+ - Constraint (validade condicional de norma/ ciclo de vida = ativar / ... / desativar)
+ - Action

@@ -1,0 +1,27 @@
+
+<!-- ************************************************* -->
+<!-- Multi Agents Environment Simulator - GNU MAGES    -->
+<!-- Armor XML DTD v.1.0a                               -->
+<!-- ************************************************* -->
+
+<!-- 
+
+   Copyright (c)  2001  Joao Ricardo Bittencourt.
+   Permission is granted to copy, distribute and/or modify this document
+   under the terms of the GNU Free Documentation License, Version 1.1
+   or any later version published by the Free Software Foundation;
+   without Invariant Sections, without Front-Cover Texts, and without 
+   the Back-Cover Texts. A copy of the license is included 
+   in the section entitled "GNU Free Documentation License".
+-->
+
+
+<!-- ELEMENTS -->
+
+<!ELEMENT armor (level.armor)>
+<!ATTLIST armor
+	pts	CDATA	#REQUIRED
+>
+<!ELEMENT level.amor  (#PCDATA)>
+
+<!-- End Armor XML DTD v.1.0a -->

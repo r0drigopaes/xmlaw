@@ -1,0 +1,240 @@
+
+/******************************************************************
+ * @(#) PropertyDialog.java     1.1     98/4/16
+ *
+ * Copyright (c) 1998 John Miller
+ * All Right Reserved
+ *-----------------------------------------------------------------
+ * Permission to use, copy, modify and distribute this software and
+ * its documentation without fee is hereby granted provided that
+ * this copyright notice appears in all copies.
+ * WE MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY
+ * OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE SHALL NOT BE
+ * LIABLE FOR ANY DAMAGES SUFFERED BY ANY USER AS A RESULT OFUSING,
+ * MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ *-----------------------------------------------------------------
+ *
+ * @version     1.1, 1 Jul 1999
+ * @author      John Miller
+ */
+
+package jsim.jrun;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+import jsim.util.*;
+import jsim.variate.*;
+import jsim.jmessage.ModelProperties;
+
+/******************************************************************
+ * Dialog box for updating a models properties.
+ */
+
+public class PropertyDialog extends JFrame
+                            implements ActionListener
+{
+    /////////////////// Immutable Variables \\\\\\\\\\\\\\\\\\\\\\\
+    /**
+     * The calling model agent
+     */
+    private final ModelAgent modelAgent;
+
+    /**
+     * Properties of the model.
+     */
+    private final ModelProperties prop;
+    
+    /**
+     * Apply button
+     */
+    private final Button applyButton;
+    
+    /**
+     * Number of tokens
+     */
+    private final TextField [] nTokens;
+
+    /**
+     * Time distribution
+     */
+    private final Choice [] timeDist;
+
+    /**
+     * Alpha
+     */
+    private final TextField [] alpha;
+
+    /**
+     * Beta
+     */
+    private final TextField [] beta;
+
+    /**
+     * Gamma
+     */
+    private final TextField [] gamma;
+
+    /**
+     * Stream
+     */
+    private final TextField [] stream;
+
+    /**
+     * Trace
+     */
+    private final Trace trc;
+
+
+    /**********************************************************************
+     * Construct a dialog box to adjust the properties for a node.
+     * @param  pList  property list
+     */
+    public PropertyDialog (ModelAgent modelAgent, ModelProperties prop)
+    {
+        super ("Edit Properties of " + prop.getModelName () + " Model");
+        addWindowListener (new WindowAdapter () {
+            public void WindowClosing (WindowEvent e) {
+                System.exit (0);
+            }});
+
+	trc = new Trace ("jrun", "PropertyDialog");
+
+        Label nType, nName;
+	Panel content = new Panel ();	
+
+        this.modelAgent = modelAgent;
+	this.prop = prop;
+        int numNodes = prop.getNumOfNodes ();
+        String [] nodeName = prop.getNodeName ();
+        String [] distributionType = prop.getDistributionType ();
+        int [] nodeType = prop.getNodeType ();
+        int [] numOfTokens = prop.getNumOfTokens ();
+        Integer [] streamVal = prop.getStream ();
+        Double [] alphaVal = prop.getAlpha ();
+        Double [] betaVal = prop.getBeta ();
+        Double [] gammaVal = prop.getGamma ();
+
+        content.setLayout (new GridLayout (0, 8));
+        content.add (new Label ("Type"));
+        content.add (new Label ("Name"));
+        content.add (new Label ("numTokens"));
+        content.add (new Label ("Distribution"));
+        content.add (new Label ("Alpha"));
+        content.add (new Label ("Beta")); 
+        content.add (new Label ("Gamma")); 
+        content.add (new Label ("Stream"));
+
+        nTokens  = new TextField [numNodes];
+        timeDist = new Choice [numNodes];
+	alpha = new TextField [numNodes];
+        beta = new TextField [numNodes];
+        gamma = new TextField [numNodes];
+	stream = new TextField [numNodes];
+
+        for (int i = 0; i < numNodes; i++) {
+
+            nType        = new Label (Node.TYPE_NAME [nodeType [i]]);
+            nName        = new Label (nodeName [i]);
+            nTokens [i]  = new TextField (new String ("" + numOfTokens [i]));
+            timeDist [i] = new Choice ();
+
+            for (int j = 0; j < VarNames.NAME.length; j++) 
+                 timeDist [i].add (VarNames.NAME [j]);
+	    timeDist [i].select (distributionType [i]);
+
+            String alphaStr = "", betaStr = "", gammaStr = "", streamStr = "";
+            if (alphaVal [i] != null) alphaStr = alphaVal [i].toString ();
+            if (betaVal [i] != null) betaStr = betaVal [i].toString ();
+            if (gammaVal [i] != null) gammaStr = gammaVal [i].toString ();
+            if (streamVal [i] != null) streamStr = streamVal [i].toString ();
+
+	    alpha [i] = new TextField (alphaStr);
+            beta [i] = new TextField (betaStr);
+            gamma [i] = new TextField (gammaStr);
+	    stream [i] = new TextField (streamStr);
+
+            content.add (nType);         content.add (nName);       
+	    content.add (nTokens [i]); 
+	    content.add (timeDist [i]);  content.add (alpha [i]);   
+	    content.add (beta [i]);
+            content.add (gamma [i]);     content.add (stream [i]);
+
+        }; // for
+
+        applyButton   = new Button ("Apply");
+
+        content.add (new Label (""));    content.add (new Label (""));
+	content.add (applyButton);       
+
+        applyButton.addActionListener (this);
+
+	setContentPane (content);
+        pack ();
+        setVisible(true);
+
+    }; // PropertyDialog
+
+
+    /**********************************************************************
+     * Handle button events.
+     *     Apply:  update the nodes parameters and then dismiss dialog box.
+     * @param  evt  button action event
+     */
+    public void actionPerformed (ActionEvent evt)
+    {
+
+	int dist;
+
+        if (evt.getSource () == applyButton) {
+
+            int numOfNodes = prop.getNumOfNodes ();
+            String [] distType = new String [numOfNodes];
+            int [] numOfTokens = new int [numOfNodes];
+            Integer [] streamVal = new Integer [numOfNodes];
+            Double [] alphaVal = new Double [numOfNodes];
+            Double [] betaVal = new Double [numOfNodes];
+            Double [] gammaVal = new Double [numOfNodes];
+            for (int i = 0; i < numOfNodes; i++) {
+               distType [i] = timeDist [i].getSelectedItem ();
+               numOfTokens [i] = Integer.parseInt (nTokens [i].getText ().trim ());
+               if (stream [i].getText ().equals ("")) streamVal [i] = null;
+               streamVal [i] = new Integer (stream [i].getText ().trim ());
+               if (alpha [i].getText ().equals ("")) alphaVal [i] = null;
+               else alphaVal [i] = new Double (alpha [i].getText ().trim ());
+               if (beta [i].getText ().equals ("")) betaVal [i] = null;
+               else betaVal [i] = new Double (beta [i].getText ().trim ());
+               if (gamma [i].getText ().equals ("")) gammaVal [i] = null;
+               else gammaVal [i] = new Double (gamma [i].getText ().trim ());
+	    }; // for
+
+            prop.setDistributionType (distType);
+            prop.setNumOfTokens (numOfTokens);
+            prop.setStream (streamVal);
+            prop.setAlpha (alphaVal);
+            prop.setBeta (betaVal);
+            prop.setGamma (gammaVal);
+
+        }; // if
+
+        modelAgent.fireChangeEvent (prop);
+
+        dispose ();
+
+    }; // actionPerformed
+
+
+    /**********************************************************************
+     * Main method for test PropertyDialog.
+     * @param  args  command-line arguments
+     */
+    public static void main (String [] args)
+    {
+    }; // main
+
+
+}; // class
+

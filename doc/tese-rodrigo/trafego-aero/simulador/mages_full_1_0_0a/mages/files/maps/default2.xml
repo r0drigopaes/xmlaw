@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "../../dtd/map.dtd">
+<map height="10" width="10">
+    <mapschema>
+        <mapsch.name>Default</mapsch.name>
+        <mapsch.validator>Default</mapsch.validator>
+        <mapsch.entry col="3" layer="0" path="defaultTrn.xml" row="1" type="NML"/>
+    </mapschema>
+    <layer ly.id="0">
+        <simobj name="Block" x="0" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="1" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="2" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="3" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="4" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="5" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="6" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="7" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="8" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="9" y="0">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="1">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="2" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="7" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="1">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="1">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="2">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="2">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="7" y="2">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="2">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="2">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="3">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="3">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="7" y="3">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="3">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="3">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="4">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="3" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="4" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="5" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="6" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="7" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="4">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="4">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="5">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="5">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="7" y="5">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="5">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="5">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="6">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="6">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="7" y="6">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="6">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="6">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="7">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="2" y="7">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="7" y="7">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="7">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="7">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="8">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Plain" x="1" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="2" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="3" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="4" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="5" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="6" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="7" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Plain" x="8" y="8">
+            <icon angle="0" height="50" path="default/floor2.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="0" name="intr" value="0"/>
+        </simobj>
+        <simobj name="Block" x="9" y="8">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="0" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="1" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="2" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="3" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="4" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="5" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="6" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="7" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="8" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+        <simobj name="Block" x="9" y="9">
+            <icon angle="0" height="50" path="default/block.gif"
+                texture="" type="IMG" width="50"/>
+            <param default="1" name="intr" value="1"/>
+        </simobj>
+    </layer>
+</map>

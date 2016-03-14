@@ -1,0 +1,18 @@
+Falta:
+
+
+- escrever agradecimentos
+- reler a tese
+
+
+Feito:
+
+- Revisão da gramática do XMLaw
+- traduzir figuras
+- traduzir tabelas
+- decidir sobre tirar ou manter um parágrafo de conclusão ao final de cada capitulo
+- re-estruturar o capitulo 2
+- padronizar os captions das figuras, tabelas e código
+- escrever resumo
+- escrever abstract
+- verificar diagramação final

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='java.lang.Integer' uid='1360826667806852920' super='java.lang.Number'>
+<field name='value' type='int'/>
+</class>
+<class name='jsim.jmessage.ModelProperties' uid='4993936879657733608' super='jsim.jmessage.Message'>
+<field name='numOfNodes' type='int'/>
+<field name='alpha' type='java.lang.Double[]'/>
+<field name='beta' type='java.lang.Double[]'/>
+<field name='gamma' type='java.lang.Double[]'/>
+<field name='modelName' type='java.lang.String'/>
+<field name='nodeName' type='java.lang.String[]'/>
+<field name='nodeType' type='int[]'/>
+<field name='numOfTokens' type='int[]'/>
+<field name='stream' type='java.lang.Integer[]'/>
+<field name='timeDist' type='java.lang.String[]'/>
+</class>
+<class name='java.lang.String[]' uid='-5921575005990323385'>
+</class>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+<class name='java.lang.Number' uid='-8742448824652078965'>
+</class>
+<class name='java.lang.Integer[]' uid='-101421563860753893'>
+</class>
+<class name='java.lang.Double' uid='-9172774392245257468' super='java.lang.Number'>
+<field name='value' type='double'/>
+</class>
+<class name='int[]' uid='5600894804908749477'>
+</class>
+<class name='java.lang.Double[]' uid='-2228528061661948250'>
+</class>
+</classes>
+<object class='jsim.jmessage.ModelProperties' id='i7'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>Inform</value>
+</super>
+<value type='int' name='numOfNodes'>3</value>
+<array class='java.lang.Double[]' id='i10' length='3' name='alpha'>
+<object class='java.lang.Double' id='i13'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2000.0</value>
+</object>
+<object class='java.lang.Double' id='i14'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2000.0</value>
+</object>
+<object class='java.lang.Double' id='i15'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.1</value>
+</object>
+</array>
+<array class='java.lang.Double[]' id='i16' length='3' name='beta'>
+<object class='java.lang.Double' id='i17'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<object class='java.lang.Double' id='i18'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1000.0</value>
+</object>
+<null/>
+</array>
+<array class='java.lang.Double[]' id='i19' length='3' name='gamma'>
+<null/>
+<null/>
+<null/>
+</array>
+<value type='java.lang.String' name='modelName'>Bank</value>
+<array class='java.lang.String[]' id='i22' length='3' name='nodeName'>
+<value type='java.lang.String'>Customer</value>
+<value type='java.lang.String'>Teller</value>
+<value type='java.lang.String'>Exit</value>
+</array>
+<array class='int[]' id='i27' length='3' name='nodeType'>
+<value type='int'>3</value>
+<value type='int'>1</value>
+<value type='int'>4</value>
+</array>
+<array class='int[]' id='i28' length='3' name='numOfTokens'>
+<value type='int'>100</value>
+<value type='int'>5</value>
+<value type='int'>0</value>
+</array>
+<array class='java.lang.Integer[]' id='i30' length='3' name='stream'>
+<object class='java.lang.Integer' id='i32'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<object class='java.lang.Integer' id='i33'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+<object class='java.lang.Integer' id='i34'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>0</value>
+</object>
+</array>
+<array class='java.lang.String[]' id='i35' length='3' name='timeDist'>
+<value type='java.lang.String'>Uniform</value>
+<value type='java.lang.String'>Uniform</value>
+<value type='java.lang.String'>Bernoulli</value>
+</array>
+</object>
+</koml>

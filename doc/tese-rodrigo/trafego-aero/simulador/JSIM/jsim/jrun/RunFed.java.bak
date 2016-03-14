@@ -1,0 +1,95 @@
+package jsim.jrun;
+
+import java.util.*;
+
+import jsim.jmessage.*;
+import jsim.util.*;
+
+public class RunFed
+{
+    public static boolean runfed (String [][] graph)
+    {
+	Trace           trc = new Trace ("RunFed", "RunFed");
+	Hashtable       ht = new Hashtable ();
+	String []       source;
+	String []       target;		// for each source
+	JsimBean []     sBean;
+	JsimListener    l = null;
+	Class           c;
+	boolean         foundAgent = false;
+		
+	source = new String [graph.length];
+	for (int i = 0; i < graph.length; i++) {
+		source [i] = graph [i][0];
+		trc.show ("runfed", "source [" + i + "] is " + source [i]);
+		target = new String [graph [i].length - 1];
+		for (int j = 1; j < graph [i].length; j++) {
+			target [j - 1] = graph [i][j];
+			int tmp = j - 1;
+			trc.show ("runfed", "target [" + i + "][" + tmp + "] is "
+						+ target [j - 1]);
+		}; // for
+		ht.put (source [i], target);
+	}; // for
+
+	sBean = new JsimBean [source.length];
+	try {
+	    for (int i = 0; i < source.length; i++) {
+		c = Class.forName ((String) source [i]);
+		sBean [i] = (JsimBean) c.newInstance ();
+	    }; // for
+
+	    for (int i = 0; i < source.length; i++) {
+		target = (String []) ht.get (source [i]);
+		for (int j = 0; j < target.length; j++) {
+		   boolean match = false;
+		   for (int k = 0; !match && k < source.length; k++) {
+		      if (target [j].equals (source [k])) {
+			  l = (JsimListener) sBean [k];
+			  match = true;
+		      }; // if
+		   }; // for
+		   if (!match) {
+			c = Class.forName ((String) target [j]);
+			l = (JsimListener) c.newInstance ();
+		   }; // if
+		   sBean [i].addJsimListener (l);
+		}; // for
+	    }; // for
+	} catch (Exception e) {
+		e.printStackTrace ();
+		return false;
+	}; // try
+
+	// try scenario agent first
+	for (int i = 0; i < source.length; i++) {  
+		if (sBean [i] instanceof ScenarioAgent) {
+			foundAgent = true;
+			ScenarioAgent sa = (ScenarioAgent) sBean [i];
+			sa.actionPerformed (null);
+			return true;
+		}; // if
+	}; // for
+
+	// then try model agent
+	if (!foundAgent)  {   
+		for (int i = 0; i < source.length; i++) {
+			if (sBean [i] instanceof ScenarioAgent) {
+				foundAgent = true;
+				ModelAgent ma = (ModelAgent) sBean [i];
+				ma.fireInquireEvent ();
+			}; // if
+		}; // for
+	}; // if
+
+	if (!foundAgent) {
+		trc.show ("runfed", "No agents are found, model will be run in standalone mode");
+		return false;
+	} else {
+		trc.show ("runfed", "Starting model federation with agents...");
+		return true;
+	}; // if
+
+    }; // runfed
+
+}; // class RunFed

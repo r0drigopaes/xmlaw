@@ -1,0 +1,48 @@
+
+<!-- ************************************************* -->
+<!-- Multi Agents Environment Simulator - GNU MAGES    -->
+<!-- SimObject XML DTD v.1.0a                             -->
+<!-- ************************************************* -->
+
+<!-- 
+
+   Copyright (c)  2001  Joao Ricardo Bittencourt.
+   Permission is granted to copy, distribute and/or modify this document
+   under the terms of the GNU Free Documentation License, Version 1.1
+   or any later version published by the Free Software Foundation;
+   without Invariant Sections, without Front-Cover Texts, and without 
+   the Back-Cover Texts. A copy of the license is included 
+   in the section entitled "GNU Free Documentation License".
+-->
+
+
+<!-- ELEMENTS -->
+
+<!ELEMENT simobj(icon*|link*,param*)>
+<!ATTLIST simboj
+	name	CDATA	#REQUIRED
+	x		CDATA	#IMPLIED "-1"
+	y		CDATA	#IMPLIED "-1"	
+>
+
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+	name	CDATA	#REQUIRED
+	value   CDATA   #REQUIRED
+	default CDATA	#IMPLIED
+>
+
+<!ELEMENT icon EMPTY>
+<!ATTLIST icon
+	path	CDATA					#REQUIRED
+	type  	(IMG | SPRITE) 			#IMPLIED 	"IMG"
+	angle	(0 | 90 | 180 | -90) 	#IMPLIED 	"0"
+	width	CDATA					#IMPLIED 	"-1"
+	height  CDATA					#IMPLIED 	"-1"
+        texture  CDATA                                      #IMPLIED
+        useTextr (true|false) #IMPLIED
+>
+
+<!ELEMENT link (#PCDATA)>
+
+<!-- End SimObject XML DTD v.1.0a -->

@@ -1,0 +1,245 @@
+/***
+ * file: Graph.java
+ * @version 1.0, 30 July 2002
+ * @Author Matt Perry
+ */
+package animator;
+
+import java.lang.*;
+//import java.lang.math.*;
+import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+import javax.swing.*;
+
+/***********************************************************************************
+ * This class defines a Graph to be used with the Simulation package of JSIM.  The 
+ * Graph represents a skeleton of sources, sinks, and facilities along with interconnections
+ * between them.
+ */
+
+ public class Graph {
+
+  public LinkedList nodes; 		//nodes of the graph
+  public LinkedList edges;		//edges of the graph
+
+  public double step = 50.0;		//step along an edge for one move
+  
+
+ /***********************************************************************************
+  * Constructor
+  * @param nodes	LinkedList of nodes for the Graph
+  * @param edges	LinkedList of edges for the Graph
+  */
+
+  public Graph (LinkedList nodes, LinkedList edges) {
+
+	this.nodes = nodes;       
+	this.edges = edges;
+	
+  }//Constructor
+
+ /**********************************************************************************
+  * Sets the properties of the graph: Colors, Locations, labels etc.
+  */
+
+  public void setEdges () {
+	
+        ListIterator it = nodes.listIterator();
+        
+        while (it.hasNext()) {
+        	AnimationEntity ae = (AnimationEntity)it.next();
+        	setNodeLabel (ae.id);
+        	setTokenLoc (ae.id);
+        }//while
+        
+   }//setEdges()
+
+ /********************************************************************************
+  * Sets the label position for a node
+  * @param id		id of node
+  */
+  
+  public void setNodeLabel (int id) {
+  
+  	AnimationEntity ae = getNode (id);
+  	
+  	if (ae != null) {
+  		Rectangle bounds = ae.shape.getBounds();
+  		ae.label_x = bounds.getX() + 15;
+  		ae.label_y = bounds.getY() - 15;
+  		
+  		ae.serviced_x = (bounds.getX() + ((bounds.getWidth())/2.0)) - 7;
+		ae.serviced_y = (bounds.getY() + ((bounds.getHeight())/2.0)) + 2.5;
+  		
+         }
+  }
+  
+ /********************************************************************************
+  * Sets the label position for an edge
+  * @param id 		id of edge
+  */
+  
+  public void setEdgeLabel (int id) {
+  
+  	Edge e = getEdge(id);
+  	
+  	if (e != null) {
+  		e.label_y = e.mid_y - 40;
+  		e.label_x = e.mid_x - 30;
+  	   }
+  }//setEdgeLabel
+  
+ /********************************************************************************
+  * Sets the token locations for a node
+  */
+  
+  public void setTokenLoc (int id) {
+  
+  	AnimationEntity ae = getNode (id);
+  	
+  	if (ae != null) {
+  		Rectangle bounds = ae.shape.getBounds();
+  		ae.tokStart_x = (int)bounds.getX() + (int)bounds.getWidth() - (11);
+  		ae.tokStart_y = (int)bounds.getY() + (5);
+  	   }
+  		
+    }//setTokenLoc
+
+ /********************************************************************************
+  * Sets the increments for an edge
+  * @param id		id of the edge
+  */
+
+  public void setIncrements (int id) {
+
+	Edge e = getEdge(id);
+
+	if (e != null) {
+		if (!e.undefinedSlope) {
+			double x_increment = Math.sqrt((step*step)/((e.slope*e.slope) + 1));
+			double y_increment = x_increment*e.slope;
+		   	e.x_increment = x_increment;
+			e.y_increment = y_increment;
+		   }//if
+		else {
+			e.x_increment = 0;
+			e.y_increment = step;
+		     }
+	    }//if
+   }//setIncrements
+
+ /********************************************************************************
+  * Returns the node with the given id
+  * @param id		id of the node to remove
+  */
+
+  public AnimationEntity getNode (int id) {
+
+	ListIterator it = nodes.listIterator();
+	AnimationEntity ae = null;
+
+	while (it.hasNext()) {
+		ae = (AnimationEntity)it.next();
+		if (ae.id == id) {
+			return ae;
+		   }
+	}
+
+	return null;
+  }
+
+ /********************************************************************************
+  * Returns the edge with the given id
+  * @param id		id of the node to remove
+  */
+
+  public Edge getEdge (int id) {
+
+	ListIterator it = edges.listIterator();
+	Edge e = null;
+
+	while (it.hasNext()) {
+		e = (Edge)it.next();
+		if (e.id == id) {
+			return e;
+		   }
+	}
+
+	return null;
+  }
+
+ /*********************************************************************************
+  * Adds a new node to the Graph
+  * @param ae		AnimationEntity to add as a node
+  */
+
+  public void addNode (AnimationEntity ae) {
+
+	nodes.add(ae);
+  }
+
+ /*********************************************************************************
+  * Adds a new edge to the Graph
+  * @param e		Edge to add to the Graph
+  */
+
+  public void addEdge (Edge e) {
+
+	edges.add(e);
+  }
+
+ /*********************************************************************************
+  * Removes a node from the Graph
+  * @param id		id of node to remove
+  */
+
+  public void removeNode (int id) {
+
+	ListIterator it = nodes.listIterator();
+	AnimationEntity ae = null;
+
+	while (it.hasNext()) {
+		ae = (AnimationEntity)it.next();
+		if (ae.id == id) {
+			nodes.remove (ae);
+		   }
+	}
+   }
+
+ /*********************************************************************************
+  * Removes an edge from the Graph
+  * @param id		id of edge to remove
+  */
+
+  public void removeEdge (int id) {
+
+	ListIterator it = edges.listIterator();
+	Edge e = null;
+
+	while (it.hasNext()) {
+		e = (Edge)it.next();
+		if (e.id == id) {
+			edges.remove (e);
+		   }
+	}
+   }
+
+ /**********************************************************************************
+  * Main function for testing
+  */
+
+  public static void main (String [] args) {
+  
+ 
+  }//main
+
+
+	
+
+
+ }//Graph
+	
+
+		 		

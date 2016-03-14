@@ -1,0 +1,114 @@
+JGame Changelog
+
+1.2 -> 1.3 (20070330)
+
+* sound; the ...Audio... methods handle sound.  Some of the games now have
+  some sound.
+* added "online game generator" application in gamegen/
+* committed shift-esc fix by Jeff Friesen
+* new game: Ramjet
+* made AppConfig a bit more robust
+* minor changes: defineGraphics has been renamed to defineMedia, made
+  i_am_applet public; some changes in docs.
+
+1.1.1 -> 1.2 (20061023)
+
+* much improved output of getKeyDesc, and added its inverse, getKeyCode
+* added a new class, AppConfig, for game configuration.  StdGame now starts
+  AppConfig when pressing [enter] in title.
+* The games are adapted to work with AppConfig, that is, their keys are now
+  properly configurable, and the proper start game key is displayed.
+* Forgot to add Munchies to the launcher.
+* Added HTML for "fullscreen" applets
+* added "performance" section to manual
+* defineImage now cleans up old images
+
+1.1 -> 1.1.1 (20061015)
+* Fixed concurrency bug where objects are concurrently accessed by game thread
+  and repaint thread.  This gets rid of some of the rare null pointer
+  exceptions inside Sort.
+* Included a game launcher in the examples package so that the games can be
+  run with -jar
+* fiddled around with the JGEngineThread dynamics, without much effect though.
+  I now yield every frame, and do the yield/sleep after the call to repaint().
+* after trying out on a slow machine and finding that the gc causes a small
+  jerk in the animation about once a second, I fiddled around with reducing
+  the number of objects created, without much effect however.
+* I found that javac -source 1.2 -target 1.2 works neither for the source nor
+  for the target for jdk1.4.2.  I'm filing a bug report to sun, and have
+  compiled this version on a "real" 1.2 compiler. 
+
+1.0.2 -> 1.1 (20061007)
+* new game: caverns of fire
+* API change: ...BGTile -> ...Tile (these methods are used very often)
+* bugfix: no more errors for objects with undefined bboxes in dbgSetBoundingBox
+* fixed rounding bug causing the tile span not being correctly defined for
+  negative coordinates.
+* bugfix: setBGImage(null) never worked.
+* changed protected members to package-protected.
+* Change in update sequencing: moved "frame finished" actions on object out of
+  paint loop to the end of the update loop; moved animation update to
+  moveObjects.
+* fixed broken getTopLeftTile()
+* fixed sleep mode bug by clearing the wake-up key on wakeup
+
+1.0 -> 1.0.2 (20061002)
+
+* Full-screen mode didn't work in Jdk 1.2. This has been fixed.
+* Image rendering has been improved.  There's a new method setRenderSettings.
+* Changed fire key to Z in Insecticide (because of Windows trouble with
+  pressing 5x shift).
+* StdGame no longer requires you to start with setGameState("Title").
+* Fixed pause game frame size in StdGame, and changed getFontHeight
+
+Version 0.9 -> 1.0 (20060928):
+
+* fixed ignore condition bug in StdGame, where gameOver was not ignored;
+  fixed bug in JGEngine, which could be in the same state multiple times.
+* added debugging options: an option for printing the game state, a dbgPrint
+  method which enables printing on console and in the playfield
+* inproved error handling/catching: neater error messages and an on-screen
+  failure message for applets.
+* cleaned up the setfont and setcolor code, added debug font and debug colours
+* The application now opens a window without decoration in full-screen mode
+* Yield updatethread when it can't sleep, so it hopefully gives more time to
+  the input handler thread.
+* moved StdGame to jgame package.
+
+Version 0.8 -> 0.9 (20060924)
+
+* made a standard game framework that simplifies global game state handling,
+  and some standard game objects.
+* added new games: ChainReaction, PubMan, Munchies, DungeonsOfHack, SpaceRun;
+  improved MatrixMiner and Insecticide
+* custom paint() method in JGObject, plus some extra paint methods in
+  JGEngine
+* mouse support
+* Bugfixes/minor improvements: setFont, better animation timing,
+  check...Aligned/snapToGrid now have a larger margin, images are now loaded
+  using getResource.
+* JGTimers now have parent
+* defineImage and tables improved: the transparency flag is no longer needed,
+  and the image size can now be used as default bounding box.  Wrote some
+  docs on *.tbl files.
+* miscellaneous extra methods: integer random, counttiles, alignment in
+  drawImageString, getImage, getImageSize, getKeyDesc, wakeUpOnKey
+* added special tile cid handling: setBGTileSettings, and set/and/orBGtileCid()
+* api name changes: renamed the get...Tile... API to shorter names: getTiles,
+  getCenterTiles, getTopLeftTile, getCenterTile.  Changed defineImages to
+  defineGraphics.
+* gamestate extensions: removeGameState, state transition method calls:
+  start<state>
+* images are now pre-scaled so that no in-game delay is introduced
+* startup progress bar and splash screen
+* used smoother image scaling algorithm
+* included jar support and a "make jar"
+
+Version 0.8 (20060907):
+
+This project started in September 2005, but here is finally the first
+"official" release.  The project is modelled after a previous project of mine:
+XGame, an X11 game library.  In the JGame project, I wanted to have easier
+tile handling, and also devised a more consistent and convenient parallel
+model.  
+

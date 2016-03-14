@@ -1,0 +1,16 @@
+<Laws xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<!- This law purpouse is to test errors when parsing an malformed law file ->
+
+	<LawOrganization id="auction" name="World Auction">
+		
+		<InvalidTag>
+	
+		<!-- Role definition -->		
+		<Role id="buyer" />
+		<Role id="seller" />			
+		<Role id="observer" />
+		<Role id="requester" />
+		<Role id="provider" />
+	</LawOrganization>
+</Laws>

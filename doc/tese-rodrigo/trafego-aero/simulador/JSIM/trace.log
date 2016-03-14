@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571468</millis>
+  <sequence>0</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Server.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571671</millis>
+  <sequence>1</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Facility.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>2</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Signal.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>3</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Source.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>4</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Sink.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>5</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Transport.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>6</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Split.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571687</millis>
+  <sequence>7</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\AndJoin.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571703</millis>
+  <sequence>8</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Move.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571703</millis>
+  <sequence>9</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Delete.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571703</millis>
+  <sequence>10</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Update.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:31</date>
+  <millis>1175286571703</millis>
+  <sequence>11</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = C:\Documents and Settings\Rodrigo  Paes\JSIM\jsim\jmodel\images\Generate.gif</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:37</date>
+  <millis>1175286577500</millis>
+  <sequence>12</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>11</thread>
+  <message>set actionType to 0</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:42</date>
+  <millis>1175286582984</millis>
+  <sequence>13</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>11</thread>
+  <message>set actionType to 4</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:44</date>
+  <millis>1175286584750</millis>
+  <sequence>14</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>11</thread>
+  <message>set actionType to 8</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:46</date>
+  <millis>1175286586421</millis>
+  <sequence>15</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>12</thread>
+  <message>set actionType to 3</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:47</date>
+  <millis>1175286587984</millis>
+  <sequence>16</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>12</thread>
+  <message>set actionType to 2</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:49</date>
+  <millis>1175286589265</millis>
+  <sequence>17</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>12</thread>
+  <message>set actionType to 0</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:50</date>
+  <millis>1175286590687</millis>
+  <sequence>18</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setActionType</method>
+  <thread>12</thread>
+  <message>set actionType to 0</message>
+</record>
+<record>
+  <date>2007-03-30T14:29:58</date>
+  <millis>1175286598781</millis>
+  <sequence>19</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>WARNING</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>load</method>
+  <thread>12</thread>
+  <message>unable to open file JModel.jm a\JModel.jm (The system cannot find the path specified)</message>
+</record>
+</log>

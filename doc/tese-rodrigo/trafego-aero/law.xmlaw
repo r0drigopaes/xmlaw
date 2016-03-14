@@ -1,0 +1,75 @@
+atc{
+	takeOff{
+		msg1{airplane, controller, handshake($flightPlan,$airplaneInfo)}
+		msg2{controller, airplane, $groundInstructions}
+		msg3{airplane, controller, askPermission}
+		msg4{controller, airplane, ok}
+		
+		s1{initial}
+		s5{success}
+		
+		t1{s1->s2, msg1}
+		t2{s2->s3, msg2}
+		t3{s3->s4, msg3}
+		t4{s4->s5, msg4, [checkMinimumAutonomy]}
+		
+		// takeOff scene's constraints
+		checkMinimumAutonomy{br.pucrio.CheckMinimumAutonomy}
+		
+	}
+	
+	monitoring{
+		msg1{radar, controller, $flightProgressStrip}
+		msg2{airplane, controller, $flightProgressStrip}
+		msg3{airplane, controller, landing}
+		
+		s1{initial}
+		s3{success}
+		
+		t1{s1->s2, msg1}
+		t2{s1->s2, msg2}
+		t3{s2->s2, msg1}
+		t4{s2->s2, msg2}
+		t5{s2->s3, msg3}
+	}
+	
+	controllerOrders{
+		msg1{controller, airplane, $changeFlightPlan}
+		msg2{controller, airplane, end}
+		
+		s1{initial}
+		s3{success}
+		
+		t1{s1->s2, msg1}
+		t2{s2->s2, msg1}
+		t3{s2->s3, end}
+	}
+	
+	handover{
+		msg1{controller, airplane, $switchController}		
+		
+		s1{initial}
+		s2{success}
+		
+		t1{s1->s2, msg1}		
+	}
+	
+	landing{
+		msg1{airplane, controller, $askPermission}
+		msg2{controller, airplane, ok}
+		
+		s1{initial}
+		s3{success}
+		
+		t1{s1->s2, msg1}		
+		t2{s2->s3, ok, [checkMinimumDistance]}		
+		
+		// landing scene's constraints
+		checkMinimumDistance{br.pucrio.CheckMinimumDistance}
+	}
+	
+	// Global action
+	informControllerAndAirplane{(takeOff.checkMinimumAutonomy), br.pucrio.InformControllerAndAirplane}
+	detectFlightPlanChanges{(monitoring.t1, monitoring.t2, monitoring.t3, monitoring.t4, controllerOrders.t1, controllerOrders.t2)}
+
+}

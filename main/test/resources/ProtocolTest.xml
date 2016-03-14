@@ -1,0 +1,80 @@
+<Laws>
+
+	<!--  Protocols definition -->	
+
+	<LawOrganization id="auction" name="World Auction">
+		<Role id="buyer" />
+		<Role id="seller" />			
+		<Role id="observer" />
+		<Scene id="game" time-to-live="infinity">	
+			<Messages>
+			
+				<Message id="m1" performative="request">
+					<Content>
+						<Entry key="person" value="void" />							
+					</Content>
+					<Sender role-ref="buyer" />
+					<Receivers>
+						<Receiver role-ref="seller" multiplicity="1" />
+					</Receivers>
+				</Message>
+			
+				<Message id="m1" performative="request">
+					<Content>
+						<Entry key="person" value="void" />							
+					</Content>
+					<Sender role-ref="buyer" />
+					<Receivers>
+						<Receiver role-ref="seller" multiplicity="1" />
+					</Receivers>
+				</Message>
+				
+				<Message id="m2" performative="inform">
+					<Content>
+						<Entry key="name" value="Maíra"/>
+						<Entry key="age" value="23" />
+					</Content>
+					<Sender role-ref="seller" role-instance="aSeller" />
+					<Receivers>
+						<Receiver role-ref="buyer" role-instance="aBuyer" multiplicity="1" />
+						<Receiver role-ref="observer" multiplicity="1" />
+					</Receivers>
+				</Message>				
+			</Messages>		
+			
+			<Protocol id="contract-net">			
+				<States>
+					<State id="s0" type="initial" label="Initial State" />
+					<State id="s1" type="execution" label="Ping sent" />
+					<State id="s2" type="success" label="Pong sent" />
+				</States>
+				<Transitions>
+					<Transition id="t1" from="s0" to="s1" ref="m1" event-type="message_arrival" />
+					<Transition id="t2" from="s1" to="s2" ref="m2" event-type="message_arrival" />
+				</Transitions>
+			</Protocol>	
+			
+			<Clocks>
+				<Clock id="clock_1" type="periodic" tick-period="2000">
+					<Activations>
+						<Element ref="t1" event-type="transition_activation" />
+						<Element ref="clock_2" event-type="clock_activation" />
+					</Activations>
+					<Deactivations>
+						<Element ref="m2" event-type="message_arrival" />
+					</Deactivations>
+				</Clock>
+			</Clocks>
+			<Norms>
+                 <Norm id="seller-permission-to-cancel" type="permission">
+                      <Owner>$seller</Owner>
+                      <Activations>
+                           <Element ref="time-to-decide" event-type="clock_tick"/>
+                       </Activations>
+                  </Norm>
+           </Norms>
+		</Scene>
+		
+		
+	</LawOrganization>
+</Laws>

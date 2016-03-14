@@ -1,0 +1,87 @@
+package jsim.jmessage;
+
+import java.io.Serializable;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+
+public class Store extends Message {
+
+    private static final long	serialVersionUID = -6292887518843050290L;
+    public Integer		scenarioID;
+    public AgentData		agentData;
+    public ModelProperties	modelProperties;
+    public FinalReport		outputStats;
+
+    public Store (String		actionType,
+		  Integer		scenarioID,
+		  AgentData		agentData,
+		  ModelProperties	modelProperties,
+		  FinalReport		outputStats)
+    {
+	this.actionType = actionType;
+	this.scenarioID = scenarioID;
+	this.agentData = agentData;
+	this.modelProperties = modelProperties;
+	this.outputStats = outputStats;
+
+    } // Store constructor
+
+    public Integer		getScenarioID () { return scenarioID; }
+    public AgentData		getAgentData () { return agentData; }
+    public ModelProperties	getModelProperties () { return modelProperties; }
+    public FinalReport		getFinalReport () { return outputStats; }
+
+    public String toString ()
+    {
+	String xmlStr = "";
+
+	xmlStr += "\n      <ScenarioID>" + scenarioID + "</ScenarioID>";
+	xmlStr += "\n      <AgentProperties>" + agentData.toString ();
+	xmlStr += "\n      </AgentProperties>";
+	xmlStr += "\n      <ModelProperties>" + modelProperties.toString ();
+	xmlStr += "\n      </ModelProperties>";
+	xmlStr += "\n      <OutputStatistics>" + outputStats.toString ();
+	xmlStr += "\n      </OutputStatistics>";
+
+	return xmlStr;
+	
+    }; // toString
+
+    // Java serialization requirements
+
+    public void writeObject (ObjectOutputStream out)
+		throws IOException {
+
+	out.writeObject (actionType);
+        out.writeObject (scenarioID);
+	out.writeObject (agentData);
+	out.writeObject (modelProperties);
+	out.writeObject (outputStats);
+
+    } // writeObject
+
+    public void readObject (ObjectInputStream in)
+		throws IOException, ClassNotFoundException {
+
+	actionType = (String) in.readObject ();
+	scenarioID = (Integer) in.readObject ();
+	agentData = (AgentData) in.readObject ();
+	modelProperties = (ModelProperties) in.readObject ();
+	outputStats = (FinalReport) in.readObject ();
+
+    } // readObject
+
+    // Koala XML serialization requirements
+    public static void readObject (fr.dyade.koala.serialization.GeneratorInputStream in)
+		throws IOException, ClassNotFoundException {
+
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+
+    } // readObject
+
+} // class Store

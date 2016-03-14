@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE team SYSTEM "../../dtd/team.dtd">
+<team>
+    <team.name>Default time</team.name>
+    <team.description>Default time - Use just default bots - GNU Mages</team.description>
+    <bot pb="14.0" bot.id="0">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>http://www.inf.unisinos.br/~jrbitt</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Default #1</bot.name>
+            <bot.description>Default</bot.description>
+            <date>
+                <month>10</month>
+                <day>29</day>
+                <year>2001</year>
+            </date>
+            <controller>mages.controller.ctf.client.TestController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="1" name="STR" pts="1"/>
+            <feature level="1" name="DEX" pts="1"/>
+            <feature level="1" name="BODY" pts="1"/>
+            <feature level="1" name="MOV" pts="1"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="1" name="FA" pts="2"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="10" pts="0"/>
+        <fat add="0" level="10.0" pts="0"/>
+        <rec level="0.01"/>
+        <armor pts="5.0">
+            <level.armor>10</level.armor>
+        </armor>
+        <weapons>
+            <weapon pts="2" class="RANGE" type="SIMPLE_SHOT" skill="FA">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+    <bot pb="14.0" bot.id="1">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>http://www.inf.unisinos.br/~jrbitt</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Default #2</bot.name>
+            <bot.description>Default</bot.description>
+            <date>
+                <month>10</month>
+                <day>29</day>
+                <year>2001</year>
+            </date>
+            <controller>mages.controller.ctf.client.TestController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="1" name="STR" pts="1"/>
+            <feature level="1" name="DEX" pts="1"/>
+            <feature level="1" name="BODY" pts="1"/>
+            <feature level="1" name="MOV" pts="1"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="1" name="FA" pts="2"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="10" pts="0"/>
+        <fat add="0" level="10.0" pts="0"/>
+        <rec level="0.01"/>
+        <armor pts="5.0">
+            <level.armor>10</level.armor>
+        </armor>
+        <weapons>
+            <weapon pts="2" class="RANGE" type="SIMPLE_SHOT" skill="FA">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+    <bot pb="14.0" bot.id="2">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>http://www.inf.unisinos.br/~jrbitt</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Default #3</bot.name>
+            <bot.description>Default</bot.description>
+            <date>
+                <month>10</month>
+                <day>29</day>
+                <year>2001</year>
+            </date>
+            <controller>mages.controller.ctf.client.TestController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="1" name="STR" pts="1"/>
+            <feature level="1" name="DEX" pts="1"/>
+            <feature level="1" name="BODY" pts="1"/>
+            <feature level="1" name="MOV" pts="1"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="1" name="FA" pts="2"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="10" pts="0"/>
+        <fat add="0" level="10.0" pts="0"/>
+        <rec level="0.01"/>
+        <armor pts="5.0">
+            <level.armor>10</level.armor>
+        </armor>
+        <weapons>
+            <weapon pts="2" class="RANGE" type="SIMPLE_SHOT" skill="FA">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+    <bot pb="14.0" bot.id="3">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>http://www.inf.unisinos.br/~jrbitt</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Default #4</bot.name>
+            <bot.description>Default</bot.description>
+            <date>
+                <month>10</month>
+                <day>29</day>
+                <year>2001</year>
+            </date>
+            <controller>mages.controller.ctf.client.TestController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="1" name="STR" pts="1"/>
+            <feature level="1" name="DEX" pts="1"/>
+            <feature level="1" name="BODY" pts="1"/>
+            <feature level="1" name="MOV" pts="1"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="1" name="FA" pts="2"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="10" pts="0"/>
+        <fat add="0" level="10.0" pts="0"/>
+        <rec level="0.01"/>
+        <armor pts="5.0">
+            <level.armor>10</level.armor>
+        </armor>
+        <weapons>
+            <weapon pts="2" class="RANGE" type="SIMPLE_SHOT" skill="FA">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+</team>
+                                

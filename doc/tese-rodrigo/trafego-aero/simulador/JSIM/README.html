@@ -1,0 +1,182 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+                            
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+                            
+  <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+  <title>JSIM README File</title>
+</head>
+  <body background="blue_paper.gif">
+              
+<center>       
+<h1> <font color="#3333ff">README File for JSIM</font></h1>
+      </center>
+              
+<center>       
+<hr width="100%"></center>
+         <br>
+     <b><font color="#3333ff"><big><big>The JSIM License</big></big></font></b><br>
+         
+<ul>
+       <li>The <a href="License.html">JSIM license</a> is a BSD-style license.<br>
+       </li>
+         
+</ul>
+         
+<hr width="100%" size="2">     
+<h2><font color="#3333ff">Download the tar file (JSIM.tar)</font></h2>
+              
+<ul>
+       <li> &nbsp;4612931 Jan&nbsp; 28 04:50 JSIM.tar</li>
+             
+</ul>
+              
+<h2>        
+<hr width="100%"></h2>
+              
+<h2> <font color="#3333ff">Installing JSIM</font></h2>
+              
+<ul>
+       <li> tar zxvfp JSIM.tar</li>
+             
+</ul>
+              
+<h2>        
+<hr width="100%"></h2>
+              
+<h2> <font color="#3333ff">Updating your Environment (UNIX)</font></h2>
+      <br>
+      (e.g., in .login or .cshrc files -- adjust as needed)       
+<ul>
+       <li> setenv JAVA_HOME $HOME/java/jdk1.6.0</li>
+       <li> setenv JSIM_HOME $HOME/JSIM</li>
+       <li> setenv CLASSPATH $JSIM_HOME/.:$CLASSPATH</li>
+             
+</ul>
+              
+<h2> </h2>
+         
+<h2> <font color="#3333ff">Updating your Environment (LINUX)</font></h2>
+      <small><small><small><big><big><big>(e.g., in .bashrc files -- adjust
+ as needed)</big></big></big></small></small></small><b><small><small> </small></small></b>
+       
+<ul>
+        <li> export JAVA_HOME $HOME/java/jdk1.6.0</li>
+        <li> export JSIM_HOME $HOME/JSIM</li>
+        <li> export CLASSPATH $JSIM_HOME/.:$CLASSPATH</li>
+           
+</ul>
+              
+<hr width="100%">         
+<h2> <font color="#3333ff">Adding JSIM to your path</font></h2>
+       (directories to search for executable files, e.g., see .cshrc or .bashrc) 
+        
+<ul>
+       <li> $JSIM_HOME/bin</li>
+             
+</ul>
+              
+<h2>        
+<hr width="100%"></h2>
+              
+<h2> <font color="#3333ff">Building JSIM</font></h2>
+              
+<p> &nbsp;&nbsp;&nbsp; The JSIM build uses <a
+ href="http://ant.apache.org/">Apache ANT 1.6.2</a>. The instructions    below
+assume that ANT is installed.</p>
+              
+<ul>
+       <li> cd JSIM</li>
+        <li> ant -buildfile JSIMBuild.xml compile</li>
+             
+</ul>
+       Let's now assume you are starting from your JSIM home directory. 
+     
+<p> </p>
+           
+<hr width="100%">       
+<h2> <font color="#3333ff">Running the Model Designer</font></h2>
+              
+<p> &nbsp;&nbsp; The steps below will open and generate the Bank example in
+the  using the JSIM designer.</p>
+              
+<ul>
+       <li> cd examples/bank</li>
+                    <li> ant -find Designer.xml<br>
+  </li>
+        <li> -- select the "Open" option on the file menu<br>
+    </li>
+        <li> -- enter Bank.jm as the file name in the open dialog box</li>
+    <li>-- click the "Apply" button on the open dialog box<br>
+   </li>
+        <li> -- click "Generate" button and then on the canvas</li>
+             
+</ul>
+              
+<p>&nbsp;&nbsp;&nbsp; More information on using the JSIM designer can be found
+ in the <a href="documentation/Manual.htm">Manual.htm</a> file.</p>
+              
+<hr width="100%">         
+<h2> <font color="#3333ff">Running Example Model Applications</font></h2>
+              
+<p> &nbsp;&nbsp;&nbsp; The steps below will compile and execute the Bank 
+example.</p>
+              
+<ul>
+       <li> cd examples/bank</li>
+        <li> ant -find ModelBuild.xml<br>
+  </li>
+        <li> java Bank</li>
+             
+</ul>
+              
+<p>&nbsp;&nbsp;&nbsp; More information on executing JSIM models can be found 
+  in  the <a href="documentation/Manual.htm">Manual.htm</a> file.</p>
+           
+<hr width="100%">      <br>
+   <b><font color="#3333ff"><big><big>Creating the JSIM API Documantation</big></big></font></b> 
+  
+<ul>
+           
+  <ul>
+      <li>cd JSIM<br>
+      </li>
+       
+  </ul>
+           
+  <ul>
+       <li>ant -buildfile JSIMBuild.xml doc</li>
+           
+  </ul>
+     
+</ul>
+  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; The api documentation will be placed
+ in the JSIM/doc directory.<br>
+     
+<hr width="100%" size="2">   
+<h2><br>
+    </h2>
+     
+<h2><font color="#3333ff">Known Bugs</font></h2>
+              
+<ul>
+       <li> Edges cannot be deleted in the graphical designer.</li>
+        <li> Signal nodes do not work correctly when used with facility nodes. 
+    </li>
+        <li> The designer does not generate models correctly when signal
+nodes    are used. </li>
+       <li> In some cases the designer encounters a serialization error when
+  attempting  to load saved models.  </li>
+             
+</ul>
+        <br>
+      <br>
+     <br>
+    <br>
+   <br>
+  <br>
+ <br>
+</body>
+</html>

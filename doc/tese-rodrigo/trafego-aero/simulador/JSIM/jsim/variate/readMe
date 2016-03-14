@@ -1,0 +1,59 @@
+
+Overview of variates package
+----------------------------
+
+The algorithms used for the following random variate
+generators may be found in one of the following books.
+
+ Averill M. Law and W. David Kelton,
+ Simulation Modeling and Analysis,
+ McGraw-Hill, Inc., NY, 1982.
+
+ A. Alan B. Pritsker, 
+ Introduction to Simulation and SLAM II, 3rd Ed.,
+ John Wiley & Sons, NY, 1986.
+
+
+Random Number Generators
+------------------------
+
+  Jan 20 19:51 LCGRandom.java
+
+Base Class
+----------
+
+  Jan 20 17:28 Variate.java
+
+Discrete Distributions (8)
+----------------------
+
+  Jan 20 17:47 Bernoulli.java
+  Jan 15 20:29 Binomial.java
+  Jan 16 20:02 DiscreteProb.java
+  Jan 16 20:17 Geometric.java
+  Jan 16 20:59 HyperGeometric.java
+  Jan 20 16:33 NegativeBinomial.java
+  Jan 20 17:48 Poisson.java
+  Jan 20 17:46 Randi.java
+
+ note:  these distributions return integers casted to double
+
+Continuous Distributions (14)
+------------------------
+
+  Jan 16 16:10 Beta.java
+  Jan 20 16:04 Cauchy.java
+  Jan 16 20:00 ChiSquare.java
+  Jan 15 21:18 Erlang.java
+  Jan 15 21:22 Exponential.java
+  Jan 15 21:33 F_Distribution.java
+  Jan 16 16:02 Gamma.java
+  Jan 16 20:40 HyperExponential.java
+  Jan 16 20:58 LogNormal.java
+  Jan 15 20:20 Normal.java
+  Jan 20 17:59 StudentT.java
+  Jan 20 18:23 Triangular.java
+  Jan 20 18:31 Uniform.java
+  Jan 20 18:32 Uniform2.java
+  Jan 20 18:42 Weibull.java
+

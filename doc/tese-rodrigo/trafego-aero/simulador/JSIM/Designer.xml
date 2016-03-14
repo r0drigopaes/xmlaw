@@ -1,0 +1,13 @@
+<project name="ModelBuild" default="designer" basedir=".">
+		<description>
+			Build file for JSIM designer
+		</description>
+	<!-- global properties -->
+	
+<target name="designer">
+	<java classname = "jsim.jmodel.NetFrame"
+         	fork= "true">
+		<arg value="${user.dir}" />
+	</java>
+</target>
+</project>

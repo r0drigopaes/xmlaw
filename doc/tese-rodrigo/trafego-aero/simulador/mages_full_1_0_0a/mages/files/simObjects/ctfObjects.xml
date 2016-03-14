@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE simobjcol SYSTEM "../../dtd/simobjcol.dtd">
+
+<simobjcol name="Objects" col.id="CAPTURE_THE_FLAG">
+  <simobj name="Flag Blue">
+    <icon path="ctf/flagBlue.gif" width="32" height="32"/>
+  </simobj>
+
+  <simobj name="Flag Red">
+    <icon path="ctf/flagRed.gif" width="32" height="32"/>
+  </simobj>
+
+  <simobj name="Base Blue">
+    <icon path="ctf/baseBlue.gif" width="32" height="32"/>
+  </simobj>
+
+  <simobj name="Base Red">
+    <icon path="ctf/baseRed.gif" width="32" height="32"/>
+  </simobj>
+</simobjcol>
+
+

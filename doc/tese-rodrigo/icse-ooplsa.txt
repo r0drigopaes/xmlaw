@@ -1,0 +1,80 @@
+10:25
+12:46
+
+
+
+Brainstorm
+
+Requisitos
+Projeto
+Implementação
+Teste
+Validação
+Criticalidade
+Patterns
+Padrões
+Service-Oriented
+Exceções
+Separation of Concerns
+Domain-Driven Design
+Generative Approach
+Processos
+Assertivas
+Engenharia reversa
+Medição
+Segurança
+Educação
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is the nature of the gap between the systems we want and the systems we program? 
+How can we cope with the uncertainty of the real world in the systems we build? 
+How can we find/maintain the overlapping conceptual models underneath programs? 
+How can we weave, unweave, and reweave the conceptual threads that compose programs? 
+
+What is Programming anyway? 
+
+The activity of manipulating a formal language? 
+A constraint-solving refinement process that produces complete/executable specifications from perpetual fuzzyness? 
+What can we learn about Programming in other fields? 
+What are the scientific underpinnings of this human activity? 
+What models should drive the design of formal languages and programming tools? 
+What sociological models explain the dynamics of teams of software developers? 
+What models explain change and adaptation? 
+
+What about programs in the biological world? 
+
+What can we learn from DNA programs? 
+How does biology cope with change and evolution? 
+Is that a good model for the purposeful systems we build? 
+
+And what is modularity for, really? 
+
+Why do we always end up dividing our systems into subsystems? 
+Why does Nature also do it? (Or does it? Is modularity in our minds only?) 
+How can we find out whether our decompositions are good? 
+How black should black boxes be? 
+
+
+OOPSLA:
+
+significance: Motivate why the research is important or useful. Explain what problem it addresses. 
+novelty: Extend the frontier of knowledge. Explicitly relate your research to previous work. 
+correctness: Critically evaluate and support your claims with proofs, an implementation, examples, or experiments. 
+clarity: Organize the paper well and write clearly. Make sure you support your claims
+
+
+ICSE
+The research abstract should be a maximum four (4) pages long, formatted in accordance with the ICSE 2006 Format and Submission Guidelines. It should cover: the technical problem to be solved with a justification of its importance; an account of related and prior work explaining why this has not solved the problem; the research hypothesis or claim; a sketch of the proposed solution; the expected contributions of your dissertation research; progress in solving the stated problem; the methods you are using or will use to carry out your research; a plan for evaluating your work and presenting credible evidence of your results to the research community.
+
+

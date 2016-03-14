@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE bot SYSTEM '../../dtd/domain.dtd'>
+<domain>
+  <domain.name>Capture The Flag</domain.name>
+  <domain.setup>mages.controller.ctf.CtFSetup</domain.setup>
+</domain>

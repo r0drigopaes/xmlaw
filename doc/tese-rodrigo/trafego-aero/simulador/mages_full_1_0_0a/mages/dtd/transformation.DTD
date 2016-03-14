@@ -1,0 +1,52 @@
+
+<!-- ************************************************* -->
+<!-- Multi Agents Environment Simulator - GNU MAGES    -->
+<!-- Transformation XML DTD v.1.0a		                       -->
+<!-- ************************************************* -->
+
+<!-- 
+
+   Copyright (c)  2002  Joao Ricardo Bittencourt.
+   Permission is granted to copy, distribute and/or modify this document
+   under the terms of the GNU Free Documentation License, Version 1.1
+   or any later version published by the Free Software Foundation;
+   without Invariant Sections, without Front-Cover Texts, and without 
+   the Back-Cover Texts. A copy of the license is included 
+   in the section entitled "GNU Free Documentation License".
+-->
+
+  
+<!-- ELEMENTS -->
+
+<!ELEMENT transf (method,simple*,norm*,cls*)>	
+<!ELEMENT method (default*,random*,clusters*)>
+<!ELEMENT default EMPTY>
+<!ELEMENT random EMPTY>
+<!ATTLIST random
+	num.samples	CDATA	#REQUIRED
+>
+<!ELEMENT clusters EMPTY>
+<!ATTLIST clusters
+	num.samples	CDATA	#REQUIRED
+	id.col	CDATA	#REQUIRED	
+>
+
+<!ELEMENT simple (col+)>
+<!ELEMENT col EMPTY>
+<!ATTLIST col
+	id.col	CDATA	#REQUIRED
+>
+<!ELEMENT norm (col+)>
+<!ATTLIST norm
+	min		CDATA	#REQUIRED
+	max		CDATA	#REQUIRED
+	ignore  CDATA   #IMPLIED
+>
+<!ELEMENT cls (col+, ptn+)>
+<!ELEMENT ptn EMPTY>
+<!ATTLIST ptn
+	value		CDATA	#REQUIRED
+	newvalue	CDATA	#REQUIRED
+>
+
+<!-- End Transformation XML DTD v.1.0a -->

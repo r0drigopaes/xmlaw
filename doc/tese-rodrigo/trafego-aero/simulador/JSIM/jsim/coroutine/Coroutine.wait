@@ -1,0 +1,796 @@
+
+/*********************************************************
+ * @@file  Coroutine.java
+ * @@date  Mon Sep 25 16:24:36 EDT 2000
+ */
+
+package jsim.coroutine;
+
+import java.util.*;
+import java.util.logging.Logger;
+
+//import jsim.queue.*;
+import jsim.util.*;
+//import jsim.process.*;
+
+/*********************************************************
+ * This Coroutine class provides a more restricted form of
+ * interleaved execution than threads.  In particular, only
+ * one coroutine can be in the running state at any one
+ * time.  This reduces concurrency, but also simplifies
+ * synchronization problems.  For certain domains such as
+ * simulation, this restricted concurrency is all that is
+ * needed.  This coroutine package schedules couroutines
+ * to run in time order.
+ * @version  1.0
+ * @author   John Miller
+ */
+public class Coroutine implements Runnable
+{
+    ////////////////////// Constants \\\\\\\\\\\\\\\\\\\\\
+    /**
+     * Normal priority level.
+     */
+    public static final int NORM_PRIORITY = Thread.NORM_PRIORITY;
+
+    /**
+     * State: Coroutine is newly created.
+     */
+    private static final int CREATED = 0;
+
+    /**
+     * State: Coroutine is running.
+     */
+    private static final int RUNNING = 1;
+
+    /**
+     * State: Coroutine paused for a definite period of time.
+     */
+    private static final int PAUSED = 2;
+
+    /**
+     * State: Coroutine is indefinitly waiting in a queue.
+     */
+    private static final int WAITING = 3;
+
+    /**
+     * State: Coroutine has terminated.
+     */
+    private static final int ENDED = 4;
+
+    /**
+     * Basic unit of delay (100 milliseconds).
+     */
+    private static final double UNIT = 100.0;
+
+    ////////////////// Shared Variables \\\\\\\\\\\\\\\\\\
+    /**
+     * The present time (now).
+     */
+    private static double now = 0;
+
+    /**
+     * Counter for coroutine id's.
+     */
+    private static int idCounter = 0;
+
+    /**
+     * Time ordered list of future coroutine activations.
+     */
+//  private static final TreeSet activationList = new TreeSet (new Comp ());
+//  private static final TemporalQueue activationList = new TemporalQueue ();
+    private static final PriorityQueue<Coroutine> activationList = new PriorityQueue<Coroutine> (101, new Comp());
+	private static final PriorityQueue<Coroutine> debugList = new PriorityQueue<Coroutine> (101, new Comp());
+    /**
+     * Time ordered list of future coroutine activations.
+     */
+	protected static Logger trc = Logger.getLogger(Coroutine.class.getName());
+    // private static final Trace trc = new Trace ("Coroutine");
+
+    /**
+     * Slowness factor (speed control for animation)
+     */
+    //private static double slowness = 0;
+
+    /**
+     * Terminal state of simulation
+     */
+    private static boolean terminal = false;
+
+
+    ///////////////// Immutable Variables \\\\\\\\\\\\\\\\
+    /**
+     * Coroutine activity is via a thread.
+     */
+    /*private final*/ public Thread life;
+
+    /**
+     * Name of coroutine.
+     */
+    public final String name;
+
+    /**
+     * Unique identifier (id) for coroutine.
+     */
+    private final int id;
+
+    ////////////////// Regular Variables \\\\\\\\\\\\\\\\\
+
+    /**
+     * Current state of coroutine (see constants above).
+     */
+    private int state;
+
+    /**
+     * Next activation time for coroutine.
+     */
+    private double actTime;
+
+    /**
+     * List/group of special coroutines.
+     * No adds/removes should be done outside this class.
+     */
+    private LinkedList<Coroutine> group = null;
+
+
+    /**
+     * Busy Wait variable
+     */
+     private boolean ableToRun = false;
+
+    /*****************************************************
+     * Construct a coroutine.
+     * @param  runObj  Runnable object
+     * @param  name    Name of coroutine.
+     */
+    public Coroutine (String name, Runnable runObj)
+    {
+        this.name     = name;
+        //this.slowness = slowness;
+        life          = new Thread (runObj, name);
+        state         = CREATED;
+        id            = idCounter++;
+        actTime       = now;
+        activationList.add (this);
+		//debugList.add ( this );
+		Trace.setLogConfig ( trc );
+		trc.severe ( this.name + " added to activation list at " + this.actTime);
+
+    }; // Coroutine
+
+
+    /*****************************************************
+     * Construct a coroutine.
+     * @param  name      Name of coroutine.
+     */
+    public Coroutine (String name)
+    {
+        this.name     = name;
+       // this.slowness = slowness;
+        life          = new Thread (this, name);
+        state         = CREATED;
+        id            = idCounter++;
+        actTime       = now;
+        activationList.add (this);
+		//debugList.add ( this );
+		Trace.setLogConfig ( trc );
+		trc.severe ( this.name + " added to activationlist at " + this.actTime);
+
+    }; // Coroutine
+
+	/** %%%%%%%%%%%%%%%%%%%%%% *** %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	 * Constructor for testing only.
+	 * @param  name      Name of coroutine.
+	 * @param  startTime Starting time of coroutine.
+	 */
+	public Coroutine (String name, double startTime)
+	{
+		this.name     = name;
+		// this.slowness = slowness;
+		life          = new Thread (this, name);
+		state         = CREATED;
+		id            = idCounter++;
+		actTime       = startTime;
+		activationList.add (this);
+		//debugList.add ( this );
+		Trace.setLogConfig ( trc );
+		trc.severe ( this.name + " added to activationlist at " + this.actTime);
+
+	}; // Coroutine
+
+    /*****************************************************
+     * Sets the state of this coroutine
+     * @param state	the new state
+     */
+     public void setState (int state) 
+     {
+     	this.state = state;
+     	
+      }//setState
+
+    /*****************************************************
+     * Join a special group of coroutines (e.g., those
+     * that actively move in an animation).
+     * Subclasses not using the default (null) must invoke
+     * this method.
+     * @param  group   Outside list for group.
+     */
+    protected void joinGroup (LinkedList<Coroutine> group)
+    {
+        this.group = group;
+		synchronized (group) {
+        	group.add (this);
+			trc.info ( "added " + name + " to group, length = " + group.size ());
+        	//trc.show ("joinGroup", "added " + name + " to group" +
+            //                   " length = " + group.size ());
+	}
+    }; // joinGroup
+
+
+    /*****************************************************
+     * Determine whether all coroutines have terminated.
+     * @return  boolean  Whether no coroutines are left.
+     */
+    public static boolean isTerminal ()
+    {
+        return terminal;
+
+    }; // isTerminal
+
+
+    /*****************************************************
+     * Change the current time.
+     * @param  newTime  New value for time.
+     *  
+    public static void changeTime (double newTime)
+    {
+        now = newTime;
+
+    }; // changeTime
+    */
+
+    /*****************************************************
+     * Adjust execution speed for better animation.
+     * @param  slow  Slowness factor.
+     *
+    public static void changeSpeed (double slow)
+    {
+        slowness = slow;
+
+    }; // changeSpeed 
+    */
+
+    /*****************************************************
+     * Adjust execution speed for better animation.
+     * @param  direction  Slowness factor direction change.
+     *  
+    public static void changeSpeed (int direction)
+    {
+        trc.show ("changeSpeed", "direction = " + direction);
+        if (direction < 0) {
+            slowness += 1;
+        } else {
+            slowness -= 1;
+            if (slowness < 0)  slowness = 0;
+        }; // if
+ 
+    }; // changeSpeed 
+    */
+
+    //////////////// Variables used in run \\\\\\\\\\\\\\
+
+    private static boolean      busy  = false;
+    private static LinkedList<Coroutine>   queue = new LinkedList<Coroutine> ();
+ // private static FIFO_Queue   queue = new FIFO_Queue ();
+    private static final Random ran   = new Random ();
+
+    /*****************************************************
+     * The run method simulates a G/G/1 queue (example only).
+     * It should be overridden in extended classes.
+     */
+    public void run ()
+    {
+		trc.info ( name + " started at time " + now );
+        // trc.show ("run", name + " started at time " + now);
+        if (busy) {
+            waitIn (queue);
+        }; // if
+       
+		trc.info ( name + " served at time " + now );
+        // trc.show ("run", name + " served at time " + now);
+        busy = true;
+        pause (100.0 + 1000.0 * ran.nextDouble ());
+        busy = false;
+
+		trc.info ( name + " completed at time " + now );
+        // trc.show ("run", name + " completed at time " + now);
+        kickOut (queue);
+        end ();
+
+    }; // run
+
+
+    /*****************************************************
+     * Get the current time (i.e., now).
+     * @return  double  The time value of now. 
+     */
+    public static double getTime ()
+    {
+        return now;
+
+    }; // getTime
+
+
+    /*****************************************************
+     * Indefinite wait in a queue.
+     * @param  queue   Waiting queue.
+     */
+    protected void waitIn (LinkedList<Coroutine> queue)
+    {
+        state = WAITING;
+	//synchronized (group) {
+        	//group.remove (this);
+        	//trc.show ("waitIn", "removed " + name + " from group" +
+                           // " length = " + group.size ());
+        	//queue.add (this);
+	//}
+	queue.add (this);
+        contextSwitch (this, "waitIn");
+
+    }; // waitIn
+
+
+    /*****************************************************
+y     * Indefinate wait in a hashmap.
+     * @param   hMap    Waiting hashmap.
+     * @param   key     Key object for hashmap.
+     * @param   cor  Coroutine to wait in hashmap.
+     */
+    public Object waitForJoin ( HashMap<Integer, Coroutine> hmap, Integer key, Coroutine cor ) 
+    {
+       if ( !hmap.containsKey ( key ) ) {
+           state = WAITING;
+           hmap.put ( key, cor );
+           /**
+            * contextSwitch to test join "GS"
+            */
+           contextSwitch(this, "waitForJoin");
+           return cor;
+       }
+       else {
+           return hmap.get ( key );
+       }
+
+     } // waitForJoin
+
+    /*****************************************************
+     * Remove from hashmap and put on activation list.
+     * @param   hmap   Waiting hashmap.
+     * @param   key    Key object for hashmap.
+     */
+     public boolean initiateJoin ( HashMap<Integer, Coroutine> hmap, Integer key )
+     {
+       Coroutine first = (Coroutine) hmap.remove ( key );
+       if ( first == null )
+          return false;
+       else {
+          first.actTime = now;
+          first.state = PAUSED;
+          activationList.add ( first); 
+		 // debugList.add ( first );
+		  trc.severe ( first.name + " added to activationlist at " + first.actTime);
+       }
+       return true;
+
+      } // initiateJoin
+
+    /*****************************************************
+     * Remove from queue and put on activation list.
+     * @param   queue      Waiting queue.
+     * @return  Coroutine  First on queue.
+     */
+    protected Coroutine kickOut (LinkedList<Coroutine> queue)
+    {
+        if ( ! queue.isEmpty ()) {
+//          Coroutine first = (Coroutine) queue.remove (0);
+//          Q_Node    node  = (Q_Node) queue.remove (0);
+            Coroutine first =  queue.poll ();
+            first.actTime = now;
+            first.state = PAUSED;
+	    //synchronized (group) {
+            	//group.add (this);
+            	//trc.show ("kickOut", "added " + first.name + " to group" +
+                                 //" length = " + group.size ());
+	    //}
+	    
+//          activationList.add (first);
+            activationList.add (first);
+			//debugList.add ( first );
+	        trc.severe ( first.name + " added activation list on kickout at " + first.actTime);
+            return first;
+        }; // if
+        return null;
+
+    }; // kickOut
+
+
+    /*****************************************************
+     * Pause execution of coroutine for delay units of time.
+     * @param  delay  Delay time.
+     */
+    public void pause (double delay)
+    {
+        actTime = now + delay;
+        state = PAUSED;
+//      activationList.add (this);
+        activationList.add (this);
+		//debugList.add ( this );
+		trc.severe ( this.name + " added to activation list on pause at " + this.actTime);
+        contextSwitch (this, "pause");
+
+    }; // pause
+
+
+    /*****************************************************
+     * Terminate the coroutine.
+     * The commented out contextSwitch (null, "end") allows garbage 
+     * collection of completed entities but causes unusual glitches.
+     * Any suggestions?
+     */
+    public void end ()
+    {
+        state = ENDED;
+        if (group != null) {
+            int len = group.size ();
+	    synchronized (group) {
+	            group.remove (this);
+				trc.info ( "removed " + name + " from group" +
+					" length = " + group.size ());
+        	    // trc.show ("end", "removed " + name + " from group" +
+                //             " length = " + group.size ());
+	    }
+            if (len != group.size () + 1) {
+				trc.warning ( "unable to remove entity from list: " + this.name +
+								" len = " + len);
+                // trc.tell ("end", "unable to remove entity from list: " + this.name +
+                //                " len = " + len);
+           } // if
+        } // if
+        //contextSwitch (null, "end");
+        contextSwitch (this, "end");
+ 
+    }; // end
+
+
+    /*****************************************************
+     * Pause execution of coroutine for delay units of time.
+     */
+    public void preempt ()
+    {
+        // TBD
+
+    }; // preempt
+
+
+    /*****************************************************
+     * Transfer from main to first coroutine.
+     */
+    public static void start ()
+    {
+        contextSwitch (null, "initiate");
+
+    }; // start
+
+
+    /*****************************************************
+     * Make the coroutine sleep in real time.
+     * @param  delay  Sleep time.
+     *
+    public void sleep (double delay)
+    {
+        try {
+            life.sleep ((int) (slowness * UNIT));
+        } catch (InterruptedException ex) {
+            trc.show ("sleep", "sleep interrupted " + ex);
+        }; // try
+
+    }; // sleep
+     */
+
+
+    /*****************************************************
+     * Perform a context switch between to coroutines.
+     * Transfer control from curr to the first on activation
+     * list.
+     * @param  curr    Currently executing coroutine.
+     * @param  reason  Reason for context switch.
+     */
+    private static void contextSwitch (Coroutine curr, String reason)
+    {
+        /*****************************************************
+         * Slow down coroutine execution (e.g., for better animation).
+         *
+        if (slowness > 0.0) {
+            try {
+                curr.life.sleep ((int) (slowness * UNIT));
+            } catch (InterruptedException ex) {
+                trc.show ("contextSwitch", "sleep interrupted " + ex);
+            }; // try
+        } // if
+	*/
+
+        /*****************************************************
+         * Get coroutine to switch to (next).
+         */
+        Coroutine next = null;
+        if (! activationList.isEmpty ()) {
+            next = activationList.poll ();
+            now = next.actTime;                // advance time
+			trc.severe ( next.name + " removed from activation list at " + next.actTime );
+        } else {
+			trc.info ( "activation list is empty " + next );
+            // trc.show ("contextSwitch", "activation list is empty " + next);
+            terminal = true;
+
+            return;
+            //System.exit (0);
+        }; // if
+        
+
+        /*****************************************************
+         * Regular context switch: coroutine 'curr' to coroutine 'next'
+         */
+        if (curr != null) {
+
+			trc.info ( reason + " : from " + curr.name
+						+ " to " + next.name
+						+ " at " + now);
+            // trc.show ("contextSwitch", reason + " : from " + curr.name
+            //                                    + " to " + next.name
+            //                                    + " at " + now);
+
+            if (next.state == CREATED) {
+
+                next.state = RUNNING;
+                //trc.show ("contextSwitch", "start " + next.name
+                //                         + " wait " + curr.name);
+                next.life.start ();
+/***************
+                curr.life.suspend ();
+***************/
+                synchronized (curr) {
+					boolean lockReleased = false;
+					while ( !lockReleased ) 
+					{
+						try 
+						{
+							curr.wait ();
+							lockReleased = true;
+							trc.info ( "wait successful." );
+						} 
+						catch (InterruptedException ex) 
+						{
+							trc.info ( "wait interrupted " + ex );
+							// trc.show ("contextSwitch", "wait interrupted " + ex);
+						} 
+						catch (IllegalMonitorStateException ex) 
+						{
+							trc.warning ( "wait failed " + ex );
+							lockReleased = true;
+							// trc.tell ("contextSwitch", "wait failed " + ex);
+						}; // try
+					} // while
+
+                }; // synchronized
+
+            } else if (next.state == PAUSED) {
+
+                next.state = RUNNING;
+
+                if (next != curr) {
+/*******************
+                    next.life.resume ();
+                    curr.life.suspend ();
+*******************/
+	            //trc.show ("contextSwitch", "notify " + next.name
+                    //                          + " wait " + curr.name);
+
+                    synchronized (curr) {
+                        synchronized (next) {
+                            try {
+                                next.notify ();
+								next.life.interrupt ();
+                            } catch (IllegalMonitorStateException ex) {
+								trc.warning ( "notify failed " + ex );
+                                // trc.tell ("contextSwitch", "notify failed " + ex);
+                            }; // try
+                        }; // synchronized
+
+						boolean lockReleased = false;
+						while ( !lockReleased ) 
+						{
+							try 
+							{
+								curr.wait ();
+								lockReleased = true;
+								trc.info ( "wait successful." );
+							} 
+							catch (InterruptedException ex) 
+							{
+								trc.info ( "wait interrupted " + ex );
+								// trc.show ("contextSwitch", "wait interrupted " + ex);
+							} 
+							catch (IllegalMonitorStateException ex) 
+							{
+								lockReleased = true;
+								trc.warning ( "wait failed " + ex );
+								// trc.tell ("contextSwitch", "wait failed " + ex);
+							}; // try
+						} // while
+                    }; // synchronized
+
+                } else {
+
+                    //trc.show ("contextSwitch", "same coroutine - don't switch");
+
+                }; // if
+
+            } else if (next.state == ENDED) {
+            
+            	next.end();
+            
+            } else {
+
+				trc.warning ( "illegal state: " + next.state);
+                // trc.tell ("contextSwitch", "illegal state");
+
+            }; // if
+
+        /*****************************************************
+         * Special context switch: coroutine 'null' to coroutine 'next'
+         */
+        } else {
+            
+			trc.info ( reason + " : from null"
+						+ " to " + next.name
+						+ " in state " 
+						+ next.state
+						+ " at " + now);
+            // trc.show ("contextSwitch", reason + " : from null"
+            //                                  + " to " + next.name
+            //                                  + " in state " 
+            //                                  + next.state
+            //                                  + " at " + now);                                            
+            if (next.state == CREATED) {
+
+                next.state = RUNNING;
+                //trc.show ("contextSwitch", "start " + next.name
+                //                         + " wait " + null);
+                next.life.start ();
+
+            } else if (next.state == PAUSED) {
+
+                next.state = RUNNING;
+                //trc.show ("contextSwitch", "notify " + next.name
+                //                              + " wait null");
+/***************
+                next.life.resume ();
+****************/
+                synchronized (next) {
+                    try {
+                        next.notify ();
+                    } catch (IllegalMonitorStateException ex) {
+						trc.warning ( "notify failed " + ex );
+                        // trc.tell ("contextSwitch", "notify failed " + ex);
+                    }; // try
+                }; // synchronized
+
+            }; // if
+           
+
+        }; // if
+
+    }; // contextSwitch 
+
+    /*****************************************************
+     * Nested class for comparing objects on activation list.
+     * Used for TreeSet
+     */
+    private static class Comp implements Comparator<Coroutine>
+    {
+         public int compare (Coroutine c1, Coroutine c2)
+         {
+			 //trc.info ( " Compare >> " + c1.actTime + " - " + c2.actTime + " = " + ((int) (c1.actTime - c2.actTime)) );
+             return (int) ( c1.actTime - c2.actTime ); 
+
+         }; // compare
+
+         public boolean equals (Coroutine c1, Coroutine c2)
+         {
+			 trc.info ( " Equals >> " + c1.actTime + "-" + c2.actTime + "= " + ((int) (c1.actTime - c2.actTime)) );
+             return c1.actTime - c2.actTime == 0; 
+
+         }; // equals
+
+    }; // Comp
+    
+
+     
+    /*****************************************************
+     * Implements suspend()
+     */
+     private void suspend() {
+     	
+     	try {
+     		this.life.wait();
+     	      
+     	} catch (InterruptedException ex) {
+			   trc.info ( "wait interrupted " + ex );
+         	// trc.show ("contextSwitch", "wait interrupted " + ex);
+        } catch (IllegalMonitorStateException ex) {
+			   trc.warning ( "wait failed " + ex );	
+               // trc.tell ("contextSwitch", "wait failed " + ex);
+        }; // try
+     };//suspend
+      
+     
+    /*****************************************************
+     * Implements resume()
+     */
+      private synchronized void resume() {
+    
+      	try {
+      		this.life.notify();
+      	} catch (IllegalMonitorStateException ex) {
+				trc.warning ( "notify failed " + ex );
+                // trc.tell ("contextSwitch", "notify failed " + ex);
+        }; // try
+        
+      }; //resume()
+
+	/* ****************************** Debug Method *********************/
+	public static void DebugPQ () 
+	{
+		/* //////////// for loop for testing \\\\\\\\\\\\\\\\ */
+		while ( !debugList.isEmpty () ) 
+		{
+			Coroutine db = debugList.poll ();
+			trc.severe ( db.name + " " + db.actTime );
+		}
+	}
+
+	public void setActTime ( double coTime) 
+	{
+		actTime = coTime;
+	}
+
+    /*****************************************************
+     * Main method for testing purposes only.
+     * @param  args  Command-line arguments.
+     */
+    public static void main (String [] args)
+    {
+        final int MAX = 20;
+
+		trc.info ( "create " + MAX + " coroutines" );
+        // trc.show ("main", "create " + MAX + " coroutines");
+        for (int i = 0; i < MAX; i++) {
+			Coroutine co;
+			double startTime = (Math.random () * 1000);
+            co = new Coroutine ("c" + i, startTime);
+			//co.setActTime (Math.random () * 1000);
+			//debugList.add ( co );
+        }; // for
+
+		// Coroutine.DebugPQ ();
+         trc.info ( "start the first coroutine");
+		// trc.show ("main", "start the first coroutine");
+        start ();
+		trc.info ( "method is finished" );
+        // trc.show ("main", "method is finished");
+
+    }; // main
+
+
+}; // class
+

@@ -1,0 +1,64 @@
+<import file="contract-net.xml" as="file1" />
+<import file="contract-net2.xml" as="file2" />
+
+<Laws>
+
+	<LawOrganization id="auction" name="World Auction">
+		<!-- Role definition -->		
+		<Role id="buyer" />
+		<Role id="seller" />			
+		<Role id="observer" />
+
+		<Scene id="game" time-to-live="infinity">			
+			<!-- Protocol Include -->
+			<include-protocol id="file1:contract-net"/>
+			<include-protocol id="file1:fipa-request"/
+			
+			<!-- Clocks Definition -->
+			<Clock id="clock_1" type="periodic" tick-period="2000">
+				<Activations>
+					<!-- 
+					Como a gente faz as referencias aos ids?
+					Como saber onde t1 está?
+						Resp.:
+							Se não houver ambiguidade, usa-se normalmente. Caso haja ambiguidade
+							utiliza-se:
+								../Scene[@id='game']/Protocols/Protocol[@id='contract-net']/Transitions/Transition[@id='t1']
+					 -->
+					
+					<Element ref="t1" event-type="transition_activation" />
+					<Element ref="clock_2" event-type="clock_activation" />
+				</Activations>
+				<Deactivations>
+					<Element ref="m2" event-type="message_arrival" />
+				</Deactivations>
+			</Clock>
+		</Scene>
+		
+		
+		<Clock id="clock_3" type="periodic" tick-period="2000">
+			<Activations>
+				<Element ref="as" event-type="transition_activation" />
+				<Element ref="clock_2" event-type="clock_activation" />
+			</Activations>
+			<Deactivations>
+				<Element ref="m2" event-type="message_arrival" />
+			</Deactivations>
+		</Clock>
+
+		<Norm type="permission" id="acquiredPermission">
+			<GivenTo>
+				<Role ref="seller" instance="@seller.instance"/>
+			</GivenTo>
+			<!-- Dá a permissão quando a transição é ativada -->
+			<Activations>
+				<Element ref="t1" event-type="transition_activation"/>
+			</Activations>
+			<!-- Retira a permissão quando a cena termina -->
+		    <Deactivations>
+				<Element ref="negotiation" event-type="scene_completion"/>
+			</Deactivations>
+		</Norm>		
+		
+	</LawOrganization>
+</Laws>

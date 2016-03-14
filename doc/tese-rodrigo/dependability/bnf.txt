@@ -1,0 +1,36 @@
+General Syntax:
+| OR
+[] optional
+'' reserved symbol
+
+Message = message-id'{'sender','addressee','content'}'  
+
+Transition =	transition-id'{'sourceState'->'destinationState',' message-id '}'
+				transition-id'{'sourceState'->'destinationState',' message-id ',' Lists '}'
+Lists = '[' list of constraints ids ']' |
+		'[' list of norms ids ']' |
+		'[' list of constraints ids ']' ',' '[' list of norms ids ']'
+
+Clock = clock-id'{' Time ',' Clock_Type ',' ActivationEvents ',' DeactivationEvents '}'
+Time: IntegerLiteral[Unit]
+Unit: 's' | 'm' | 'h' | 'd' 
+Clock_Type = 'periodic' | 'regular'
+
+ActivationEvents = Events
+DeactivationEvents =  Events
+
+Events = 	'('')' |
+			'('ElementRef')' |
+			'('ListsOfElementsRef')' |
+			'('element-id'..'element-id')' 
+ElementRef = element-id |
+			'('element-id ',' event-type ')'
+			
+			
+Contraint = constraint-id'{'java-class'}'
+
+Action = action-id'{'ActivationEvents ',' java-class'}'
+
+Norm = norm-id'{' NormType ',' owner ',' ActivationEvents ',' DeactivationEvents '}'
+
+NormType = 'obligation' | 'permission' | 'prohibition'

@@ -1,0 +1,56 @@
+<Protocol id="contract-net">			
+				<Messages>
+					<Message id="m1" performative="request">
+						<Content>
+							<Entry key="name" value="Maíra"/>
+							<Entry key="age" value="23" />
+						</Content>
+						<Sender role-ref="requester" role-instance="$theSender" />
+						<Receivers>
+							<Receiver role-ref="provider" role-instance="$receiver1" />
+							<Receiver role-ref="provider" role-instance="$receiver2" />
+						</Receivers>
+					</Message>
+					
+					
+					<Message id="m2" performative="inform">
+						<Content>
+							<Entry key="name" value="Maira"/>
+							<Entry key="age" value="23" />
+						</Content>
+						<Sender role-ref="seller" role-instance="aSeller" />
+						<Receivers>
+							<Receiver role-ref="buyer" role-instance="aBuyer" multiplicity="1" />
+							<Receiver role-ref="observer" multiplicity="1" />
+						</Receivers>
+					</Message>				
+				</Messages>
+				<States>
+					<State id="s0" type="initial" label="Initial State" />
+					<State id="s1" type="execution" label="Ping sent" />
+					<State id="s2" type="success" label="Pong sent" />
+				</States>
+				<Transitions>
+					<Transition id="t1" from="s0" to="s1" ref="m1" event-type="message_arrival" />			
+					<Transition id="t2" from="s1" to="s2" ref="m2" event-type="message_arrival">
+						<ActivatedNorms>
+							<!-- 
+								Pega o sender da mensagem e verifica se o valor do "given to"
+								da norma são iguais.
+							-->
+							<NormRef ref="aPermission" />
+						</ActivatedNorms>
+					</Transition>
+					
+					<Transition id="t3" from="s1" to="s2" ref="clock3" event-type="clock_tick">
+						<ActivatedNorms>
+							<!-- 
+								Verifica se existe uma norma ativa no atual contexto de execucao.
+							-->
+							<NormRef ref="anotherPermission" />
+						</ActivatedNorms>
+					</Transition>
+					
+				</Transitions>
+			</Protocol>	
+			<!-- End Contract-Net -->

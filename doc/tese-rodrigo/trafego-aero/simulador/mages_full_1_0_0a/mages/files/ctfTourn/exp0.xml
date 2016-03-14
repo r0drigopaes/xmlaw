@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tournament SYSTEM "../../dtd/tournament.dtd">
+<tournament>
+    <tourn.name>Experimento_TC</tourn.name>
+    <tourn.description>Experimento Comparacao entre uma controladora
+        neural e uma nebulosa.  Joao Ricardo Bittencourt</tourn.description>
+    <mbt>2</mbt>
+    <mbp>20</mbp>
+    <mfl>4</mfl>
+    <mtm>2</mtm>
+</tournament>

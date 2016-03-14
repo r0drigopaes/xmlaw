@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapschema SYSTEM "../../dtd/mapschema.dtd">
+
+<mapschema>
+     <mapsch.name>Default</mapsch.name>
+     <mapsch.entry layer="0" type="NML" path="defaultTrn.xml" row="1" col="3"/>
+</mapschema>

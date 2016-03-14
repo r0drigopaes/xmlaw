@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE simobjcol SYSTEM "../../dtd/simobjcol.dtd">
+
+<simobjcol name="Default terrains" col.id="DEFAULT">
+  <simobj name="Plain">
+    <icon path="default/floor.gif" width="50" height="50"/>
+    <icon path="default/floor2.gif" width="50" height="50"/>
+    <param name="intr" value="0" default="0"/>  
+  </simobj>
+
+  <simobj name="Block">
+    <icon path="default/block.gif" width="50" height="50"/>
+    <param name="intr" value="1" default="1"/>  
+  </simobj>
+</simobjcol>
+
+

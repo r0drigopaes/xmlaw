@@ -1,0 +1,68 @@
+
+<!-- ************************************************* -->
+<!-- Multi Agents Environment Simulator - GNU MAGES    -->
+<!-- Bot XML DTD v.1.0a		                       -->
+<!-- ************************************************* -->
+
+<!-- 
+
+   Copyright (c)  2001  Joao Ricardo Bittencourt.
+   Permission is granted to copy, distribute and/or modify this document
+   under the terms of the GNU Free Documentation License, Version 1.1
+   or any later version published by the Free Software Foundation;
+   without Invariant Sections, without Front-Cover Texts, and without 
+   the Back-Cover Texts. A copy of the license is included 
+   in the section entitled "GNU Free Documentation License".
+-->
+
+  
+<!-- ELEMENTS -->
+
+<!ELEMENT bot (user,header,features+,hits,fat,rec,armor,weapons)>	
+<!ATTLIST bot
+	bp		CDATA	#REQUIRED
+	bot.id	ID		#IMPLIED	
+>
+
+<!ELEMENT header (bot.name,bot.description,date,controller)> 
+<!ELEMENT bot.name (#PCDATA)> 
+<!ELEMENT bot.description (#PCDATA)> 
+<!ELEMENT date (month,day,year)> 
+<!ELEMENT month (#PCDATA)> 
+<!ELEMENT day (#PCDATA)> 
+<!ELEMENT year (#PCDATA)> 
+<!ELEMENT controller (#PCDATA)> 
+<!ELEMENT features (feature+)>
+
+<!ATTLIST features
+	type	(ATTR | SKILL)	#REQUIRED	
+>
+
+<!ELEMENT feature EMPTY>
+<!ATTLIST feature
+        name   CDATA   #REQUIRED 
+        level  CDATA   #REQUIRED
+        pts    CDATA   #REQUIRED
+>
+
+<!ELEMENT hits EMPTY>
+<!ATTLIST hits
+        level  CDATA   #REQUIRED
+        add    CDATA   #REQUIRED
+        pts    CDATA   #REQUIRED
+>
+
+<!ELEMENT fat EMPTY>
+<!ATTLIST fat
+        level  CDATA   #REQUIRED
+        add    CDATA   #REQUIRED
+        pts    CDATA   #REQUIRED
+>
+
+<!ELEMENT rec EMPTY>
+<!ATTLIST rec
+	level	CDATA	#REQUIRED    
+>
+		
+
+<!-- End Bot XML DTD v.1.0a -->

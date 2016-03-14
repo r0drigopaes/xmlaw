@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE simobjcol SYSTEM "../../dtd/simobjcol.dtd">
+
+<simobjcol name="Terrains" col.id="CAPTURE_THE_FLAG">
+  <simobj name="Plain">
+    <icon path="ctf/plain.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="0" default="0"/>  
+  </simobj>
+
+  <simobj name="Flat Water">
+    <icon path="ctf/fwater.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="0.5" default="0.5"/>  
+  </simobj>
+
+  <simobj name="Deep Water">
+    <icon path="ctf/dwater.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="1.0" default="1.0"/>  
+  </simobj>
+
+  <simobj name="Sand">
+    <icon path="ctf/sand.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="0.77" default="0.77"/>  
+  </simobj>
+
+  <simobj name="Swamp">
+    <icon path="ctf/swamp.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="0.5" default="0.5"/>  
+  </simobj>
+
+  <simobj name="Snow">
+    <icon path="ctf/snow.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="0.77" default="0.77"/>
+  </simobj>
+
+  <simobj name="Rocky">
+    <icon path="ctf/rocky.gif" width="32" height="32" texture="ctf/texture2.jpg"/>
+    <param name="cost" value="0.5" default="0.5"/>  
+  </simobj>
+
+  <simobj name="Wall">
+    <icon path="ctf/wall.gif" width="32" height="32" texture="ctf/texture1.jpg"/>
+    <param name="cost" value="1.0" default="1.0"/>  
+  </simobj>
+</simobjcol>

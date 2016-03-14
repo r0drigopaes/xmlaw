@@ -1,0 +1,135 @@
+package jsim.jmessage;
+
+import java.io.Serializable;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+
+public class Store extends Message 
+{
+    private static final long	serialVersionUID = -6292887518843050290L;
+    public Integer		scenarioID;
+    public AgentData		agent;
+    public String		modelName;
+    public NodeProps []		props;
+    public Stats []		stats;
+
+    public Store (String		actionType,
+		  Integer		scenarioID,
+		  AgentData		agentData,
+		  ModelProperties	modelProperties,
+		  FinalReport		report)
+    {
+	this.actionType = actionType;
+	this.scenarioID = scenarioID;
+	this.agent = agentData;
+	this.modelName = modelProperties.getModelName ();
+
+	int numNodes = modelProperties.getNumOfNodes ();
+	String [] nodeName = modelProperties.getNodeName ();
+	int    [] nodeType = modelProperties.getNodeType ();
+	int    [] numTokens = modelProperties.getNumOfTokens ();
+	String [] distType = modelProperties.getDistributionType ();
+	Double [] alpha = modelProperties.getAlpha ();
+	Double [] beta = modelProperties.getBeta ();
+	Double [] gamma = modelProperties.getGamma ();
+	Integer [] stream = modelProperties.getStream ();
+	props = new NodeProps [numNodes];
+
+	Double [][] timeStat = report.getTimeStat ();
+	Double [][] timeObsStat = report.getTimeObsStat ();
+	Double [][] occuStat = report.getOccuStat ();
+	Double [][] occuObsStat = report.getOccuObsStat ();
+	stats = new Stats [numNodes];
+	for (int i = 0; i < numNodes; i++) {
+		props [i] = new NodeProps (nodeName [i], nodeType [i],
+				numTokens [i], distType [i], alpha [i],
+				beta [i], gamma [i], stream [i]);
+		stats [i] = new Stats (timeStat [i], timeObsStat [i],
+					occuStat [i], occuObsStat [i]);
+	}; // for
+
+	
+
+    }; // Store constructor
+
+    public Integer		getScenarioID () { return scenarioID; }
+    public AgentData		getAgentData () { return agent; }
+    public String		getModelName () { return modelName; }
+    public NodeProps []		getNodeProps () { return props; }
+    public Stats []		getOutputStats () { return stats; }
+
+    public String toString ()
+    {
+	String xmlStr = "";
+
+	xmlStr += "\n      <ScenarioID>" + scenarioID + "</ScenarioID>";
+	xmlStr += "\n      <AgentProperties>" + agent.toString ();
+	xmlStr += "\n      </AgentProperties>";
+	xmlStr += "\n      <ModelName>" + modelName + "</ModelName>";
+
+	xmlStr += "\n      <ModelNodes>";
+	for (int i = 0; i < props.length; i++) {
+	   xmlStr += "\n        <Node id=" + i + ">";
+	   xmlStr += props [i].toString ();
+	   xmlStr += stats [i].toString ();
+	   xmlStr += "\n        </Node>";
+	}; // for
+	xmlStr += "\n      </ModelNodes>";
+
+	return xmlStr;
+	
+    }; // toString
+
+    // Java serialization requirements
+
+    public void writeObject (ObjectOutputStream out)
+		throws IOException {
+
+	out.writeObject (actionType);
+        out.writeObject (scenarioID);
+	out.writeObject (agent);
+	out.writeObject (modelName);
+	int nNodes = props.length;
+	out.writeInt (nNodes);
+	for (int i = 0; i < nNodes; i++) {
+		out.writeObject (props [i]);
+		out.writeObject (stats [i]);
+	}; // for
+
+    }; // writeObject
+
+    public void readObject (ObjectInputStream in)
+		throws IOException, ClassNotFoundException {
+
+	actionType = (String) in.readObject ();
+	scenarioID = (Integer) in.readObject ();
+	agent = (AgentData) in.readObject ();
+	modelName = (String) in.readObject ();
+	int nNodes = (int) in.readInt ();
+	props = new NodeProps [nNodes];
+	stats = new Stats [nNodes];
+	for (int i = 0; i < nNodes; i++) {
+		props [i] = (NodeProps) in.readObject ();
+		stats [i] = (Stats) in.readObject ();
+	}; // for
+
+    }; // readObject
+
+    // Koala XML serialization requirements
+    public static void readObject (fr.dyade.koala.serialization.GeneratorInputStream in)
+		throws IOException, ClassNotFoundException {
+
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+        int nNodes = (int) in.readInt ();
+	for (int i = 0; i < nNodes; i++) {
+		in.readObject ();
+		in.readObject ();
+	}; // for
+
+    }; // readObject
+
+}; // class Store

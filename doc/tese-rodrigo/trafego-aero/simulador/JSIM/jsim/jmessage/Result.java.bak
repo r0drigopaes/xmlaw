@@ -1,0 +1,113 @@
+package jsim.jmessage;
+
+import java.io.*;
+import java.sql.*;
+import java.util.*;
+
+public class Result extends Message {
+
+   private int			nCols = 0;
+   private int			nRows = 0;
+   private String []		colLabel = null;
+   private Vector []		value = null;
+
+   public Result (String actionType, ResultSet rs) throws SQLException 
+   {
+	System.out.println ("Result constructor: extracting result meta data");
+
+	this.actionType = actionType;
+	ResultSetMetaData meta = rs.getMetaData ();
+	nCols = meta.getColumnCount ();
+	colLabel = new String [nCols];
+	Vector [] temp = new Vector [nCols];
+	for (int i = 0; i < nCols; i++) {
+		colLabel [i] = meta.getColumnLabel (i + 1);
+		temp [i] = new Vector ();
+	} // for
+
+	System.out.println ("Result constructor: extracting result data");
+	while (rs.next ()) {
+		nRows++;
+		for (int i = 0; i < nCols; i++) 
+		   temp [i].add (rs.getObject (i + 1));
+	} // while
+
+	value = new Vector [nRows];
+	for (int i = 0; i < nRows; i++) {
+		value [i] = new Vector ();
+		for (int j = 0; j < nCols; j++)
+			value [i].add (temp [j].get (i));
+	} // for
+
+   } // Result constructor
+
+   public int		getColumnCount ()  { return nCols; }
+   public int		getRowCount () { return nRows; }
+   public String []	getColumnLabels () { return colLabel; }
+   public Vector []	getValue ()  { return value; }
+
+   // Java serialization requirements
+
+   public void writeObject (ObjectOutputStream out)
+		throws IOException 
+   {
+	out.writeObject (actionType);
+	out.writeInt (nCols);
+	out.writeInt (nRows);
+	for (int i = 0; i < nCols; i++)
+		out.writeObject (colLabel [i]);
+	for (int i = 0; i < nRows; i++)
+		out.writeObject (value [i]);
+
+   } // writeObject
+
+   public void readObject (ObjectInputStream in)
+		throws IOException, ClassNotFoundException 
+   {
+	actionType = (String) in.readObject ();
+	nCols = in.readInt ();
+	nRows = in.readInt ();
+	colLabel = new String [nCols];
+	value = new Vector [nRows];
+	for (int i = 0; i < nCols; i++)
+		colLabel [i] = (String) in.readObject ();
+	for (int i = 0; i < nRows; i++)
+		value [i] = (Vector) in.readObject ();
+
+   } // readObject
+
+   // Koml XML serialization requirements
+   public static void readObject
+	(fr.dyade.koala.serialization.GeneratorInputStream in)
+		throws IOException, ClassNotFoundException
+   {
+	in.readObject ();
+	int nCs = in.readInt ();
+	int nRs = in.readInt ();
+	for (int i = 0; i < nCs; i++)
+		in.readObject ();
+	for (int i = 0; i < nRs; i++)
+		in.readObject ();
+
+   } // readObject
+
+   public void print () 
+   {
+
+	System.out.println ("nCols: " + nCols + " nRows: " + nRows);
+	System.out.println ("colLabels: ");
+	for (int i = 0; i < nCols; i++)
+		System.out.print ("  " + colLabel [i]);
+
+	System.out.println ("values: ");
+	for (int i = 0; i < nRows; i++) {
+	   System.out.println ("Row # " + i);
+	   for (int j = 0; j < nCols; j++) {
+	   	System.out.print (colLabel [j] + ": " + 
+				(value [i].get (j)).toString ());
+	   } // for
+	} // for
+
+   } // print
+
+} // class Result

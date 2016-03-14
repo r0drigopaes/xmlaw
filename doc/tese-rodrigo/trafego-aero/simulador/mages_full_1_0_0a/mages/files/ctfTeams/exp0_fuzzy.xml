@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE team SYSTEM "../../dtd/team.dtd">
+<team>
+    <team.name>CtF Fuzzy Team</team.name>
+    <team.description>This team use fuzzy logic controls.  Joao Ricardo Bittencourt</team.description>
+    <bot bp="20.0">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>www.inf.unisinos.br/~jrbitt/mages</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Attacker</bot.name>
+            <bot.description>This bot just is responsable to attack enemy</bot.description>
+            <date>
+                <month>4</month>
+                <day>19</day>
+                <year>2002</year>
+            </date>
+            <controller>br.unisinos.inf.jrbitt.tc.fuzzy.CtFFuzzyAttackerController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="2" name="STR" pts="2"/>
+            <feature level="2" name="DEX" pts="2"/>
+            <feature level="2" name="BODY" pts="2"/>
+            <feature level="1" name="MOV" pts="1"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="2" name="FA" pts="4"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="20" pts="0"/>
+        <fat add="0" level="20.0" pts="0"/>
+        <rec level="0.04"/>
+        <armor pts="6.0">
+            <level.armor>12</level.armor>
+        </armor>
+        <weapons>
+            <weapon class="RANGE" pts="2" skill="FA" type="SIMPLE_SHOT">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+    <bot bp="20.0">
+        <user>
+            <usr.name>Joao Ricardo Bittencourt</usr.name>
+            <email>jrbitt@netu.unisinos.br</email>
+            <site>www.inf.unisinos.br/~jrbitt/mages</site>
+            <inst>UNISINOS</inst>
+            <country>Brazil</country>
+        </user>
+        <header>
+            <bot.name>Capturer the flags</bot.name>
+            <bot.description>This bot just is responsable to capture
+                enemy flags</bot.description>
+            <date>
+                <month>4</month>
+                <day>19</day>
+                <year>2002</year>
+            </date>
+            <controller>br.unisinos.inf.jrbitt.tc.fuzzy.CtFFuzzyCapturerController</controller>
+        </header>
+        <features type="ATTR">
+            <feature level="1" name="STR" pts="1"/>
+            <feature level="2" name="DEX" pts="2"/>
+            <feature level="2" name="BODY" pts="2"/>
+            <feature level="2" name="MOV" pts="2"/>
+            <feature level="1" name="COU" pts="1"/>
+        </features>
+        <features type="SKILL">
+            <feature level="1" name="FA" pts="2"/>
+            <feature level="0" name="HVW" pts="0"/>
+            <feature level="0" name="HTH" pts="0"/>
+            <feature level="0" name="EV" pts="0"/>
+        </features>
+        <hits add="0" level="20" pts="0"/>
+        <fat add="0" level="20.0" pts="0"/>
+        <rec level="0.03"/>
+        <armor pts="8.0">
+            <level.armor>16</level.armor>
+        </armor>
+        <weapons>
+            <weapon class="RANGE" pts="2" skill="FA" type="SIMPLE_SHOT">
+                <wpn.name>Handgun</wpn.name>
+                <dc>3</dc>
+                <rof>2</rof>
+                <amno>8</amno>
+                <range>60</range>
+            </weapon>
+        </weapons>
+    </bot>
+</team>

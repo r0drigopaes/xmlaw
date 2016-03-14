@@ -1,0 +1,105 @@
+package jsim.jmessage;
+
+import java.io.Serializable;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+
+public class Store extends Message 
+{
+    private static final long	serialVersionUID = -6292887518843050290L;
+    public Integer		scenarioID;
+    public AgentData		agent;
+    public ModelData		model;
+
+    public Store (String		actionType,
+		  Integer		scenarioID,
+		  AgentData		agentData,
+		  ModelProperties	modelProperties,
+		  FinalReport		report)
+    {
+	this.actionType = actionType;
+	this.scenarioID = scenarioID;
+	this.agent = agentData;
+
+	String modelName = modelProperties.getModelName ();
+	int numNodes = modelProperties.getNumOfNodes ();
+	String [] nodeName = modelProperties.getNodeName ();
+	int    [] nodeType = modelProperties.getNodeType ();
+	int    [] numTokens = modelProperties.getNumOfTokens ();
+	String [] distType = modelProperties.getDistributionType ();
+	Double [] alpha = modelProperties.getAlpha ();
+	Double [] beta = modelProperties.getBeta ();
+	Double [] gamma = modelProperties.getGamma ();
+	Integer [] stream = modelProperties.getStream ();
+	NodeProps [] props = new NodeProps [numNodes];
+
+	Double [][] timeStat = report.getTimeStat ();
+	Double [][] timeObsStat = report.getTimeObsStat ();
+	Double [][] occuStat = report.getOccuStat ();
+	Double [][] occuObsStat = report.getOccuObsStat ();
+	Stats [] stats = new Stats [numNodes];
+	for (int i = 0; i < numNodes; i++) {
+		props [i] = new NodeProps (nodeName [i], nodeType [i],
+				numTokens [i], distType [i], alpha [i],
+				beta [i], gamma [i], stream [i]);
+		stats [i] = new Stats (timeStat [i], timeObsStat [i],
+					occuStat [i], occuObsStat [i]);
+	}; // for
+
+	model = new ModelData (modelName, props, stats);
+
+    }; // Store constructor
+
+    public Integer		getScenarioID () { return scenarioID; }
+    public AgentData		getAgent () { return agent; }
+    public ModelData		getModel () { return model; }
+
+    public String toString ()
+    {
+	String xmlStr = "";
+
+	xmlStr += "\n      <ScenarioID>" + scenarioID + "</ScenarioID>";
+	xmlStr += "\n      <Agent>" + agent.toString ();
+	xmlStr += "\n      </Agent>";
+	xmlStr += "\n      <Model>" + model.toString ();
+	xmlStr += "\n      </Model>";
+
+	return xmlStr;
+	
+    }; // toString
+
+    // Java serialization requirements
+
+    public void writeObject (ObjectOutputStream out)
+		throws IOException {
+
+	out.writeObject (actionType);
+        out.writeObject (scenarioID);
+	out.writeObject (agent);
+	out.writeObject (model);
+
+    }; // writeObject
+
+    public void readObject (ObjectInputStream in)
+		throws IOException, ClassNotFoundException {
+
+	actionType = (String) in.readObject ();
+	scenarioID = (Integer) in.readObject ();
+	agent = (AgentData) in.readObject ();
+	model = (ModelData) in.readObject ();
+
+    }; // readObject
+
+    // Koala XML serialization requirements
+    public static void readObject (fr.dyade.koala.serialization.GeneratorInputStream in)
+		throws IOException, ClassNotFoundException {
+
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+        in.readObject ();
+
+    }; // readObject
+
+}; // class Store

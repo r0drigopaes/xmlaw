@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Discussao>
+<!-- 
+
+Antes de mais nada acho que temos discussões de três naturezas neste documento:
+- a estrutura de definição de leis (descrição dos elementos)
+- a dinâmica de relacionamento de elementos (encadeamento de módulos para receber eventos)
+- descrições de configuração do mediador
+
+-->
+
+<!-- 
+Repositório de componentes disponíveis para a especificação das leis. Este repositório define referências para diferentes componentes que podem ser utilizados em leis. Leis referenciam componente apenas utilizando o seu id  Por componentes, entenda-se classes Java e web services. 
+-->
+<ComponentRepository>
+	<ComponentReference id="PrologContentInterpreterClass" javaClass="br.interpreter.PrologInterpreter"/>
+</ComponentRepository>
+
+<!--  Sequência na qual os módulos são avisados sobre a chegada de uma mensagem. Esta proposta segue o padrão Chain of Responsability. O interpretador é implementado como um kernel comum, que organiza o modelo de eventos e onde modulos poderiam ser acoplados.
+
+Desta forma, um módulo deve ser definido independentemente do outro, visto que as dependências entre
+eles são indiretas através dos eventos. Usando o padrão chain of responsability é possivel definir quem trata os eventos primeiro.
+
+Esta descrição dos módulos não estaria neste arquivo de definição das leis, mas no proprio mediador. < GUGA DISCORDA: Isto é parte da dinâmica de execução das leis, portanto pode variar segundo características das aplicações que estão sendo desenvolvidas. Neste sentido, isto é o caminho para se desenvolver uma linguagem de programação orientada a eventos, e as instruções desta linguagem correspondem a ordem em que os elementos recebem eventos. Colocar a ordem explicitamente em cada elemento pode ser uma alternativa. Acho que isto precisa amadurecer mais. 
+
+Rodrigo: Concordo com você. Mas então desta forma, podemos usar esta definição de módulos apenas como se fosse descritores de componentes que são "plugados" no interpretador. É preciso ainda identificar quais são os atributos de deployment destes módulos.
+-->
+
+<Modules>
+	<Module>Protocol</Module>
+	<Module>Action</Module>
+	<Module>Norms</Module>
+	<Module>Criticality</Module>
+	<Module>Test</Module>
+	<Module>Coordination</Module>
+</Modules>
+
+<Scene id="negotiation">
+        
+	<!-- Pré-Definidos -->
+	<!--
+		   role
+			id
+			instance
+
+			Guga: Não entendi isto.
+	-->	
+
+	<!-- 
+	Operadores
+	@{variable} = recupera o valor de uma determinada variável
+	${variable} = atribui um valor a uma variavel
+	-->
+	
+	
+	<!--  Tipos definidos pelo usuário.
+	
+    Existem tipos que são definidos pelo Schema XML. Estes outros tipos são definidos através de complexType
+    e formam a estrutura desta especificação XML.
+
+	Os tipos definidos pelo usuário são tipos que variam de acordo com a aplicação. Por exemplo, ordem de
+    compra, um contador e etc.
+	
+    Na definição de tipos podem ser utilizados os tipos primitivos:
+	- string
+	- double
+	- float
+	- int
+	- boolean
+	- date
+	-->
+	<Types>
+	  <Type name="OrdemDeCompra">
+		<attribute name="id" type="string"/>
+		<attribute name="productId" type="string"/>
+		<attribute name="quantity" type="double"/>		
+	  </Type>	   
+	</Types>
+
+
+	<Variables>
+		<!-- 
+		Variáveis no escopo de cena possuem apenas uma instância para cada cena em execução.
+		-->
+		<Scene>		
+			<Variable id="contador" type="int"/>
+		</Scene>
+		<!-- 
+		Variáveis no escopo da cadeia de causas e consequências são instanciadas a cada novo ciclo da cadeia.
+        
+        Por exemplo, uma mensagem recebida indica o inicio de uma cadeia de causas e consequências, estas
+        variáveis são criadas e passadas adiante por toda a cadeia. Cadeias diferentes não compartilham as
+        mesmas instâncias e, portanto, possuem valores diferentes 
+		
+		Guga: Na realidade isto tem cara de stack... mas podemos chamar de cadeia de causa e consequencia sim.
+        O único problema é definir isto e deixar a definição de forma transparente. Por exemplo, em java, existe o 
+        modificar static para atributos de classe e nada para atributos de instancia... acho que devemos seguir o
+        mesmo principio.
+
+		<Scene>		
+			<Variable id="contadorCena" scope="scene" type="int"/>
+			<Variable id="outroContadorCadeia" scope="chain" type="int"/>
+		</Scene>
+
+		Rodrigo: Podemos alterar sem problemas. Só pra deixar a semantica mais clara do que eu tava querendo dizer:
+		Seja uma variavel A com o escopo chain.
+		Ao chegar uma mensagem, A é criada, inicializada e passada adiante na cadeia.
+		Caso outra mensagem chegue, mesmo enquanto o primeiro A ainda está sendo transmitido na cadeia, uma nova instância
+		de A é criada, inicializada e passada adiante. Um A não tem relação com o outro A.
+         -->
+		<Chain>
+			<Variable id="ordem" type="OrdemDeCompra"/>
+			
+			<!-- Definição dos papéis -->
+			<Variable id="buyer" type="Role"/>
+			<Variable id="seller" type="Role"/>
+			<Variable id="other" type="Role"/>
+		</Chain>
+	</Variables>
+
+	<!-- 
+	Define quem é o componente responsável por interpretar o conteúdo das mensagens.
+	
+    Este componente deve ser capaz de instanciar as variáveis passadas no template de acordo com os tipos
+    definidos no XMLaw.
+
+     Guga... acho que isto é responsabilidade do mediador... devemos criar um arquivo para a configuração do
+     mesmo.
+
+	 Rodrigo: Ok, mas acho que a lei tem que definir qual interpretador está sendo utilizado.
+	-->
+	<ContentInterpreter componentRef="PrologContentInterpreterClass"/>
+
+	obj.bairro.nome=leblon, obj.nome=maira, obj.idade=*
+
+	String getBairro()
+	String getNome()
+	String getIdade()
+
+	
+	<Messages>
+   		<Message  id="rfq" 
+					performative="cfp" >
+			<Content>
+					<Entry key="product-details" value="$ordem.productId"/>					
+			</Content>
+
+			<!-- 
+				Indica que somente um agente especifico identificado por "aSpecificAgent"
+				e que esteja desempenhando o papel de buyer pode ser o sender desta mensagem
+				-->
+			<Sender role-ref="buyer" role-instance="maira"/>			
+
+			<Receivers> 
+				<!-- 
+				Indica que o agente "aNamedAgent" desempenhando o papel "other"
+				é um dos receptores desta mensagem 
+				-->
+				<Role ref="other" instance="aNamedAgent"/>
+				
+				<!-- 
+				Cardinalidades possíveis :
+				n		= 0 ou mais
+				x..y	= mínimo X, máximo y
+				1..n	= pelo menos 1
+				x		= exatamente X
+				-->
+				
+				<!-- 
+				Indica que qualquer agente desempenhando 
+				o papel de seller pode ser um receptor desta mensagem.
+				Inclusive vários sellers podem receber esta mensagem
+				-->
+				<Role ref="seller" multiplicity="n"/>
+			</Receivers>
+		</Message>
+	</Messages>
+
+	<!-- 
+	Definição do protocolo de interação. 
+
+
+	E se a mensagem não estiver conforme com o protocolo?
+		Modo "strict"
+			Envia uma mensagem de volta ao agente informando que a mensagem não pertence ao protocolo.
+		Modo "relaxed"
+			Deixa a mensagem chegar ao destino mas não muda em nada o estado do protocolo
+
+    Guga: acho que isto é configuração do mediador... portanto, deveria estar em outro arquivo. Sugiro manter sem o mode. Ou ainda, pode ser uma oportunidade concreta de testarmos a ideia de usar o any ou anyattribute.
+
+	Rodrigo: Quanto a ser uma responsabilidade do mediador, se ele pode trabalhar em dois modos, como informamos pra ele em qual modo trabalhar?
+	visto que 1 mediador pode ser utilizado para mediar várias leis ao mesmo tempo?
+	-->
+	<Protocol mode="relaxed">
+		<Initial state="s0"/>
+		<Finals>
+			<Final state="s2" success="true"/>
+			<Final state="s3" success="false"/>
+			<Final state="s4" success="false"/>
+		</Finals>
+		<!--  
+		Colocar a transição sendo ativada por um evento, desacopla a sua ativação
+		a ocorrência de uma mensagem
+		-->
+		<Transition id="t1" from="s0" to="s1" ref="rfq" event-type="message_arrival"/>
+	</Protocol>
+	
+	<!--
+	Permissões podem ser dadas a agentes específicos ou a um grupo de agentes
+	identificado pelo papel.
+
+	Além disso, permissões podem ser dadas a priori, ou seja, desde a criação
+	de uma cena, ou podem também ser adquiridas durante a execução da cena.
+
+	Guga: não acho que precisemos definir uma permissão sendo concedida a priori.
+    Sempre haverá um evento iniciador do processo. Nem que seja a entrada do agente na cena, ou ainda a 
+    entrada dele na organização.
+
+	Rodrigo: Concordo.
+	-->
+
+	<!-- 
+	Semantica das Normas como condicional em transições
+	
+   CENÁRIO I:
+	
+	s0 -> s1 "conditional to" permissão
+			dispara se permissão está ativa
+			não dispara se permissão está desativa
+	s0 -> s1 "conditional to" proibição
+			dispara se proibição está desativa
+			não dispara se proibição está ativa
+
+	s0 -> s1 "conditional to" obrigação
+			dispara se obrigação no campo ActiveNorms está ativa
+			não dispara se obrigação no campo DeActiveNorms está desativa
+
+	Desta forma, para que serve a obrigação?
+
+	Especificação de coisas como:
+		SE obrigação de pagar ENTÃO proibição de interagir
+	
+	aí, usa-se a proibição nas transições.
+
+	Por que não utilizar a proibição direto?
+
+	Porque obrigação poderia ser visto como algo de mais alto nível que pode disparar
+	várias consequências, como por exemplo, ativar duas obrigações.
+
+   Guga, a logica está correta, mas não sei se uma obrigacao é um artifício de análise e que quando 
+   mapeada para implementação deveria ser decomposta. Por exemplo, uma obrigacao implica em duas   
+   permissões e uma proibição. Devemos estudar isto e escolher uma das duas abordagens.  
+
+	Rodrigo: ok, entao temos um TODO
+	-->
+
+   <!-- Permissão adquirida por um agente -->
+	<Permission id="acquiredPermission">
+		<GivenTo>
+			<Role ref="seller" instance="@seller.instance"/>
+		</GivenTo>
+		<!-- Dá a permissão quando a transição é ativada -->
+		<Activations>
+			<Element ref="t1" event-type="transition_activation"/>
+		</Activations>
+		<!-- Retira a permissão quando a cena termina -->
+        <Deactivations>
+			<Element ref="negotiation" event-type="scene_completion"/>
+		</Deactivations>
+	</Permission>
+
+
+	
+	  <!-- Como fazer as actions utilizarem o repositório de componentes -->
+	<Actions>
+		<Action id="javaAction1" component-id="xpto"/>
+	</Actions>
+	
+	  <!-- Se puder ter mais de um repositorio-->
+		<ComponentRepository id="wpz">...</ComponentRepository>
+	<Actions>
+		<Action id="javaAction1" component-id="xpto" repository-name="wpz"/>
+	
+	
+		<Action id="javaAction1" language="java">
+			int soma = 0;
+			for (int i=0; i== contador; i++){
+				soma++
+			}
+			contador++
+		</Action>
+
+		<Action id="javaAction2" language="java" class="br.apackage.ActionImplementation"/>
+
+	  <!-- Não acho q devamos gerar web-services no codigo de xmlaw -->
+
+		<Action id="webServiceAction" language="webservice" configFile="webservices.xml">
+			List quotes = invoke "getQuote";
+			for each (Quote quote: quotes){
+				print quote.getPrice();
+			}
+		</Action>
+		<Action id="keepRFQInfo" class="br.pucrio.inf.les.law.app.tacscm.norm.actions.KeepRFQAction">
+			<Element ref="rfqTransition" event-type="transition_activation"/>
+			<Element ref="otherRFQTransition" event-type="transition_activation"/>
+			<Element ref="newRFQTransition" event-type="transition_activation"/>
+		</Action>
+	</Actions>
+
+	<Constraints>
+		<Constraint id="checkDates" class="br.pucrio.inf.les.law.app.tacscm.norm.constraints.CheckValidDay"/>
+		<Constraint id="checkAttributes" class="br.pucrio.inf.les.law.app.tacscm.norm.constraints.CheckValidMessage"/>
+	</Constraints>	
+
+
+	<Criticality>
+	</Criticality>
+
+	<Test>
+	</Test>
+
+</Scene>
+
+
+<!--
+Como definir herança?
+
+Três operadores foram criados: abstract, completes & extends.
+
+"abstract" é utilizado para identificar elemento que precisa ser melhor definido para ser utilizado na prática.
+
+"completes" preenche pontos de extensão (hooks) que foram deixados para futura definição. Não é possível sobrescrever nada, somente definir classes ausentes.
+
+"extends" além de completar pode modificar alguma definição feita anteriormente. Equivalente a herança em OO.
+
+-->
+
+<!--
+Attribute type="abstract" define when a law element is not completely implemented (have hooks) or must be better defined to be used.
+Rodrigo: Não gostei muito desta sintaxe: "_". Mas não estou conseguindo pensar em algo melhor.
+-->
+
+<Permission id="P" type="abstract">
+      <Owner>_</Owner>
+      <Activations> _ </Activations>
+      <Deactivations> _ </Deactivations>
+      <Constraints> 
+         <Constraint id="constraintA"/>
+      </Constraints>
+    <Actions>
+     <Action id="_" class="_"> _ </Action>
+     <Action id="actionA">_</Action>
+    </Actions>
+</Permission>
+
+<!--
+completes _ fill the "hooks" that were left unspecified
+-->
+
+<Permission id="P" type="abstract">
+      <Owner>_</Owner>
+      <Activations> _ </Activations>
+      <Deactivations> _ </Deactivations>
+      <Constraints> 
+         <Constraint id="constraintA"/>
+      </Constraints>
+    <Actions>
+     <Action id="_" class="_"> _ </Action>
+     <Action id="actionA">_</Action>
+    </Actions>
+</Permission>
+
+<Permission id="NewP" completes="P">
+    <Constraint id="constraintA" class="CA"/>
+    <Action id="actionA" class="AA"/>
+</Permission>
+
+<Permission id="AnotherP" completes="P">
+    <Constraint id="constraintA" class="CA"/>
+    <Action id="actionA" class="AV"/>
+</Permission>
+
+<Permission id="PCompleted" completes="P">
+    <Constraint id="constraintA" class="CC"/>
+    <Action id="actionA" class="AB"/>
+</Permission>
+
+<!--
+extends _ reuses the description of law elements and includes or superposes modifications
+-->
+
+<Permission id="W" type="abstract">
+      <Owner>_</Owner>
+      <Activations> _ </Activations>
+      <Deactivations> _ </Deactivations>
+      <Constraints> 
+         <Constraint id="constraintW"/>
+      </Constraints>
+</Permission>
+
+
+<Permission id="NewP" extends="W">
+  <Constraints> 
+    <Constraint id="constraintW" class="A"/>
+  </Constraints> 
+  <Actions>
+    <Action id="actionX" class="X">
+      <Element ref="W" event-type="clock_activation"/>
+    </Action>
+  </Actions>
+</Permission>
+
+<Permission id="AnotherP" extends="W">
+ <Constraints> 
+   <Constraint id="constraintW" class="B"/>
+ </Constraints> 
+ <Activations> 
+  <Element ref="X" event-type="clock-tick"/>
+ </Activations>
+</Permission>
+
+<!-- 
+1- É preciso definir uma extensão em um arquivo diferente. Era bom um exemplo simples disso.
+2- E como fazer a herança de outros elementos como Scene?
+
+
+<!-- Modularizing scenes 
+
+É interessante comecar a identificar como podemos modularizar cenas para que elas possam ser mais facilmente reusadas. A ideia eh permitir que eventos sejam compartilhados entre cenas definidas em blocos distintos. Um conector foi proposto para este fim, a funcao dele é definir que eventos podem entrar, sair ou entrar e sair de um módulo (cena), funcionando como uma espécie de interface.
+
+Rodrigo: Gostei bastante da idéia de canais.
+
+-->
+
+<!-- Connector is a means to share event among different law modules.  -->
+
+<!-- Connector Definition -->
+<Organization >
+	<Connector id="channel_name" > 
+		<EventRef type="clock_activation"/>
+		<EventRef type="transition_activation"/>
+		<EventRef type="norm_deactivation"/>
+</Connector>	
+ ...
+</Organization>
+
+<!-- Connector Usage -->
+<Scene id="scene_name">
+  <Connectors>
+     <ConnectorRef id ="channel_name"  type="in">
+		<EventRef type="clock_activation"/>
+      </ConnectorRef>
+</Connectors>  
+_
+</Scene>
+
+<Scene id="other_scene_name">
+  <Connectors>
+	     <ConnectorRef id ="channel_name"  type="out"/>
+  </Connectors>  
+   _
+</Scene>
+
+<!-- IN / OUT / INOUT Channel -->
+
+<Connector id="net" > 
+    <EventRef type="clock_activation"/>
+    <EventRef type="transition_activation"/>
+     ...
+</Connector>
+
+<Scene id="ContractNet" time-to-live="infinity">
+  <Connectors>
+	  <ConnectorRef id ="net" type="inout"/>
+  </Connectors>	
+  <Creators> _ </Creators>
+   <Entrance> _ </Entrance>
+     <Messages> _ </Messages>
+      <Protocol>
+         <States> _ </States>
+         <Transitions> _  </Transitions>
+   </Protocol>
+</Scene>
+<Scene id="NotUnderstood" time-to-live="infinity">
+ <Connectors>
+	  <ConnectorRef id ="net" type="in"/>
+  </Connectors>	
+    _
+</Scene>
+
+<Scene id="CancelProccess" time-to-live="infinity">
+ <Connectors>
+	  <ConnectorRef id ="net" type="out"/>
+  </Connectors>	
+    ...
+</Scene>
+
+</Discussao>

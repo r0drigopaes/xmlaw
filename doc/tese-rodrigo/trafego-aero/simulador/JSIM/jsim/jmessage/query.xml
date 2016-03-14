@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='jsim.jmessage.Query' uid='-5798279705999435565' super='jsim.jmessage.Message'>
+<field name='queryStr' type='java.lang.String'/>
+</class>
+<class name='jsim.jmessage.DBConnectionInfo' uid='-4436913034187897049'>
+<field name='driverClassName' type='java.lang.String'/>
+<field name='framework' type='java.lang.String'/>
+<field name='passwd' type='java.lang.String'/>
+<field name='url' type='java.lang.String'/>
+<field name='username' type='java.lang.String'/>
+</class>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+</classes>
+<object class='jsim.jmessage.Query' id='i3'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>Sequence query</value>
+</super>
+<value type='java.lang.String' name='queryStr'>SELECT seq FROM sequence</value>
+</object>
+<object class='jsim.jmessage.DBConnectionInfo' id='i7'>
+<value type='java.lang.String' name='driverClassName'>COM.cloudscape.core.RmiJdbcDriver</value>
+<value type='java.lang.String' name='framework'>rmijdbc</value>
+<value type='java.lang.String' name='passwd'></value>
+<value type='java.lang.String' name='url'>jdbc:cloudscape:rmi://chief.cs.uga.edu:2001/JsimDB</value>
+<null name='username'/>
+</object>
+</koml>

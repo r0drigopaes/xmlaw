@@ -1,0 +1,7 @@
+<html>
+<title> Graphical Designer for JSIM </title>
+<body>
+<applet code = jsim/jmodel/Design.class CODEBASE="../../." ARCHIVE="../../jsim.jar" width = 200 height = 200> </applet>
+</body>
+</html>
+

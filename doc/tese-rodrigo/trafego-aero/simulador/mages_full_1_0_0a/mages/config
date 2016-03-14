@@ -1,0 +1,48 @@
+#E-mail do administrador do sistema
+ADMIN_EMAIL = localdomain
+
+#Parametros do CtF Bot
+MAX_BOTS_SESSION = 8
+
+#Parametros do CtF Clean
+#Tempo de espera por parametros (default=2 min)
+TIME_OUT_PARAMS = 120000
+
+#Intervalo de verificacao (default=1 min)
+TIME_SLEEP = 60000
+
+#Tempo maximo para esperar um outro usuario (default=5 min)
+TIME_WAIT_TEAM = 300000
+
+#Tempo maximo (ms) para esperar a acao de um agente 
+#controlado por computador (default=100ms)
+TIME_COMPUTER_AGENT = 1000
+
+#Tempo maximo (ms) para esperar a acao de um agente 
+#controlado por um humano (default=5 min)
+#TIME_HUMAN_AGENT = 300000
+TIME_HUMAN_AGENT = 1200000
+
+#Se alguma interface gr†fica pode ser exibida
+#0 --> n∆o permite o uso de recursos gr†ficos
+#1 --> permite o uso de recursos gr†ficos (modo default)
+USE_SCREEN = 1
+
+#Mecanismo usado para detectar quando uma conex∆o
+#cliente n∆o estÇ respondendo. O valor default Ç 3 vezes.
+TIMES_TO_TRY = 3
+
+#Tempo maximo usado para os clientes reconectarem em
+#caso de perda da conex∆o (default= 10min)
+TIME_RECOVERY = 600000
+
+#A tolerancia Ç usada para determinar quando um agente
+#Ç considerado morto devido um tempo prÇ-determinado de
+#turnos que o agente est† sem agir (default=10)
+TOLERANCE = 10
+
+#Maximo de replicacoes no modo batch (default=1000)
+MAX_RUNS = 1000
+
+#Tempo m†ximo de espera dos comunicadores (default=50ms)
+TIME_COMM = 50

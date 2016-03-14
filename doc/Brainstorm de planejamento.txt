@@ -1,0 +1,106 @@
+Princípios XMLaw:
+(1) Exitem leis que governam a interação entre os agentes de software.
+(2) Leis precisam ser aplicadas via software.
+(3) As leis precisam ser especificadas explicitamente ao invés de estarem implícitas no código de cada um dos agentes.
+(4) Deve ser possível especificar leis de maneira modular, de forma a permitir a sua reutilização.
+
+
+Objetivos do projeto:
+
+- Gerar a documentação
+	- Modelo de classes
+	- Documentar a estrutura de Handler --> Descriptor --> Execution
+	- Documentar como gerar e escutar por eventos
+	- Documentar a linguagem em si + XMLSchema
+
+- Gerar a implementação
+
+
+-----------------------------------------------------------
+- Objetivos da linguagem:
+
+	O que vamos priorizar?
+
+	1 Modularização / reuso
+		- Definição / Utilização / Composição
+		- Elemento auto-contidos
+		- Dependencias externas explicitas
+			Exemplo: 
+				Protocolos definidos externamente e reutilizados em diversas cenas.
+		- Paralelo com classes
+
+	2 Expressividade
+		- Uso de variáveis internas
+		- Análise de expressividade. Minsky X XMLaw
+
+
+	- Legibilidade X Compactabilidade
+	- Estensibilidade
+	
+
+- Objetivos da infra-estrutura de enforcement:
+
+	
+	- Modulo de monitoramento de troca de mensagens
+		- Escalabilidade
+
+	x Modulo interpretador
+		- Facilidade de manutenção - flexibilidade para mudanças	
+		- Desempenho na interpretacao
+		
+		Sub-Módulos:
+			- Analise Sintática
+			- Modelo de Execução
+
+	y Atuação: action/ bloqueio de mensagens / relatorios / replicação / etc 
+		- Facilidade de manutenção - flexibilidade para mudanças
+		
+
+-----------------------------------------------------------
+- Planejamento de atividades:
+	- O que vamos priorizar? qual será o papel de cada um (especificacao de casos de teste, implementacao de um modulo especifico)?
+
+
+
+LINGUAGEM
+- Definição de um XML que contenha exemplos das estruturas definidas e utilizadas de forma modular.
+- Definição de um XML que contenha exemplo com variáveis (expressividade)
+
+MIDDLEWARE
+
+	Modulo interpretador
+		- Geração (Engenharia Reversa) do modelo de classes atual : Sintática e Execução.
+		- Paradinha
+		- Análise do modelo em relação aos principios do middleware: Sintática e Execução.
+			- Discussão Interpretação "orientada a dados" e "orientada a objetos".
+		
+		- Redefinição das tarefas
+-----------------------------------------------------------
+
+- DEFINIÇÃO / COMPOSIÇÃO
+
+- Protocolos podem ser definidos externamente em seus próprios arquivos. Assim, podemos utilizar um mecanismo similar ao "import" do java para que possamos reutilizar a definicao do protocolo.
+
+- Os elementos que definem escopo são: Organization e Scene.
+
+- 'Organization' pode conter 'scene' como sub-escopo.
+
+- Dentro de um escopo é possível definir os seguintes elementos: Protocol, Clock, Norm, Action e Constraint.
+
+- Os elementos definidos dentro de um escopo podem ser utilizados no mesmo ou em um de seus sub-escopos.
+
+
+
+- Protocol
+	pode ser definido uma vez e reutilizado em diversas cenas.
+
+- Clock
+	Como um clock se ativa 
+
+- Norm
+
+- Action
+
+- Constraint
+
+- Organization

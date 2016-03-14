@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE bot SYSTEM '../../dtd/bot.dtd'>
+<bot bp='14.0'>
+  <user>
+    <usr.name>Joao Ricardo Bittencourt</usr.name>
+    <email>jrbitt@netu.unisinos.br</email>
+    <site>http://www.inf.unisinos.br/~jrbitt</site>
+    <inst>UNISINOS</inst>
+    <country>Brazil</country>
+  </user>
+  <header>
+    <bot.name>Default</bot.name>
+    <bot.description>Default</bot.description>
+    <date>
+       <month>10</month>
+       <day>24</day>
+       <year>2001</year>
+    </date>
+    <controller>mages.controller.ctf.client</controller>
+  </header>
+  <features type='ATTR'>
+    <feature name='STR' level='1' pts='1'/>
+    <feature name='DEX' level='1' pts='1'/>
+    <feature name='BODY' level='1' pts='1'/>
+    <feature name='MOV' level='1' pts='1'/>
+    <feature name='COU' level='1' pts='1'/>
+  </features>
+  <features type='SKILL'>
+    <feature name='FA' level='1' pts='2'/>
+    <feature name='HVW' level='0' pts='0'/>
+    <feature name='HTH' level='0' pts='0'/>
+    <feature name='EV' level='0' pts='0'/>
+  </features>
+  <hits level='10' add='0' pts='0'/>
+  <fat level='10.0' add='0' pts='0'/>
+  <rec level='0.01'/>
+  <armor pts='5.0'>
+     <level.armor>10</level.armor>
+  </armor>
+  <weapons>
+    <weapon pts='2' class="MELEE" type="SIMPLE_SHOT" skill="FA">
+       <wpn.name>Handgun</wpn.name>
+       <dc>3</dc>
+       <rof>2</rof>
+       <amno>8</amno>
+       <range>60</range>
+    </weapon>
+  </weapons>
+</bot>

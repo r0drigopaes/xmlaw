@@ -1,0 +1,27 @@
+<html><head><title>JGame package overview</title></head>
+<body>
+
+Contains the essential classes of JGame.
+
+<P>
+
+The main classes are JGEngine (the whole game) and JGObject (a sprite object).
+Sublass these to write your own game.  It's handy to have your JGObject
+classes as inner classes of your JGengine.  JGTimer is used for creating
+timers in your games.  ImageUtil contains some image manipulation methods that
+are used by JGame but can be used stand-alone as well.  AppConfig is a
+stand-alone class that can be used for game configuration.
+
+<P>
+
+StdGame is a game framework that handles a standard game state machine
+(startlevel, life lost, game over, etc).  It is built as a layer on top of
+JGEngine.  It uses AppConfig for handling keyboard settings.
+
+<P>
+JGame should also come with a user manual (the file MANUAL).  It is
+distributed under the revised BSD license (see the file LICENSE).
+More information can be found on the website,
+http://www.13thmonkey.org/~boris/jgame/  
+
+</body></html>

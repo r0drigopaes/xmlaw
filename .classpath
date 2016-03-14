@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="main/src/java"/>
+	<classpathentry kind="src" path="main/test/resources"/>
+	<classpathentry kind="src" path="main/src/resources"/>
+	<classpathentry kind="src" path="main/test/java"/>
+	<classpathentry sourcepath="JRE_SRC" kind="var" path="JRE_LIB"/>
+	<classpathentry kind="var" path="MAVEN_REPO/commons-logging/jars/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/deis/jars/tuProlog-1.2.0.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/jade/jars/base64-3.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/jade/jars/iiop-3.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/jade/jars/jade-3.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/jade/jars/jadeTools-3.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/junit/jars/junit-3.8.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/les/jars/utils-1.1.4.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/log4j/jars/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/xerces/jars/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/xerces/jars/xerces-1.4.0.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/les/jars/ASF-2.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

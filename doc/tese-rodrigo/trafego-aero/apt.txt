@@ -1,0 +1,118 @@
+Estrutura
+
+- Fidedignidade
+	- Definição
+		- Engenharia de Software Fidedigno - Ardnt
+		- Avizienis
+
+- Sistema de Controle de Trafego Aero
+	- Objetivos
+		- A controller's primary task is to separate certain aircraft — 
+			- to prevent them from coming too close to each other by use of lateral, vertical and longitudinal separation. 
+		- Secondary tasks include ensuring safe, orderly and expeditious flow of traffic and providing information to pilots, such as weather, navigation information and NOTAMs (Notices to Airmen).
+
+
+		- The day-to-day problems faced by the air traffic control system are primarily related to the volume of air traffic demand placed on the system, and weather.
+
+		
+
+	- Atores principais
+
+- design paradigm for fault-tolerant systems (The Dependability Problem: Introduction and Verification of FauIt Tolerance for a Very Complex System - Avizienis)
+
+	1. Identify the classes of expected faults over lifetime of the system;
+	2. Specify goals for system performance and dependability (service modes, recovery time bounds, reliability, availabifity, and safety goals);
+	3. Partition the system into subsystems (hardware and software) for implementation of borh performance and fault tolerance;
+	4. Select error detection and fauh diagnosis algorithms for every subsystem;
+	5. Devise recovery algorithms for every subsystem;
+	6. Evaluate the effectiveness of fault tolerance and its impact on performance;
+	7. Integrate subsystem fault tolerance attributes on the systemwide (global) scale;
+	8. Refine the design by iteration of steps 3-7.
+
+
+
+- Fontes de Problemas
+	- Falta de conhecimento técnico
+	- Software
+	- Hardware
+	- Falha Humana
+		- Piloto - During 2004 in the United States, pilot error was listed as the primary cause of 78.6% of fatal general aviation accidents, and as the primary cause of 75.5% of general aviation accidents over all [nall report].
+			- mistake
+			- oversight
+			- lapse in judgement
+			- failure to exercise due diligence
+
+			- Voar em altitude diferente da planejada (November 28, 1979 - Air New Zealand Flight 901)
+			- Voar baixo/alto/devagar/rápido demais na aproximação para o pouso (February 28, 1966 - T-38)
+			- Falha de entendimento na comunicação com a torre de controle (colisão aérea) (March 27, 1977 - Tenerife disaster)
+			- Não ativar o sistema descongelador quando necessário (January 13, 1982 - Air Florida Flight 90, a Boeing 737)
+			- Não ativar os "flaps" no momento da decolagem (August 31, 1988 - Delta Air Lines Flight 1141)
+			- Desativação imprópria de instrumentos com defeitos
+				- problema na turbina esquerda, foi desligado a direita (January 8, 1989 - In the Kegworth air disaster)
+
+			- 
+
+	- Operação no aeroporto
+	- Problemas durante o vôo
+		- Terroristas
+		- ...
+	- Tempo
+
+	- Controladores
+		- Controlador manda fazer algo diferente do que dizem os sistemas (On July 1, 2002 a Tupolev Tu-154 and Boeing 757)
+		
+
+
+	- Atualmente: Com o avanço do conhecimento técnico, falhas nos aviões tem se tornado cada vez mais raras. Isto tem levado a exposição das falhas humanas.
+		
+
+Survey:
+
+
+
+- Exemplos de Problemas
+
+- Estratégias de Resolução destes Problemas
+
+- Exemplo
+
+
+"however, hardware/software isssues tend to revolve around the use of commercial off-the-shhelf software and tis increasing complexity. Of particular concern is the difficulty sometimes encountered of ascertaining the basic code for commercial off-the-shelf software, which makes its validation a challeging task. People involved in the details of the IT sustem ofen lack real-world aircraft and airline-operations experience, which can lead to mismatches of equirements knowledge and software design"
+
+- Our approach defines that those commercial off-the-shelf software have their operation monitored bu the M-Law. Then, the domain experts can define the expected behavior using a high-level declarative language.
+
+- LEI
+
+"Lei, no sentido jurídico, é uma regra da conduta humana que é imposta e ministrada aos cidadãos de um dado Estado. Em suma, é Norma que rege a sociedade. Nas demais ciências, é uma regra que descreve um fenômeno que ocorre com certa regularidade."
+
+- Para mitigar uma ameaça, especificamos procedimentos, ou planos de ação.
+
+Nossa abordagem, permite especificar a regra de conduta, verificar a sua violação e indicar quais s precedimentos devem ser executados.
+
+
+TOOLS:
+
+    * Conflict Alert (CA): a tool that checks possible conflicting trajectories and alerts the controller. The most common used is the STCA (Short Term CA) that is activated about 2 minutes prior the loss of separation. The algorithms used may also provide in some systems a possible vectoring solution, that is, the way to turn or descend/climb the aircraft in order to avoid infringing the minimum safety distance or altitude clearance.
+    * Minimum Safe Altitude Warning (MSAW): a tool that alerts the controller if an aircraft appears to be flying too low to the ground or will impact terrain based on its current altitude and heading.
+    * System Coordination (SYSCO) to enable controller to negotiate the release of flights from one sector to another.
+    * Area Penetration Warning (APW) to inform a controller that a flight will penetrate a restricted area.
+    * Arrival and Departure manager to help sequence the takeoff and landing of aircraft.
+    * Converging Runway Display Aid (CRDA) enables Approach controllers to run two final approaches that intersect and make sure that go arounds are minimized
+    * Final Approach Spacing Tool (FAST) gives aircraft a runway assignment that the Approach Controller will give to the aircraft. FAST can also suggest vectors for downwind and base with the correct timing. In Europe the equivalent system is known under the term metering system and predicts the future spacing of approaching aircraft on the runway
+    * User Request Evaluation Tool (URET) takes paper strips out of the equation for En Route controllers at ARTCCs By providing a display that shows all aircraft in or entering the sector. URET provides conflict resolution up to 30 minutes in advance.
+    * Mode S: provides a data downlink of flight parameters via Secondary Surveillance Radars allowing radar processing systems and therefore controllers to see various data on a flight, including airframe unique id, indicated airspeed and flight director selected level, amongst others.
+    * CPDLC: Controller Pilot Data Link Communications - allows digital messages to be sent between controllers and pilots, avoiding the need to use radiotelephony. It is especially useful in areas where difficult-to-use HF radiotelephony was previously used for communication with aircraft, e.g oceans. This is currently in use in various parts of the world including the Atlantic and Pacific oceans.
+    * ADS-B: Automatic Dependent Surveillance - provides a data downlink of various flight parameters to air traffic control systems via the Transponder (1090 MHz) and reception of those data by other aircraft in the vicinity. The most important is the aircraft's latitude, longitude and level: such data can be utilized to create a radar-like display of aircraft for controllers and thus allows a form of pseudo-radar control to be done in areas where the installation of radar is either prohibitive on the grounds of low traffic levels, or technically not feasible (e.g. oceans). This is currently in use in Australia and parts of the Pacific Ocean and Alaska.
+    * The Extended Computer Display System (EXCDS): A system of electronic flight strips replacing the old paper strips. EXCDS allows controllers to manage electronic flight data online using touch-sensitive display screens resulting in fewer manual functions and a greater focus on safety. The system has also been sold to the Air Navigation Services Providers in the United Kingdom and Denmark.
+
+
+
+
+
+Pergunta:
+	- Por que utilizar leis para lidar com dependability, principalmente quando já existem outras abordagens?
+
+Resposta:
+	- Você consegue especificar leis com as outras abordagens? :-D
+		- As leis oferecem um conjunto de abstrações que especificam o comportamento esperado do sistema e de maneira integrada você consegue especificar as estratégias de mitigação de ameaças.
+

@@ -1,0 +1,4833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2005-02-03T22:18:03</date>
+  <millis>1107487083869</millis>
+  <sequence>0</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>&lt;init&gt;</method>
+  <thread>10</thread>
+  <message>constructor started 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:03</date>
+  <millis>1107487083946</millis>
+  <sequence>1</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>&lt;init&gt;</method>
+  <thread>10</thread>
+  <message>jsim system property: use_xml = false</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:03</date>
+  <millis>1107487083980</millis>
+  <sequence>2</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>&lt;init&gt;</method>
+  <thread>10</thread>
+  <message>jsim system property: generate_xml_files = false</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084023</millis>
+  <sequence>3</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>&lt;init&gt;</method>
+  <thread>10</thread>
+  <message>constructor started 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084459</millis>
+  <sequence>4</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>initModel</method>
+  <thread>10</thread>
+  <message>create model canvas with 8 nodes</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084548</millis>
+  <sequence>5</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>initModel</method>
+  <thread>10</thread>
+  <message>construction completed 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084582</millis>
+  <sequence>6</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>start</method>
+  <thread>10</thread>
+  <message>start display thread: startSim = false</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084618</millis>
+  <sequence>7</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>run</method>
+  <thread>11</thread>
+  <message>start of run method: startSim = false</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:04</date>
+  <millis>1107487084652</millis>
+  <sequence>8</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>run</method>
+  <thread>11</thread>
+  <message>wait until run is selected 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:07</date>
+  <millis>1107487087989</millis>
+  <sequence>9</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>beginSim</method>
+  <thread>12</thread>
+  <message>startSim = true</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088027</millis>
+  <sequence>10</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>run</method>
+  <thread>11</thread>
+  <message>start all sources and signals 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088028</millis>
+  <sequence>11</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>11</thread>
+  <message>source added to activation list at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088029</millis>
+  <sequence>12</sequence>
+  <logger>jsim.process.Model</logger>
+  <level>INFO</level>
+  <class>jsim.process.Model</class>
+  <method>run</method>
+  <thread>11</thread>
+  <message>start simulation 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088029</millis>
+  <sequence>13</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>11</thread>
+  <message>source removed from activation list at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088030</millis>
+  <sequence>14</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>11</thread>
+  <message>initiate : from null to source in state 0 at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088031</millis>
+  <sequence>15</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>11</thread>
+  <message>************* source state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088078</millis>
+  <sequence>16</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>will create 30 entities until 1.7976931348623157E308 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088078</millis>
+  <sequence>17</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>start entity 0 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088082</millis>
+  <sequence>18</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>13</thread>
+  <message>simobject_0 added to activationlist at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088083</millis>
+  <sequence>19</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>joinGroup</method>
+  <thread>13</thread>
+  <message>added simobject_0 to group, length = 1</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088084</millis>
+  <sequence>20</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>startEntity</method>
+  <thread>13</thread>
+  <message>start entity simobject_0 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088085</millis>
+  <sequence>21</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>sleeps 2374.487715482008  from 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088086</millis>
+  <sequence>22</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>************* source state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088086</millis>
+  <sequence>23</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source added to activation list on pause at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088135</millis>
+  <sequence>24</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088135</millis>
+  <sequence>25</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>simobject_0 removed from activation list at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088136</millis>
+  <sequence>26</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>pause : from source to simobject_0 at 0.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088136</millis>
+  <sequence>27</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088137</millis>
+  <sequence>28</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>************* simobject_0 state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088188</millis>
+  <sequence>29</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>source is going into wait because of CREATED.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088189</millis>
+  <sequence>30</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>14</thread>
+  <message>simobject_0 at Point2D.Double[97.0, 211.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088189</millis>
+  <sequence>31</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[113.0, 211.6]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088190</millis>
+  <sequence>32</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088190</millis>
+  <sequence>33</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 233.40251125866502</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088191</millis>
+  <sequence>34</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088191</millis>
+  <sequence>35</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 removed from activation list at 233.40251125866502</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088191</millis>
+  <sequence>36</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_0 at 233.40251125866502</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088245</millis>
+  <sequence>37</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088245</millis>
+  <sequence>38</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088246</millis>
+  <sequence>39</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088246</millis>
+  <sequence>40</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[129.0, 212.20000000000002]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088247</millis>
+  <sequence>41</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088247</millis>
+  <sequence>42</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 466.80502251733003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088247</millis>
+  <sequence>43</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088248</millis>
+  <sequence>44</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 removed from activation list at 466.80502251733003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088248</millis>
+  <sequence>45</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_0 at 466.80502251733003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088249</millis>
+  <sequence>46</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088249</millis>
+  <sequence>47</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088249</millis>
+  <sequence>48</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088250</millis>
+  <sequence>49</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[145.0, 212.8]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088250</millis>
+  <sequence>50</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088251</millis>
+  <sequence>51</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088252</millis>
+  <sequence>52</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088252</millis>
+  <sequence>53</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 removed from activation list at 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088253</millis>
+  <sequence>54</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_0 at 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088253</millis>
+  <sequence>55</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088253</millis>
+  <sequence>56</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088254</millis>
+  <sequence>57</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088254</millis>
+  <sequence>58</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>14</thread>
+  <message>curr x: 145.0 curr y: 212.8 x2: 181.0 y2: 218.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088255</millis>
+  <sequence>59</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088255</millis>
+  <sequence>60</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>14</thread>
+  <message>service for entity simobject_0 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088256</millis>
+  <sequence>61</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>14</thread>
+  <message>entity simobject_0 acquires a token 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088256</millis>
+  <sequence>62</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>14</thread>
+  <message>entity simobject_0 uses 0 for 2015.034106101391 where 1 of 1 are busy 700.207533775995</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088257</millis>
+  <sequence>63</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088257</millis>
+  <sequence>64</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 2715.2416398773858</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088257</millis>
+  <sequence>65</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088258</millis>
+  <sequence>66</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>source removed from activation list at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088259</millis>
+  <sequence>67</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to source at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088260</millis>
+  <sequence>68</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088260</millis>
+  <sequence>69</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* source state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088261</millis>
+  <sequence>70</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>source contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088326</millis>
+  <sequence>71</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088326</millis>
+  <sequence>72</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>source current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088327</millis>
+  <sequence>73</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>source has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088327</millis>
+  <sequence>74</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088328</millis>
+  <sequence>75</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>source current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088329</millis>
+  <sequence>76</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088334</millis>
+  <sequence>77</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>start entity 1 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088334</millis>
+  <sequence>78</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>13</thread>
+  <message>simobject_1 added to activationlist at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088335</millis>
+  <sequence>79</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>joinGroup</method>
+  <thread>13</thread>
+  <message>added simobject_1 to group, length = 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088335</millis>
+  <sequence>80</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>startEntity</method>
+  <thread>13</thread>
+  <message>start entity simobject_1 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088335</millis>
+  <sequence>81</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>sleeps 2864.4828292841476  from 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088336</millis>
+  <sequence>82</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>************* source state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088336</millis>
+  <sequence>83</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source added to activation list on pause at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088336</millis>
+  <sequence>84</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088337</millis>
+  <sequence>85</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>simobject_1 removed from activation list at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088337</millis>
+  <sequence>86</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>pause : from source to simobject_1 at 2374.487715482008</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088337</millis>
+  <sequence>87</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088338</millis>
+  <sequence>88</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>************* simobject_1 state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088392</millis>
+  <sequence>89</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>source is going into wait because of CREATED.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088392</millis>
+  <sequence>90</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>15</thread>
+  <message>simobject_1 at Point2D.Double[97.0, 211.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088393</millis>
+  <sequence>91</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088444</millis>
+  <sequence>92</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[113.0, 211.6]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088445</millis>
+  <sequence>93</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088445</millis>
+  <sequence>94</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 2607.890226740673</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088447</millis>
+  <sequence>95</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088447</millis>
+  <sequence>96</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 removed from activation list at 2607.890226740673</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088448</millis>
+  <sequence>97</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_1 at 2607.890226740673</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088448</millis>
+  <sequence>98</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088449</millis>
+  <sequence>99</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088449</millis>
+  <sequence>100</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088452</millis>
+  <sequence>101</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[129.0, 212.20000000000002]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088453</millis>
+  <sequence>102</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088454</millis>
+  <sequence>103</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 2841.292737999338</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088454</millis>
+  <sequence>104</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088455</millis>
+  <sequence>105</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 removed from activation list at 2715.2416398773858</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088455</millis>
+  <sequence>106</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_0 at 2715.2416398773858</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088455</millis>
+  <sequence>107</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088456</millis>
+  <sequence>108</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_0 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088456</millis>
+  <sequence>109</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088457</millis>
+  <sequence>110</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088457</millis>
+  <sequence>111</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088458</millis>
+  <sequence>112</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088458</millis>
+  <sequence>113</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>Current thread is Thread[simobject_1,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088458</millis>
+  <sequence>114</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088459</millis>
+  <sequence>115</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088460</millis>
+  <sequence>116</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>14</thread>
+  <message>entity simobject_0 releases 0 ; numBusy = 1 2715.2416398773858</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088460</millis>
+  <sequence>117</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>14</thread>
+  <message>simobject_0 at Point2D.Double[287.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088460</millis>
+  <sequence>118</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[303.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088461</millis>
+  <sequence>119</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088461</millis>
+  <sequence>120</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 2962.3183838086243</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088461</millis>
+  <sequence>121</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088462</millis>
+  <sequence>122</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 removed from activation list at 2841.292737999338</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088463</millis>
+  <sequence>123</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_1 at 2841.292737999338</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088463</millis>
+  <sequence>124</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088463</millis>
+  <sequence>125</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_1 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088464</millis>
+  <sequence>126</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088467</millis>
+  <sequence>127</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088577</millis>
+  <sequence>128</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088577</millis>
+  <sequence>129</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088578</millis>
+  <sequence>130</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088578</millis>
+  <sequence>131</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088579</millis>
+  <sequence>132</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088579</millis>
+  <sequence>133</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088580</millis>
+  <sequence>134</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[145.0, 212.8]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088582</millis>
+  <sequence>135</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088582</millis>
+  <sequence>136</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088582</millis>
+  <sequence>137</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088583</millis>
+  <sequence>138</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 removed from activation list at 2962.3183838086243</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088583</millis>
+  <sequence>139</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_0 at 2962.3183838086243</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088583</millis>
+  <sequence>140</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088583</millis>
+  <sequence>141</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088584</millis>
+  <sequence>142</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088639</millis>
+  <sequence>143</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088640</millis>
+  <sequence>144</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088640</millis>
+  <sequence>145</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088641</millis>
+  <sequence>146</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088641</millis>
+  <sequence>147</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>Current thread is Thread[simobject_1,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088641</millis>
+  <sequence>148</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088642</millis>
+  <sequence>149</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088642</millis>
+  <sequence>150</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088646</millis>
+  <sequence>151</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[319.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088646</millis>
+  <sequence>152</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088647</millis>
+  <sequence>153</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 3209.395127739863</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088647</millis>
+  <sequence>154</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088648</millis>
+  <sequence>155</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 removed from activation list at 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088648</millis>
+  <sequence>156</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_1 at 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088648</millis>
+  <sequence>157</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088649</millis>
+  <sequence>158</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_1 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088653</millis>
+  <sequence>159</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088654</millis>
+  <sequence>160</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088654</millis>
+  <sequence>161</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088655</millis>
+  <sequence>162</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088655</millis>
+  <sequence>163</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088655</millis>
+  <sequence>164</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_1 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088656</millis>
+  <sequence>165</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088656</millis>
+  <sequence>166</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>15</thread>
+  <message>curr x: 145.0 curr y: 212.8 x2: 181.0 y2: 218.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088657</millis>
+  <sequence>167</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088657</millis>
+  <sequence>168</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>15</thread>
+  <message>service for entity simobject_1 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088657</millis>
+  <sequence>169</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>15</thread>
+  <message>entity simobject_1 acquires a token 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088658</millis>
+  <sequence>170</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>15</thread>
+  <message>entity simobject_1 uses 0 for 1362.9117786711604 where 1 of 1 are busy 3074.695249258003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088658</millis>
+  <sequence>171</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088658</millis>
+  <sequence>172</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 4437.607027929163</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088658</millis>
+  <sequence>173</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088659</millis>
+  <sequence>174</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 removed from activation list at 3209.395127739863</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088659</millis>
+  <sequence>175</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_0 at 3209.395127739863</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088659</millis>
+  <sequence>176</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088660</millis>
+  <sequence>177</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088660</millis>
+  <sequence>178</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088721</millis>
+  <sequence>179</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088773</millis>
+  <sequence>180</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088773</millis>
+  <sequence>181</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088774</millis>
+  <sequence>182</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088774</millis>
+  <sequence>183</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>Current thread is Thread[simobject_1,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088774</millis>
+  <sequence>184</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088776</millis>
+  <sequence>185</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088776</millis>
+  <sequence>186</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088777</millis>
+  <sequence>187</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[335.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088777</millis>
+  <sequence>188</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088778</millis>
+  <sequence>189</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088778</millis>
+  <sequence>190</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088781</millis>
+  <sequence>191</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 removed from activation list at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088781</millis>
+  <sequence>192</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_0 at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088783</millis>
+  <sequence>193</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088783</millis>
+  <sequence>194</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088784</millis>
+  <sequence>195</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088784</millis>
+  <sequence>196</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>14</thread>
+  <message>curr x: 335.0 curr y: 214.0 x2: 373.0 y2: 218.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088787</millis>
+  <sequence>197</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088790</millis>
+  <sequence>198</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Split</class>
+  <method>use</method>
+  <thread>14</thread>
+  <message>split entity simobject_0 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088791</millis>
+  <sequence>199</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>14</thread>
+  <message>simobject_2 added to activationlist at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088794</millis>
+  <sequence>200</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Split</class>
+  <method>cloneEntity</method>
+  <thread>14</thread>
+  <message>start entity simobject_2 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088797</millis>
+  <sequence>201</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>joinGroup</method>
+  <thread>14</thread>
+  <message>added simobject_2 to group, length = 3</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088798</millis>
+  <sequence>202</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>14</thread>
+  <message>simobject_0 at Point2D.Double[380.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088798</millis>
+  <sequence>203</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[396.0, 204.56842105263158]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088798</millis>
+  <sequence>204</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088799</millis>
+  <sequence>205</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 3626.4484178555767</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088799</millis>
+  <sequence>206</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088800</millis>
+  <sequence>207</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 removed from activation list at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088800</millis>
+  <sequence>208</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_2 at 3456.4718716711013</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088800</millis>
+  <sequence>209</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088805</millis>
+  <sequence>210</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_2 state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088871</millis>
+  <sequence>211</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of CREATED.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088872</millis>
+  <sequence>212</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>16</thread>
+  <message>simobject_2 at Point2D.Double[382.0, 213.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088873</millis>
+  <sequence>213</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>16</thread>
+  <message>simobject_2 to Point2D.Double[398.0, 221.5]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088874</millis>
+  <sequence>214</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>************* simobject_2 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088929</millis>
+  <sequence>215</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 added to activation list on pause at 3628.0818762849094</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088929</millis>
+  <sequence>216</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088930</millis>
+  <sequence>217</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 removed from activation list at 3626.4484178555767</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088930</millis>
+  <sequence>218</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>pause : from simobject_2 to simobject_0 at 3626.4484178555767</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088931</millis>
+  <sequence>219</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088931</millis>
+  <sequence>220</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>************* simobject_0 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088932</millis>
+  <sequence>221</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088932</millis>
+  <sequence>222</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088933</millis>
+  <sequence>223</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088933</millis>
+  <sequence>224</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088934</millis>
+  <sequence>225</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>Current thread is Thread[simobject_2,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088934</millis>
+  <sequence>226</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088935</millis>
+  <sequence>227</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088936</millis>
+  <sequence>228</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[412.0, 195.13684210526316]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088936</millis>
+  <sequence>229</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088936</millis>
+  <sequence>230</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 3796.424964040052</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088937</millis>
+  <sequence>231</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088937</millis>
+  <sequence>232</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 removed from activation list at 3628.0818762849094</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088937</millis>
+  <sequence>233</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_2 at 3628.0818762849094</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088937</millis>
+  <sequence>234</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088998</millis>
+  <sequence>235</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_2 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088998</millis>
+  <sequence>236</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_2 state set to 1 thread state is BLOCKED</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:08</date>
+  <millis>1107487088999</millis>
+  <sequence>237</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089052</millis>
+  <sequence>238</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089053</millis>
+  <sequence>239</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089053</millis>
+  <sequence>240</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089054</millis>
+  <sequence>241</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089054</millis>
+  <sequence>242</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089054</millis>
+  <sequence>243</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089055</millis>
+  <sequence>244</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>16</thread>
+  <message>simobject_2 to Point2D.Double[414.0, 230.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089056</millis>
+  <sequence>245</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>************* simobject_2 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089056</millis>
+  <sequence>246</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 added to activation list on pause at 3799.6918808987175</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089057</millis>
+  <sequence>247</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089057</millis>
+  <sequence>248</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 removed from activation list at 3796.424964040052</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089057</millis>
+  <sequence>249</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>pause : from simobject_2 to simobject_0 at 3796.424964040052</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089061</millis>
+  <sequence>250</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089061</millis>
+  <sequence>251</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089062</millis>
+  <sequence>252</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089118</millis>
+  <sequence>253</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089119</millis>
+  <sequence>254</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089119</millis>
+  <sequence>255</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089120</millis>
+  <sequence>256</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089120</millis>
+  <sequence>257</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>Current thread is Thread[simobject_2,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089120</millis>
+  <sequence>258</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089120</millis>
+  <sequence>259</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_2 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089121</millis>
+  <sequence>260</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089121</millis>
+  <sequence>261</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[428.0, 185.70526315789473]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089122</millis>
+  <sequence>262</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089122</millis>
+  <sequence>263</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 3966.4015102245276</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089123</millis>
+  <sequence>264</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089123</millis>
+  <sequence>265</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 removed from activation list at 3799.6918808987175</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089124</millis>
+  <sequence>266</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_2 at 3799.6918808987175</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089124</millis>
+  <sequence>267</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089124</millis>
+  <sequence>268</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_2 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089125</millis>
+  <sequence>269</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089125</millis>
+  <sequence>270</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089125</millis>
+  <sequence>271</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089126</millis>
+  <sequence>272</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089126</millis>
+  <sequence>273</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089126</millis>
+  <sequence>274</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089127</millis>
+  <sequence>275</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089127</millis>
+  <sequence>276</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>16</thread>
+  <message>simobject_2 to Point2D.Double[430.0, 238.5]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089127</millis>
+  <sequence>277</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>************* simobject_2 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089128</millis>
+  <sequence>278</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 added to activation list on pause at 3971.3018855125256</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089128</millis>
+  <sequence>279</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089128</millis>
+  <sequence>280</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 removed from activation list at 3966.4015102245276</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089129</millis>
+  <sequence>281</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>pause : from simobject_2 to simobject_0 at 3966.4015102245276</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089129</millis>
+  <sequence>282</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089129</millis>
+  <sequence>283</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089129</millis>
+  <sequence>284</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089190</millis>
+  <sequence>285</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089191</millis>
+  <sequence>286</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089191</millis>
+  <sequence>287</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089191</millis>
+  <sequence>288</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089192</millis>
+  <sequence>289</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>Current thread is Thread[simobject_2,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089192</millis>
+  <sequence>290</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089192</millis>
+  <sequence>291</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_2 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089193</millis>
+  <sequence>292</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089193</millis>
+  <sequence>293</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 to Point2D.Double[444.0, 176.2736842105263]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089193</millis>
+  <sequence>294</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089194</millis>
+  <sequence>295</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089194</millis>
+  <sequence>296</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089195</millis>
+  <sequence>297</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 removed from activation list at 3971.3018855125256</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089195</millis>
+  <sequence>298</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_2 at 3971.3018855125256</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089196</millis>
+  <sequence>299</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089205</millis>
+  <sequence>300</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_2 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089205</millis>
+  <sequence>301</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089206</millis>
+  <sequence>302</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089206</millis>
+  <sequence>303</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089206</millis>
+  <sequence>304</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089207</millis>
+  <sequence>305</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089207</millis>
+  <sequence>306</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089207</millis>
+  <sequence>307</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089208</millis>
+  <sequence>308</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>16</thread>
+  <message>simobject_2 to Point2D.Double[446.0, 247.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089208</millis>
+  <sequence>309</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>************* simobject_2 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089208</millis>
+  <sequence>310</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 added to activation list on pause at 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089208</millis>
+  <sequence>311</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089209</millis>
+  <sequence>312</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 removed from activation list at 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089209</millis>
+  <sequence>313</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>pause : from simobject_2 to simobject_0 at 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089209</millis>
+  <sequence>314</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089209</millis>
+  <sequence>315</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>************* simobject_0 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089211</millis>
+  <sequence>316</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089269</millis>
+  <sequence>317</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089270</millis>
+  <sequence>318</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089270</millis>
+  <sequence>319</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089271</millis>
+  <sequence>320</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089271</millis>
+  <sequence>321</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>Current thread is Thread[simobject_2,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089271</millis>
+  <sequence>322</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_0 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089271</millis>
+  <sequence>323</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_2 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089272</millis>
+  <sequence>324</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089278</millis>
+  <sequence>325</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>14</thread>
+  <message>curr x: 444.0 curr y: 176.2736842105263 x2: 479.0 y2: 162.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089278</millis>
+  <sequence>326</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>14</thread>
+  <message>simobject_0 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089279</millis>
+  <sequence>327</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>14</thread>
+  <message>service for entity simobject_0 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089279</millis>
+  <sequence>328</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>14</thread>
+  <message>entity simobject_0 acquires a token 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089280</millis>
+  <sequence>329</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>14</thread>
+  <message>entity simobject_0 uses 0 for 2045.168877134644 where 1 of 1 are busy 4136.378056409003</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089280</millis>
+  <sequence>330</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>************* simobject_0 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089280</millis>
+  <sequence>331</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 added to activation list on pause at 6181.546933543646</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089281</millis>
+  <sequence>332</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>14</thread>
+  <message>simobject_0 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089281</millis>
+  <sequence>333</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 removed from activation list at 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089281</millis>
+  <sequence>334</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>pause : from simobject_0 to simobject_2 at 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089282</millis>
+  <sequence>335</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089283</millis>
+  <sequence>336</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>************* simobject_2 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089283</millis>
+  <sequence>337</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089284</millis>
+  <sequence>338</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089284</millis>
+  <sequence>339</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089285</millis>
+  <sequence>340</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089285</millis>
+  <sequence>341</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>Current thread is Thread[simobject_0,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089286</millis>
+  <sequence>342</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_2 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089286</millis>
+  <sequence>343</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089287</millis>
+  <sequence>344</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>16</thread>
+  <message>curr x: 446.0 curr y: 247.0 x2: 482.0 y2: 268.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089287</millis>
+  <sequence>345</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>16</thread>
+  <message>simobject_2 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089287</millis>
+  <sequence>346</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>16</thread>
+  <message>service for entity simobject_2 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089288</millis>
+  <sequence>347</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>request</method>
+  <thread>16</thread>
+  <message>entity simobject_2 acquires a token 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089288</millis>
+  <sequence>348</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>16</thread>
+  <message>entity simobject_2 uses 0 for 1815.6589431761108 where 1 of 1 are busy 4142.911890126334</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089288</millis>
+  <sequence>349</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>************* simobject_2 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089288</millis>
+  <sequence>350</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 added to activation list on pause at 5958.570833302445</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089289</millis>
+  <sequence>351</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>16</thread>
+  <message>simobject_2 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089289</millis>
+  <sequence>352</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_1 removed from activation list at 4437.607027929163</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089289</millis>
+  <sequence>353</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>pause : from simobject_2 to simobject_1 at 4437.607027929163</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089290</millis>
+  <sequence>354</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089290</millis>
+  <sequence>355</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>************* simobject_1 state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089290</millis>
+  <sequence>356</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089290</millis>
+  <sequence>357</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089291</millis>
+  <sequence>358</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_1 current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089291</millis>
+  <sequence>359</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_1 has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089291</millis>
+  <sequence>360</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>Current thread is Thread[simobject_2,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089291</millis>
+  <sequence>361</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_1 current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089292</millis>
+  <sequence>362</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089293</millis>
+  <sequence>363</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Facility</class>
+  <method>use</method>
+  <thread>15</thread>
+  <message>entity simobject_1 releases 0 ; numBusy = 1 4437.607027929163</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089293</millis>
+  <sequence>364</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>15</thread>
+  <message>simobject_1 at Point2D.Double[287.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089293</millis>
+  <sequence>365</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[303.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089294</millis>
+  <sequence>366</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089294</millis>
+  <sequence>367</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 4684.683771860402</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089294</millis>
+  <sequence>368</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089294</millis>
+  <sequence>369</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 removed from activation list at 4684.683771860402</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089295</millis>
+  <sequence>370</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>16</thread>
+  <message>simobject_2 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089295</millis>
+  <sequence>371</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_1 at 4684.683771860402</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089296</millis>
+  <sequence>372</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089296</millis>
+  <sequence>373</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089296</millis>
+  <sequence>374</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089297</millis>
+  <sequence>375</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[319.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089298</millis>
+  <sequence>376</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089301</millis>
+  <sequence>377</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 4931.7605157916405</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089301</millis>
+  <sequence>378</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089301</millis>
+  <sequence>379</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 removed from activation list at 4931.7605157916405</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089368</millis>
+  <sequence>381</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_1 at 4931.7605157916405</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089368</millis>
+  <sequence>382</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089368</millis>
+  <sequence>383</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089369</millis>
+  <sequence>384</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089369</millis>
+  <sequence>385</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[335.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089369</millis>
+  <sequence>386</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089370</millis>
+  <sequence>387</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089370</millis>
+  <sequence>388</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089370</millis>
+  <sequence>389</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 removed from activation list at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089370</millis>
+  <sequence>390</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_1 at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089371</millis>
+  <sequence>391</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089371</millis>
+  <sequence>392</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 1 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089371</millis>
+  <sequence>393</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089371</millis>
+  <sequence>394</sequence>
+  <logger>jsim.util.Node</logger>
+  <level>INFO</level>
+  <class>jsim.util.QCurve</class>
+  <method>next</method>
+  <thread>15</thread>
+  <message>curr x: 335.0 curr y: 214.0 x2: 373.0 y2: 218.0</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089372</millis>
+  <sequence>395</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 reached end of transport</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089372</millis>
+  <sequence>396</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Split</class>
+  <method>use</method>
+  <thread>15</thread>
+  <message>split entity simobject_1 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089372</millis>
+  <sequence>397</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>15</thread>
+  <message>simobject_3 added to activationlist at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089376</millis>
+  <sequence>398</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Split</class>
+  <method>cloneEntity</method>
+  <thread>15</thread>
+  <message>start entity simobject_3 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089377</millis>
+  <sequence>399</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>joinGroup</method>
+  <thread>15</thread>
+  <message>added simobject_3 to group, length = 4</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089377</millis>
+  <sequence>400</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>15</thread>
+  <message>simobject_1 at Point2D.Double[380.0, 214.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089377</millis>
+  <sequence>401</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>15</thread>
+  <message>simobject_1 to Point2D.Double[396.0, 204.56842105263158]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089378</millis>
+  <sequence>402</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>************* simobject_1 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089378</millis>
+  <sequence>403</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 added to activation list on pause at 5348.813805907354</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089378</millis>
+  <sequence>404</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>15</thread>
+  <message>simobject_1 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089378</millis>
+  <sequence>405</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_3 removed from activation list at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089379</millis>
+  <sequence>406</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>pause : from simobject_1 to simobject_3 at 5178.837259722879</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089379</millis>
+  <sequence>407</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089379</millis>
+  <sequence>408</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>************* simobject_3 state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089367</millis>
+  <sequence>380</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>14</thread>
+  <message>simobject_0 is going into wait because of PAUSE.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089437</millis>
+  <sequence>409</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>15</thread>
+  <message>simobject_1 is going into wait because of CREATED.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089438</millis>
+  <sequence>410</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>join</method>
+  <thread>17</thread>
+  <message>simobject_3 at Point2D.Double[382.0, 213.0]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089439</millis>
+  <sequence>411</sequence>
+  <logger>jsim.process.Transport</logger>
+  <level>INFO</level>
+  <class>jsim.process.Transport</class>
+  <method>move</method>
+  <thread>17</thread>
+  <message>simobject_3 to Point2D.Double[398.0, 221.5]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089439</millis>
+  <sequence>412</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>17</thread>
+  <message>************* simobject_3 state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089440</millis>
+  <sequence>413</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>17</thread>
+  <message>simobject_3 added to activation list on pause at 5350.447264336687</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089440</millis>
+  <sequence>414</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>17</thread>
+  <message>simobject_3 state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089440</millis>
+  <sequence>415</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>source removed from activation list at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089441</millis>
+  <sequence>416</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>pause : from simobject_3 to source at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089441</millis>
+  <sequence>417</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089441</millis>
+  <sequence>418</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>************* source state set to 1 thread state is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089442</millis>
+  <sequence>419</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>source contextswitch state set to RUNNING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089442</millis>
+  <sequence>420</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message> %%%%%%%%% In Wait Loop %%%%%%%% </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089442</millis>
+  <sequence>421</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>source current state before notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089443</millis>
+  <sequence>422</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>source has issued a notify </message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089443</millis>
+  <sequence>423</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>Current thread is Thread[simobject_3,5,main]</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089443</millis>
+  <sequence>424</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>source current state after notify is WAITING</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089444</millis>
+  <sequence>425</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>wait successful.</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089445</millis>
+  <sequence>426</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>start entity 2 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089445</millis>
+  <sequence>427</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>&lt;init&gt;</method>
+  <thread>13</thread>
+  <message>simobject_4 added to activationlist at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089445</millis>
+  <sequence>428</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>joinGroup</method>
+  <thread>13</thread>
+  <message>added simobject_4 to group, length = 5</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089446</millis>
+  <sequence>429</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>startEntity</method>
+  <thread>13</thread>
+  <message>start entity simobject_4 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089446</millis>
+  <sequence>430</sequence>
+  <logger>jsim.process.DynamicNode.Sink.Exit</logger>
+  <level>INFO</level>
+  <class>jsim.process.Source</class>
+  <method>run</method>
+  <thread>13</thread>
+  <message>sleeps 2072.748724870732  from 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089446</millis>
+  <sequence>431</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>************* source state set to 2 thread state is RUNNABLE</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089447</millis>
+  <sequence>432</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source added to activation list on pause at 7311.7192696368875</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089447</millis>
+  <sequence>433</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>pause</method>
+  <thread>13</thread>
+  <message>source state was set to 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089447</millis>
+  <sequence>434</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>SEVERE</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>simobject_4 removed from activation list at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089447</millis>
+  <sequence>435</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>pause : from source to simobject_4 at 5238.970544766155</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089447</millis>
+  <sequence>436</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>reason is pause and state is 2</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089448</millis>
+  <sequence>437</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>13</thread>
+  <message>************* simobject_4 state set to 1 thread state is NEW</message>
+</record>
+<record>
+  <date>2005-02-03T22:18:09</date>
+  <millis>1107487089507</millis>
+  <sequence>438</sequence>
+  <logger>jsim.coroutine.Coroutine</logger>
+  <level>INFO</level>
+  <class>jsim.coroutine.Coroutine</class>
+  <method>contextSwitch</method>
+  <thread>17</thread>
+  <message>simobject_3 is going into wait because of PAUSE.</message>
+</record>
+</log>

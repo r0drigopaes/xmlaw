@@ -1,0 +1,18 @@
+<project name="ModelBuild" default="compile" basedir=".">
+		<description>
+			Build file for JSIM model
+		</description>
+	<!-- global properties -->
+	
+<target name="compile">
+	<echo>${user.dir}</echo>
+	<!-- Compile the model files -->
+	<echo>Compiling the model</echo>
+	<javac srcdir="${user.dir}"/>
+</target>
+<target name="clean">
+	<delete>
+    		<fileset dir="${user.dir}" includes="*.class"/>
+  	</delete>
+</target>
+</project>

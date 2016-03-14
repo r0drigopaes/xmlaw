@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapschema SYSTEM "../../dtd/mapschema.dtd">
+
+<mapschema>
+     <mapsch.name>Capture The Flag</mapsch.name>
+     <mapsch.validator>mages.app.ctf.CtFMapValidator</mapsch.validator>
+     <mapsch.entry layer="0" type="NML" index="true" path="ctfTerrains.xml" row="2" col="4"/>
+     <mapsch.entry layer="1" type="NML" index="false" path="ctfObjects.xml" row="2" col="2"/>
+     <mapsch.entry layer="2" type="RT"/>                
+</mapschema>

@@ -1,0 +1,911 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='double[]' uid='4514449696888150558'>
+</class>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+<class name='java.lang.Number' uid='-8742448824652078965'>
+</class>
+<class name='java.lang.String[]' uid='-5921575005990323385'>
+</class>
+<class name='jsim.jmessage.FinalReport' uid='6865934528700823025' super='jsim.jmessage.Message'>
+<field name='numOfNodes' type='int'/>
+<field name='modelName' type='java.lang.String'/>
+<field name='occuObsStat' type='java.lang.Double[][]'/>
+<field name='occuObsStatName' type='java.lang.String[]'/>
+<field name='occuStat' type='java.lang.Double[][]'/>
+<field name='occuStatName' type='java.lang.String[]'/>
+<field name='statData' type='double[]'/>
+<field name='statLabel' type='java.lang.String[]'/>
+<field name='timeObsStat' type='java.lang.Double[][]'/>
+<field name='timeObsStatName' type='java.lang.String[]'/>
+<field name='timeStat' type='java.lang.Double[][]'/>
+<field name='timeStatName' type='java.lang.String[]'/>
+</class>
+<class name='java.lang.Double' uid='-9172774392245257468' super='java.lang.Number'>
+<field name='value' type='double'/>
+</class>
+<class name='java.lang.Double[][]' uid='-3244527997347558480'>
+</class>
+<class name='java.lang.Double[]' uid='-2228528061661948250'>
+</class>
+</classes>
+<object class='jsim.jmessage.FinalReport' id='i6'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>Final</value>
+</super>
+<value type='int' name='numOfNodes'>3</value>
+<value type='java.lang.String' name='modelName'>Bank</value>
+<array class='java.lang.Double[][]' id='i10' length='3' name='occuObsStat'>
+<null/>
+<null/>
+<null/>
+</array>
+<array class='java.lang.String[]' id='i12' length='3' name='occuObsStatName'>
+<null/>
+<null/>
+<null/>
+</array>
+<array class='java.lang.Double[][]' id='i13' length='3' name='occuStat'>
+<array class='java.lang.Double[]' id='i15' length='7'>
+<object class='java.lang.Double' id='i18'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i19'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i20'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i21'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i22'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i23'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i24'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+</array>
+<array class='java.lang.Double[]' id='i25' length='7'>
+<object class='java.lang.Double' id='i26'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i27'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i28'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i29'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i30'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i31'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i32'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+</array>
+<array class='java.lang.Double[]' id='i33' length='7'>
+<object class='java.lang.Double' id='i34'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i35'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i36'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i37'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i38'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i39'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i40'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+</array>
+</array>
+<array class='java.lang.String[]' id='i41' length='3' name='occuStatName'>
+<value type='java.lang.String'>Customer (occ)</value>
+<value type='java.lang.String'>TellerQ (occ)</value>
+<value type='java.lang.String'>Exit (occ)</value>
+</array>
+<array class='double[]' id='i46' length='500' name='statData'>
+<value type='double'>1814.4756177507734</value>
+<value type='double'>1560.9301536162093</value>
+<value type='double'>1946.0605890238949</value>
+<value type='double'>2349.6809920061787</value>
+<value type='double'>1216.1141993553028</value>
+<value type='double'>1778.387953191239</value>
+<value type='double'>1984.4793565498985</value>
+<value type='double'>1819.1517965491657</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+<value type='double'>0.0</value>
+</array>
+<array class='java.lang.String[]' id='i47' length='8' name='statLabel'>
+<value type='java.lang.String'>StatName </value>
+<value type='java.lang.String'>NoSamples</value>
+<value type='java.lang.String'>MinValue </value>
+<value type='java.lang.String'>MaxValue </value>
+<value type='java.lang.String'>MeanValue</value>
+<value type='java.lang.String'>Deviation</value>
+<value type='java.lang.String'>Interval </value>
+<value type='java.lang.String'>Precision</value>
+</array>
+<array class='java.lang.Double[][]' id='i56' length='3' name='timeObsStat'>
+<array class='java.lang.Double[]' id='i57' length='7'>
+<object class='java.lang.Double' id='i58'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>100.0</value>
+</object>
+<object class='java.lang.Double' id='i59'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1024.3183588</value>
+</object>
+<object class='java.lang.Double' id='i60'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2990.6500792</value>
+</object>
+<object class='java.lang.Double' id='i61'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2005.3683646</value>
+</object>
+<object class='java.lang.Double' id='i62'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>569.61890451</value>
+</object>
+<object class='java.lang.Double' id='i63'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>113.6194583</value>
+</object>
+<object class='java.lang.Double' id='i64'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0566576496</value>
+</object>
+</array>
+<array class='java.lang.Double[]' id='i65' length='7'>
+<object class='java.lang.Double' id='i66'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>100.0</value>
+</object>
+<object class='java.lang.Double' id='i67'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i68'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i69'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i70'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i71'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<null/>
+</array>
+<array class='java.lang.Double[]' id='i72' length='7'>
+<object class='java.lang.Double' id='i73'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>100.0</value>
+</object>
+<object class='java.lang.Double' id='i74'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>3256.2716489</value>
+</object>
+<object class='java.lang.Double' id='i75'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>5167.8950197</value>
+</object>
+<object class='java.lang.Double' id='i76'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4246.105009</value>
+</object>
+<object class='java.lang.Double' id='i77'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>591.38204696</value>
+</object>
+<object class='java.lang.Double' id='i78'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>117.96045968</value>
+</object>
+<object class='java.lang.Double' id='i79'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0277808625</value>
+</object>
+</array>
+</array>
+<array class='java.lang.String[]' id='i80' length='3' name='timeObsStatName'>
+<value type='java.lang.String'>-Customer (dur)</value>
+<value type='java.lang.String'>-TellerQ (dur)</value>
+<value type='java.lang.String'>-Exit (dur)</value>
+</array>
+<array class='java.lang.Double[][]' id='i84' length='3' name='timeStat'>
+<array class='java.lang.Double[]' id='i85' length='7'>
+<object class='java.lang.Double' id='i86'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>25.0</value>
+</object>
+<object class='java.lang.Double' id='i87'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>1216.1141993</value>
+</object>
+<object class='java.lang.Double' id='i88'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2545.1409002</value>
+</object>
+<object class='java.lang.Double' id='i89'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>2005.3683646</value>
+</object>
+<object class='java.lang.Double' id='i90'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>325.14333345</value>
+</object>
+<object class='java.lang.Double' id='i91'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>137.01256524</value>
+</object>
+<object class='java.lang.Double' id='i92'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0683228915</value>
+</object>
+</array>
+<array class='java.lang.Double[]' id='i93' length='7'>
+<object class='java.lang.Double' id='i94'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>10.0</value>
+</object>
+<object class='java.lang.Double' id='i95'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i96'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i97'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i98'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<object class='java.lang.Double' id='i99'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0</value>
+</object>
+<null/>
+</array>
+<array class='java.lang.Double[]' id='i100' length='7'>
+<object class='java.lang.Double' id='i101'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>25.0</value>
+</object>
+<object class='java.lang.Double' id='i102'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>3684.2446017</value>
+</object>
+<object class='java.lang.Double' id='i103'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4788.4326477</value>
+</object>
+<object class='java.lang.Double' id='i104'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>4246.105009</value>
+</object>
+<object class='java.lang.Double' id='i105'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>255.32743173</value>
+</object>
+<object class='java.lang.Double' id='i106'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>107.5927531</value>
+</object>
+<object class='java.lang.Double' id='i107'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.0253391644</value>
+</object>
+</array>
+</array>
+<array class='java.lang.String[]' id='i108' length='3' name='timeStatName'>
+<value type='java.lang.String'>Customer (dur)</value>
+<value type='java.lang.String'>TellerQ (dur)</value>
+<value type='java.lang.String'>Exit (dur)</value>
+</array>
+</object>
+</koml>

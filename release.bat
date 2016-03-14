@@ -1,0 +1,1 @@
+maven les:law:release -Dmaven.test.skip=true

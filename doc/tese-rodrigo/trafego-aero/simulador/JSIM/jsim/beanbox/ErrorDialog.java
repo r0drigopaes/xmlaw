@@ -1,0 +1,23 @@
+
+/**************************************************************************
+ * Pop up a (modal) error dialog and wait for a user to press "continue".
+ */
+
+package jsim.beanbox;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.beans.*;
+
+public class ErrorDialog extends MessageDialog
+{
+
+    public ErrorDialog (Frame frame, String message)
+    {
+	super (frame, "Error", message);
+
+    }; // ErrorDialog
+
+
+}; // class
+

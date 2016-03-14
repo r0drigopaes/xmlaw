@@ -1,0 +1,136 @@
+
+
+-----Original Message-----
+From: tse@computer.org [mailto:tse@computer.org] 
+Sent: terça-feira, 21 de agosto de 2007 09:25
+To: r0drigopaes@yahoo.com.br
+Cc: tse@computer.org
+Subject: TSE-0091-0207 Decision
+
+TSE-0091-0207, "Using a Law Approach to Incorporate Dependability Concerns in the Specification of Multi-Agent Interactions  "
+Manuscript Type: Regular
+
+Dear Mr. Paes,
+
+We now have reviews of your above referenced submission to IEEE Transactions on Software Engineering. Copies of the review comments are enclosed.
+
+Unfortunately, based on these reviews, Associate Editor Dr. Karama Kanoun is not able to recommend this submission for publication.
+
+You may resubmit your paper, but it will be treated as a NEW submission and given a new log number.  If you choose to resubmit your paper please refer to this original log number (TSE-0091-0207), and we will include your previous manuscript's history in it's files and forward the necessary information to the Editor-in-Chief and Associate Editor.  The manuscript will then undergo a new review process.  Dr. Kanoun has the following comments for you:
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+Editor: 1
+Comments to the Author:
+Your work has for sure technical merits. however, you should give more details about the cncepts used, in particular the XMLaw mechanisms should be detailed to help understanding your work. Also, your work should be better positioned with respect to related work. Emphasis should be put on the benefit of your solution.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+
+We hope that you will find the comments from the reviewers to be useful in your future work.  If you have any questions, feel free to contact the editor or the EIC.
+
+We appreciate that you chose to submit your work to TSE.  If you have suggestions about the journal or the manuscript handling, feel free to send a note to the EIC or Associate EIC.
+
+Thank you,
+
+Ms. Mari Padilla on behalf of Dr. Karama Kanoun
+Transactions on Software Engineering
+10662 Los Vaqueros Circle
+Los Alamitos, CA 90720-2513
+USA
+Phone: +714.821.8380
+Fax: +714.821.9975
+tse@computer.org
+
+=======================================
+
+REVIEWS
+
+Reviewer: 1
+
+Recommendation: Revise and Resubmit as “new”
+
+Comments:
+Interaction laws offer a powerful mechanism for structuring complex agent (component) systems and reasoning about system dependability in terms of these laws is an attractive approach. This idea proposed is really nice. But I believe the paper is weak. This work is only at a preliminary phase. The results are not strong enough. There is evaluation of the ideas . More work should be done to produce general results.  I believe the paper should be rejected but I would really like to encourage the authors to continue this research and produce a new paper. 
+
+The paper refers to all dependability means but this discussion is kept at a very general (and as such vague) level. 
+
+The idea of providing fault tolerance using laws is more developed in the paper. But still it is presented by using 2-3 toy examples related to exception handling only (section 4).  First of all fault tolerance is much more than exception handling. Secondly, even when discussing exception handling the authors need to introduce general/underlying support exception handling, answering the following questions: how exceptions are defined, raised and propagated, how handlers are associated with the context, what is context nesting, and such. These are the fundamental issues which any exception handling mechanism needs to address.
+
+The remaining dependability concerns (section 3) are dealt with at a very superficial level without any evaluation and without providing general solutions. 
+
+A good IEEE trans paper should start with this sort of general discussion and toy examples, and continue with a complete description of the proposal and a serious evaluation. The paper does not deliver the latter.
+
+To really support fault tolerance by laws you need to show the general laws (or patterns of laws) of incorporating error detection, error recovery and fault handling into law descriptions. For example, if the focus is on backward recovery you need to talk about general representation and support for checkpoints, recovery lines, conversations, recovery blocks, and such. The same is true for exception handling. As I said before
+
+Right now the paper only shows simple straightforward “implementations” of error recovery in 3 situations in the context of a specific case study. This can be done in any language in any environment. It does not prove that your idea is great and that programmers will benefit form it. This is not software engineering. There is no discussion of the benefits of such solutions.
+
+You seem to ignore all issues related to cooperative recovery involving several distributed processes as exemplified by conversations and atomic action schemes.
+
+The dependability terminology is misused (section 4): compensation is not forward error recovery, fault handling is not forward error recovery, 
+
+Figure 2 is extremely confusing (and not readable). There is not any explanation of it.  The concept of full forward error recovery is new to me – I am not sure I understand needs for it. Figure 2 is not a figure from paper [8].
+
+Figure 1 is not readable, you need to enlarge it.
+
+
+
+
+How relevant is this manuscript to the readers of this periodical? Please explain under the Public Comments section below.: Relevant
+
+Is the manuscript technically sound? Please explain under the Public Comments section below.: Partially
+
+1. Are the title, abstract, and keywords appropriate? Please explain under the Public Comments section below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain under the Public Comments section below.: Important references are missing; more references are needed
+
+3. Please rate the organization and  readability of this manuscript. Please explain under the Public Comments section below.: Easy to read
+
+Please rate the manuscript. Explain your rating under the Public Comments section below.: Poor
+
+
+Reviewer: 2
+
+Recommendation: Author Should Prepare A Major Revision For A Second Review
+
+Comments:
+I will make here two brief comments about keywords and references. But the body of my review is attached as a file.
+  keywords: it is appropriate to add "law-governed interaction" or "law-governed approach" to their keywords.
+
+References: given the centrality of LGI in their related work, they should add some more recent publication, at least the 2005 reference manual supplied with the release of this mechanism.
+
+How relevant is this manuscript to the readers of this periodical? Please explain under the Public Comments section below.: Relevant
+
+Is the manuscript technically sound? Please explain under the Public Comments section below.: Partially
+
+1. Are the title, abstract, and keywords appropriate? Please explain under the Public Comments section below.: No
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain under the Public Comments section below.: Important references are missing; more references are needed
+
+3. Please rate the organization and  readability of this manuscript. Please explain under the Public Comments section below.: Easy to read
+
+Please rate the manuscript. Explain your rating under the Public Comments section below.: Fair
+
+
+Reviewer: 3
+
+Recommendation: Author Should Prepare A Major Revision For A Second Review
+
+Comments:
+Your work is interesting. I agree with the idea that dependability is one of the key concepts that will enable open systems to become usable in real-world applications. Your approach is simple and pragmatic:  specification of “legal” interaction protocols, monitoring of execution traces through message exchanges, triggering of actions in case of “failure” detection. This is supported by a declarative, high-level, xml-based language called XMLaw. 
+However, in my opinion, your paper requires improvements on some points. First of all, the related work is too scarce. Your work is compared with only two other works. The proportion of self-references is much too high. I would expect some comparisons with works from close research areas, such as component-based software engineering, where comparable issues are studied (see for instance the work of Vladimir Mencl and al. about SOFA and protocol state machines for UML2.0). I am also surprised by the absence of direct references and comparisons to agent social models, such as the Agent-Group-Role model of Ferber and al., while your metamodel provides close concepts to structure and control the activities in multi-agent systems (Scene, Agent, Role). Of course your paper is focused on a more specific part of your model (laws, norms, …). But I think that explanations about the management of the scenes regarding laws and norms would be useful. For example, do you provide any means to specify and control that an agent does not play conflicting or illegal combinations of roles in different scenes? How does an agent enter a scene? More precisely, is there a mechanism to control statically (before execution) that an agent is able to play a given role in a given scene? Such mechanisms are useful, regarding dependability, as they prevent the occurrence of foreseeable failures caused by syntactic or semantic (protocol) inconsistencies during interactions of agents.
+One of your major claims, to compare with other works about interaction laws, is to provide an explicit support for dependability concerns. I do not find your model very explicit. Standard elements from your law specification model are used to manage dependability concerns. But they are not explicitly identified as part of specific fault detection and fault handling mechanisms. For instance, specific events should be explicitly identified as exceptions. Some actions should be explicitly identified as exception handlers. Maybe this is the case, thanks to specific XML tags or naming conventions, but this not explained or presented in the paper.
+As a general impression, it is rather difficult to precisely evaluate the power, flexibility and precision of your model because it is only partially presented through an example. For instance, your model is driven by events. But no list of the main available event types is given. The same way, I wonder if libraries of standard actions (the sending of warnings, penalty assignment, agent exclusions, …) are provided to facilitate the specification and then the enforcement of laws. 
+The limits of actions are not presented or discussed. As your framework aims at managing open multi-agent systems, it would be interesting to know precisely what the means to enforce the laws are. Is it possible to give agents imperative orders? How are order executions controlled? It is important for the dependability of the system to be able to protect itself from malicious or unfair agents. Maybe these questions can be answered by a description of the structure and the functioning of your middleware M-Law and its mediators. A description of your middleware is indispensable to understand how your model supports “system structuring for fault tolerance”.
+The structure of the paper is clear and coherent, with one exception. It is strange to have a short subsection entitled “2.4 XMLaw for Dependability” just before a section called “3. Laws and Dependability”. Moreover, the content of the 2.4 subsection seems to correspond to some related work comparisons and not with a general description of the law model.
+As a conclusion, I would say that your paper requires a revision to provide a more precise and comprehensive description of your work, along with a denser related work section. 
+
+
+How relevant is this manuscript to the readers of this periodical? Please explain under the Public Comments section below.: Interesting - but not very relevant
+
+Is the manuscript technically sound? Please explain under the Public Comments section below.: Yes
+
+1. Are the title, abstract, and keywords appropriate? Please explain under the Public Comments section below.: Yes
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain under the Public Comments section below.: Important references are missing; more references are needed
+
+3. Please rate the organization and  readability of this manuscript. Please explain under the Public Comments section below.: Readable - but requires some effort to understand
+
+Please rate the manuscript. Explain your rating under the Public Comments section below.: Fair

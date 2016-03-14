@@ -1,0 +1,14 @@
+Manuscript ID:
+ SPE-07-0043
+ 
+Title:
+ Using Interaction Laws to Implement Dependability Explicit Computing in Open Multi-Agent Systems
+ 
+Authors:
+ Paes, Rodrigo
+Lucena, Carlos
+Carvalho, Gustavo
+ 
+Date Submitted:
+ 27-Feb-2007
+ 

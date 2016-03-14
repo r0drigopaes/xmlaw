@@ -1,0 +1,112 @@
+<Laws xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<LawOrganization id="auction" name="World Auction">
+		<!-- Role definition -->		
+		<Role id="buyer" />
+		<Role id="seller" />			
+		<Role id="observer" />
+		<Role id="requester" />
+		<Role id="provider" />
+
+		<Scene id="game" time-to-live="infinity">			
+			<!-- Protocol Include -->						
+			<xi:include href="./protocol/ContractNet.xml"/>
+			
+			<!-- Creators Roles -->
+			<!-- Papeis que podem criar a cena, ao criar a cena o agente nao entra nela -->
+			<Creators>
+				<Creator role_ref="seller"/>
+			</Creators>
+			
+			<!-- Entrance Roles and States -->
+			<!-- Papeis que podem entrar na cena, em determinado estado -->
+			<Entrance>
+				<Participant role_ref="seller" limit="1">
+					<State ref="s0"/>
+				</Participant>
+				<Participant role_ref="buyer" limit="2">
+					<State ref="s0"/>
+					<State ref="s1"/>
+				</Participant>				
+			</Entrance>
+			
+			<!-- Clocks Definition -->
+			<Clock id="clock_1" type="periodic" tick-period="2000">
+				<Activations>
+					<!-- 
+					Como a gente faz as referencias aos ids?
+					Como saber onde t1 está?
+						Resp.:
+							Se não houver ambiguidade, usa-se normalmente. Caso haja ambiguidade
+							utiliza-se:
+								../Scene[@id='game']/Protocols/Protocol[@id='contract-net']/Transitions/Transition[@id='t1']
+					 -->
+					
+					<Element ref="t1" event-type="transition_activation" />
+					<Element ref="clock_2" event-type="clock_activation" />
+				</Activations>
+				<Deactivations>
+					<Element ref="m2" event-type="message_arrival" />
+				</Deactivations>
+			</Clock>
+		</Scene>
+		
+		<Norm type="permission" id="acquiredPermission">
+			<!-- GivenTo is optional -->
+			<Assignee role-ref="seller" role-instance="$seller.instance"/>
+			<!-- Dá a permissão quando a transição é ativada -->
+			<Activations>
+				<Element ref="t1" event-type="transition_activation"/>
+			</Activations>
+			<!-- Retira a permissão quando a cena termina -->
+		    <Deactivations>
+				<Element ref="negotiation" event-type="sucessful_scene_completion"/>
+			</Deactivations>
+		</Norm>	
+		
+		<Norm type="permission" id="aPermission">
+			<Assignee role-ref="buyer" role-instance="$receiver2" />
+			<!-- Dá a permissão quando a transição é ativada -->
+			<Activations>
+				<Element ref="t1" event-type="transition_activation"/>
+			</Activations>
+			<!-- Retira a permissão quando a cena termina -->
+		    <Deactivations>
+				<Element ref="negotiation" event-type="sucessful_scene_completion"/>
+			</Deactivations>
+		</Norm>	
+		
+		<Norm type="permission" id="anotherPermission">
+			<Assignee role-ref="provider" role-instance="$receiver2" />
+			<!-- Dá a permissão quando a transição é ativada -->
+			<Activations>
+				<Element ref="t1" event-type="transition_activation"/>
+			</Activations>
+			<!-- Retira a permissão quando a cena termina -->
+		    <Deactivations>
+				<Element ref="negotiation" event-type="sucessful_scene_completion"/>
+			</Deactivations>
+		</Norm>	
+		
+		
+		<!-- Global Clock -->
+		<Clock id="clock_2" type="periodic" tick-period="2000">
+			<Activations>
+				<Element ref="t1" event-type="transition_activation" />
+			</Activations>
+			<Deactivations>
+				<Element ref="m2" event-type="message_arrival" />
+			</Deactivations>
+		</Clock>
+		<Clock id="clock_3" type="periodic" tick-period="2000">
+			<Activations>
+				<Element ref="as" event-type="transition_activation" />
+				<Element ref="clock_2" event-type="clock_activation" />
+			</Activations>
+			<Deactivations>
+				<Element ref="m2" event-type="message_arrival" />
+			</Deactivations>
+		</Clock>
+		
+	</LawOrganization>
+</Laws>

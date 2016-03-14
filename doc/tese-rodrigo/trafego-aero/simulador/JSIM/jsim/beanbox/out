@@ -1,0 +1,46 @@
+java jsim.beanbox.BeanBoxFrame
+TRACE ModelAgent.BatchMeansAgent.actionPerformed:	handle button pressed event
+TRACE ModelAgent.BatchMeansAgent.fireJsimEvent:	Event type: INQUIRE_EVT
+TRACE ModelBean.BankBean.notify:	Event type: INQUIRE_EVT
+TRACE Model.Bank.Model:	constructor started	@ 0.0
+TRACE Model.Bank.Model:	jsim system property: use_xml = true
+TRACE Model.Bank.Model:	jsim system property: generate_xml_files = true
+ alpha = 0.19739555984988078 cosa  = 0.9805806756909201 sina  = 0.19611613513818404
+ERROR TRACE Model.Bank.Model:	create model canvas with 3 nodes
+TRACE Model.Bank.initModel:	construction completed	@ 0.0
+TRACE ModelBean.BankBean.getModelProperties:	extracting model properties
+TRACE ModelBean.BankBean.fireJsimEvent:	Event type: INFORM_EVT
+TRACE ModelAgent.BatchMeansAgent.notify:	Event type: INFORM_EVT
+TRACE ModelAgent.BatchMeansAgent.fireJsimEvent:	Event type: CHANGE_EVT
+TRACE ModelBean.BankBean.notify:	Event type: CHANGE_EVT
+TRACE ModelBean.BankBean.setModelProperties:	setting model properties
+TRACE ModelBean.BankBean.fireJsimEvent:	Event type: CHANGED_EVT
+TRACE ModelAgent.BatchMeansAgent.notify:	Event type: CHANGED_EVT
+TRACE ModelAgent.BatchMeansAgent.fireJsimEvent:	Event type: SIMULATE_EVT
+TRACE ModelBean.BankBean.notify:	Event type: SIMULATE_EVT
+TRACE ModelBean.BankBean.notify:	Agent: Batch
+TRACE ModelBean.BankBean.startSim:	Please start simulation...
+TRACE Model.Bank.Model:	constructor started	@ 0.0
+TRACE Model.Bank.Model:	jsim system property: use_xml = true
+TRACE Model.Bank.Model:	jsim system property: generate_xml_files = true
+ alpha = 0.19739555984988078 cosa  = 0.9805806756909201 sina  = 0.19611613513818404
+ERROR TRACE Model.Bank.Model:	create model canvas with 3 nodes
+TRACE Model.Bank.initModel:	construction completed	@ 0.0
+TRACE Model.Bank.start:	start display thread: startSim = false
+TRACE Model.Bank.run:	start of run method: startSim = false
+TRACE Model.Bank.run:	wait until run is selected	@ 0.0
+TRACE Model.Bank.setBatchProperties:	 bSize  = 4 nBatch = 8
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Server.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Facility.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Signal.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Source.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Sink.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Transport.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Move.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Delete.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Update.gif
+TRACE NetFrame.JMODEL.initToolBar:	Icon File Name = /export/home/xmldb/JSIM/jsim/jmodel/images/Generate.gif
+TRACE NetFrame.JMODEL.NetFrame:	<test1>
+TRACE NetFrame.JMODEL.NetFrame:	<test2>
+TRACE NetFrame.JMODEL.NetFrame:	<test3>
+TRACE NetFrame.JMODEL.NetFrame:	<test4>

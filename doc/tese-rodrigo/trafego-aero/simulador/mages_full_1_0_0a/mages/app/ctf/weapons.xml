@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE weapons SYSTEM '../../dtd/weapons.dtd'>
+
+<weapons>
+  <weapon pts='2' class="RANGE" type="SIMPLE_SHOT" skill="FA">
+    <wpn.name>Handgun</wpn.name>
+    <dc>3</dc>
+    <rof>2</rof>
+    <amno>8</amno>
+    <range>60</range>
+  </weapon>
+  
+  <weapon pts='5' class="RANGE" type="SIMPLE_SHOT" skill="FA">
+    <wpn.name>Ligth Pistol</wpn.name>
+    <dc>3</dc>
+    <rof>3</rof>
+    <amno>11</amno>
+    <range>65</range>
+  </weapon>
+  
+  <weapon pts='5' class="RANGE" type="SHOTGUN" skill="HVW">
+    <wpn.name>Shotgun</wpn.name>
+    <dc>8</dc>
+    <rof>2</rof>
+    <amno>5</amno>
+    <range>66</range>
+  </weapon>
+  
+  <weapon pts='6' class="RANGE" type="SIMPLE_SHOT" skill="FA">
+    <wpn.name>Heavy Pistol</wpn.name>
+    <dc>4</dc>
+    <rof>3</rof>
+    <amno>20</amno>
+    <range>75</range>
+  </weapon>
+  
+  <weapon pts='10' class="RANGE" type="AUTOFIRE" skill="HVW">
+    <wpn.name>Combat rifle</wpn.name>
+    <dc>6</dc>
+    <rof>23</rof>
+    <amno>40</amno>
+    <range>385</range>
+  </weapon>
+  
+  <weapon pts='3' class="RANGE" type="AUTOFIRE" skill="HVW">
+    <wpn.name>Submachine gun</wpn.name>
+    <dc>3</dc>
+    <rof>30</rof>
+    <amno>30</amno>
+    <range>120</range>
+  </weapon>
+              
+</weapons>
+
+

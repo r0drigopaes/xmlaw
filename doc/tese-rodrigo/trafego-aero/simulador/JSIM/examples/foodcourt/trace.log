@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233506</millis>
+  <sequence>0</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Server.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233575</millis>
+  <sequence>1</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Facility.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233616</millis>
+  <sequence>2</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Signal.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233656</millis>
+  <sequence>3</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Source.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233697</millis>
+  <sequence>4</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Sink.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233736</millis>
+  <sequence>5</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Transport.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233777</millis>
+  <sequence>6</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Split.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233817</millis>
+  <sequence>7</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/AndJoin.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233857</millis>
+  <sequence>8</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Move.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233898</millis>
+  <sequence>9</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Delete.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233941</millis>
+  <sequence>10</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Update.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:13</date>
+  <millis>1107485233985</millis>
+  <sequence>11</sequence>
+  <logger>jsim.jmodel.NetFrame</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetFrame</class>
+  <method>initToolBar</method>
+  <thread>10</thread>
+  <message>Icon File Name = /home/silver/JSIM/jsim/jmodel/images/Generate.gif</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:49</date>
+  <millis>1107485269514</millis>
+  <sequence>12</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>setModelName</method>
+  <thread>11</thread>
+  <message>set modelName to FoodCourt</message>
+</record>
+<record>
+  <date>2005-02-03T21:47:49</date>
+  <millis>1107485269591</millis>
+  <sequence>13</sequence>
+  <logger>jsim.jmodel.NetCanvas</logger>
+  <level>INFO</level>
+  <class>jsim.jmodel.NetCanvas</class>
+  <method>load</method>
+  <thread>11</thread>
+  <message>numNodes = 7</message>
+</record>
+</log>

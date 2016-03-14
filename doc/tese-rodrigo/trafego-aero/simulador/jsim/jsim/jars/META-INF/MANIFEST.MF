@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Name: BankBean.class
+Java-Bean: True
+Created-By: 1.2.2 (Sun Microsystems Inc.)
+

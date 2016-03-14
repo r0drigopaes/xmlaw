@@ -1,0 +1,98 @@
+
+<project name="JSIMBuild" default="compile" basedir=".">
+
+	<description> Build file for JSIM </description>
+
+	<!-- global properties -->
+	
+
+<target name="compile">
+	<echo>${basedir}</echo>
+
+	<echo> Creating VarNames.java and compiling it </echo>
+	<javac sourcepath="${basedir}" srcdir="jsim/variate" includes="VarNames.java">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+
+	<echo> Compiling the Foundation package </echo>
+	<javac sourcepath="${basedir}" srcdir="jsim/variate">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/util">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/queue">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/statistic">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/coroutine">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+
+	<echo> Compiling the Engine package </echo>	
+	<javac sourcepath="${basedir}" srcdir="jsim/event">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/jmessage">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+	<javac sourcepath="${basedir}" srcdir="jsim/process">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+
+	<echo> Compiling the JModel package </echo>		
+	<javac sourcepath="${basedir}" srcdir="jsim/jmodel">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+
+	<echo> Compiling the Animator package </echo>		
+	<javac sourcepath="${basedir}" srcdir="jsim/animator">
+               <compilerarg value="-Xlint:unchecked"/>
+        </javac>
+</target>
+
+<target name="jars">
+  	<jar destfile="jsim/jars/sys/jsim.jar"
+	 basedir="jsim"
+	 includes="variate/*.class util/*.class queue/*.class statistic/*.class coroutine/*.class
+	 	   event/*.class jmessage/*.class process/*.class animator/*.class"/>
+  	<jar destfile="jsim/jars/jmodel.jar"
+	 basedir="jsim"
+	 includes="jmodel/*.class"/>
+</target>
+
+<target name="doc">
+	<javadoc packagenames="jsim.variate.*, jsim.util.*, jsim.queue.*, jsim.statistic.*, jsim.coroutine.*,
+	 	               jsim.event.*, jsim.jmessage.*, jsim.process.*, jsim.animator.*, jsim.jmodel.*"
+		 sourcepath="${basedir}"	       
+		 destdir="docs"/>
+</target>
+
+<target name="clean">
+	<delete>
+    		<fileset dir="jsim/variate" includes="*.class"/>
+		<fileset dir="jsim/util" includes="*.class"/>
+		<fileset dir="jsim/queue" includes="*.class"/>		
+		<fileset dir="jsim/statistic" includes="*.class"/>
+		<fileset dir="jsim/coroutine" includes="*.class"/>		
+		<fileset dir="jsim/event" includes="*.class"/>		
+		<fileset dir="jsim/jmessage" includes="*.class"/>		
+		<fileset dir="jsim/process" includes="*.class"/>		
+		<fileset dir="jsim/jmodel" includes="*.class"/>		
+		<fileset dir="jsim/animator" includes="*.class"/>		
+  	</delete>
+</target>
+
+<target name="cleanjars">
+	<delete>
+    		<fileset dir="jsim/jars/sys" includes="jsim.jar"/>
+		<fileset dir="jsim/jars" includes="jmodel.jar"/>
+	</delete>
+</target>
+
+<target name="cleanall" depends="clean, cleanjars"/>
+
+</project>
+

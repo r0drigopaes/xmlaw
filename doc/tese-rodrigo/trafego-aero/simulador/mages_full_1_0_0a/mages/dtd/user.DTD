@@ -1,0 +1,28 @@
+
+<!-- ************************************************* -->
+<!-- Multi Agents Environment Simulator - GNU MAGES    -->
+<!-- User XML DTD v.1.0a                               -->
+<!-- ************************************************* -->
+
+<!-- 
+
+   Copyright (c)  2001  Joao Ricardo Bittencourt.
+   Permission is granted to copy, distribute and/or modify this document
+   under the terms of the GNU Free Documentation License, Version 1.1
+   or any later version published by the Free Software Foundation;
+   without Invariant Sections, without Front-Cover Texts, and without 
+   the Back-Cover Texts. A copy of the license is included 
+   in the section entitled "GNU Free Documentation License".
+-->
+
+
+<!-- ELEMENTS -->
+
+<!ELEMENT user (usr.name,email,site+,inst?,country?)>
+<!ELEMENT usr.name  (#PCDATA)>	<!-- Name of user -->
+<!ELEMENT email (#PCDATA)>	<!-- E-mails -->
+<!ELEMENT site (#PCDATA)>	<!-- Web site -->
+<!ELEMENT inst (#PCDATA)>	<!-- Institution (university, enterprise,...) -->
+<!ELEMENT country (#PCDATA)>	<!-- Country -->
+
+<!-- End User XML DTD v.1.0a -->

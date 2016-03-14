@@ -1,0 +1,7 @@
+splash_image	x	0	gfx/ramjet-logo.jpg	-
+titlemusic	sound/BARYON04.MID
+shoot		sound/shoot.wav
+explo		sound/explo.wav
+thrust		sound/thrust.wav
+ufo			sound/ufosound.wav
+

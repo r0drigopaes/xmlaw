@@ -1,0 +1,264 @@
+
+/******************************************************************
+ * @(#) PropertyDialog.java     1.1     98/4/16
+ *
+ * Copyright (c) 1998 John Miller
+ * All Right Reserved
+ *-----------------------------------------------------------------
+ * Permission to use, copy, modify and distribute this software and
+ * its documentation without fee is hereby granted provided that
+ * this copyright notice appears in all copies.
+ * WE MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY
+ * OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE SHALL NOT BE
+ * LIABLE FOR ANY DAMAGES SUFFERED BY ANY USER AS A RESULT OFUSING,
+ * MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ *-----------------------------------------------------------------
+ *
+ * @version     1.1, 1 Jul 1999
+ * @author      John Miller
+ */
+
+package jsim.jrun;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.table.*;
+
+import jsim.process.*;
+import jsim.util.*;
+import jsim.variate.*;
+
+/******************************************************************
+ * Dialog box for updating a models properties.
+ */
+
+public class PropertyDialog extends JFrame
+                            implements ActionListener
+{
+    //////////////////////// Constants \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    private static final String  TITLE = "Set Properties";
+
+    /////////////////// Immutable Variables \\\\\\\\\\\\\\\\\\\\\\\
+    /**
+     * Property list.
+     */
+    private final Prop [] pList;
+    
+    /**
+     * Base model bean.
+     */
+    private final ModelBean model;
+    
+    /**
+     * Apply button
+     */
+    private final Button applyButton;
+    
+    /**
+     * Cancel button
+     */
+    private final Button cancelButton;
+    
+    /**
+     * Trace
+     */
+    private final Trace trc;
+
+
+    /////////////////// Variables \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    /*
+     * table model
+     */
+    private TableModel tableModel = null;
+
+
+    /**********************************************************************
+     * Construct a dialog box to adjust the properties for a node.
+     * @param  pList  property list
+     */
+    public PropertyDialog (ModelBean model, Prop [] pList)
+    {
+        super (TITLE);
+
+	trc = new Trace ("jrun", "PropertyDialog");
+
+        this.model = model;
+	this.pList = pList;
+
+        String [] colNames = {    "Type",
+                                  "Name",
+                                  "numTokens",
+                                  "Distribution",
+                                  "Alpha/Belta/Gamma",
+                                  "Stream"};
+     
+        Object [][] data = new Object [pList.length][colNames.length];
+
+        String      type, name, numTokens, params, stream;
+        Choice      dist = null;
+                
+        for (int i = 0; i < pList.length; i++) {
+            type = new String ("" + Node.TYPE_NAME [pList [i].nType]);
+            name = new String ("" + pList [i].nName);
+            numTokens  = new String ("" + pList [i].nTokens);
+            dist  = new Choice ();
+            for (int j = 0; j < VarNames.NAME.length; j++)
+                    dist.add (VarNames.NAME [j]);
+            VariateSupport vs = new VariateSupport (pList [i].timeDist);
+            dist.select (vs.variateToString ());
+            params  = vs.getParameters ();
+            stream  = vs.getStream ();
+    
+            data [i] = new Object [colNames.length];
+            data [i][0] = type;
+            data [i][1] = name;
+            data [i][2] = numTokens;
+            data [i][3] = dist;
+            data [i][4] = params;
+            data [i][5] = stream;
+
+        }; // for
+
+        tableModel = new TableModel (colNames, data);
+        JTable table = new JTable (tableModel);
+        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+
+        //Create the scroll pane and add the table to it.
+        JScrollPane scrollPane = new JScrollPane(table);
+
+        //Add the scroll pane to this window.
+        getContentPane().add(scrollPane, BorderLayout.CENTER);
+
+        applyButton   = new Button ("Apply");
+        cancelButton  = new Button ("Cancel");
+        
+        applyButton.addActionListener (this);
+        cancelButton.addActionListener (this);
+
+/*        getContentPane ().add (new Label ("")); 
+        getContentPane ().add (new Label (""));
+        getContentPane ().add (applyButton);  
+        getContentPane ().add (cancelButton);
+*/
+        addWindowListener (new WindowAdapter () {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+
+        pack ();
+        setVisible (true);
+    } // PropertyDialog
+
+
+    /*******************************************************************
+     * Handle button events.
+     *     Apply:  update the nodes parameters and then dismiss dialog box.
+     *     Cancel: dismiss dialog box.
+     * @param  evt  button action event
+     */
+    public void actionPerformed (ActionEvent evt)
+    {
+     
+        if (evt.getSource () == applyButton) {
+       
+            for (int i = 0; i < pList.length; i++) {
+
+                pList [i].nTokens  = ((Integer) tableModel.getValueAt (i, 2)).intValue ();
+                pList [i].timeDist = VariateSupport.toVariate ( 
+                   ((Choice) tableModel.getValueAt (i, 3)).getSelectedItem (),
+                   (String) tableModel.getValueAt (i, 4),
+                   (String) tableModel.getValueAt (i, 5));
+            }; // for
+
+        }; // if
+                    
+        model.setModelProperties (pList);
+
+        dispose ();
+     
+    }; // actionPerformed
+
+
+    class TableModel extends
+                             AbstractTableModel {
+
+        String [] columnNames = null;
+        Object [][] data = null;
+
+        public TableModel (String [] colNames, Object [][] d) {
+
+             super ();
+             columnNames = colNames;
+             data = d;
+
+        }; // for
+
+        public int getColumnCount() {
+            return columnNames.length;
+        }
+             
+        public int getRowCount() {
+            return data.length;
+        }
+
+        public String getColumnName(int col) {
+            return columnNames[col];
+        }
+           
+        public Object getValueAt(int row, int col) {
+            return data[row][col];
+        }
+
+        /*
+         * JTable uses this method to determine the default renderer/
+         * editor for each cell.  
+         */
+        public Class getColumnClass(int c) {
+            return getValueAt(0, c).getClass();
+        }
+                 
+        /*
+         * Don't need to implement this method unless your table's
+         * editable.
+         */
+        public boolean isCellEditable(int row, int col) {
+            //Note that the data/cell address is constant,
+            //no matter where the cell appears onscreen.
+            if (col < 2) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+            
+        public void setValueAt(Object value, int row, int col) {
+            data[row][col] = value;
+            fireTableCellUpdated(row, col);
+        }
+
+    }; // TableModel
+
+
+    /**********************************************************************
+     * Main method for test PropertyDialog.
+     * @param  args  command-line arguments
+     */
+    public static void main (String [] args)
+    {
+        Prop [] defaults = {
+        new Prop (Node.SOURCE,   "customer", 100, new Uniform (2000.0, 1000.0, 0)),
+        new Prop (Node.FACILITY, "teller",     1, new Uniform (2000.0, 1000.0, 0)),
+        new Prop (Node.SINK,     "exit",       0, new Bernoulli (0.1, 0))};
+
+        PropertyDialog pd = new PropertyDialog (null, defaults);
+
+    }; // main
+
+
+}; // class
+

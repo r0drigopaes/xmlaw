@@ -1,0 +1,34 @@
+
+# User
+USER_NAME=
+USER_EMAIL=
+USER_SITE=
+USER_INST=
+USER_COUNTRY=
+
+# Bot's Header
+BOT_NAME=
+BOT_DESCRIPTION=
+BOT_CONTROL_NAME=
+
+# Bot's Attributes
+BOT_STR=
+BOT_DEX=
+BOT_BODY=
+BOT_MOV=
+BOT_COU=
+BOT_HITS=
+BOT_FAT=
+
+# Bot's Skills
+BOT_FA=
+BOT_HVW=
+BOT_HTH=
+BOT_EV=
+
+# Bot's Armor
+ARMOR_LEVEL=
+
+# Bot's Weapons
+MAX_WEAPONS= 
+WEAPON1_NAME= 

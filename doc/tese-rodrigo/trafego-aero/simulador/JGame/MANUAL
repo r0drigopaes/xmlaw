@@ -1,0 +1,374 @@
+-----------------------
+Development with JGame
+Version: 1.3, 30 march 2007 (20070330)
+Boris van Schooten
+-----------------------
+
+Principles of animation in action games
+---------------------------------------
+
+Action game programming involves some special techniques which may be
+surprising to those who are unfamiliar with it, and which require some
+explanation.  While JGame is designed in such a way that you don't need to
+bother with a lot of technical details most of the time, we shall give a
+detailed account of its essential workings.  We shall start with the most
+basic principles, and proceed with a detailed description of the dynamics
+that JGame uses.
+
+Action and arcade games typically involve a dynamical environment in which
+animated agents move around and interact with each other and with the
+environment.  The kind of system involved here has a lot of similarities with
+a physics simulation model.  Games, of course, simplify physical realism a
+lot, although modern games follow realistic physics models more and more
+closely.  But even the oldest 2D games may be considered physics simulations.
+
+Almost all games simulate dynamics in the same way: they update a set of
+animated objects incrementally at (usually fixed but sometimes variable) time
+intervals (i.e. time steps).  This involves updating the objects' positions
+and painting them on the screen.  This technique has similarities with
+animation techniques.  In "cartoon" animation for example, you create an
+impression of continuous movement by showing a number of successive drawings,
+with each drawing being a little different from the last.  Each such drawing
+or update is called a frame.  The speed at which successive frames are
+generated in games varies from about 2 frames per second (for "board game"
+style motion) to about 70 frames per second (for smooth, realistic movement).
+JGame uses such frame-based dynamics too.  It generates frames at a specified
+speed (I found that JGame works at its best at around 30-50 frames per
+second).  For each frame, you should define how the game objects should move
+one step.  You can specify this in the method doFrame() in JGEngine.  If you
+don't specify this method, nothing will happen.  After the frame's updates are
+done, the engine paints the game objects at their current positions.
+Additionally, you can do your own painting by defining the paintFrame()
+method.  
+
+In action games, all animated objects are redrawn many times per second.  This
+redrawing is usually the most processor-intensive activity of a game
+application.  Most games adapt to slow computers by periodically skipping the
+draw action, while still updating the game objects' state.  This is called
+"frame skipping", which results in jerky or jumpy screen motion, although the
+game keeps running at its original speed. Of course, you don't want a game
+to skip all of its frames, so that you can't see what's going on anymore.  So,
+you'll want to set a limit to the amount of frames it is allowed to skip
+before drawing a frame again.  In JGame, frame rate and frame skip can be set
+with setFrameRate().
+
+Game object updating
+--------------------
+
+For those familiar with parallel and concurrent programming, it may help to
+know that games involve a unique pattern of parallelism which is rarely found
+in other applications (some call it "synchronous parallelism", as it involves
+updating in sync in discrete time steps).  It does, however, involve some of
+the problems (i.e. concurrency problems) also found in other parallel
+programs.  JGame tries to provide a model that gives as little trouble as
+possible most of the time.  It does pay, however, to understand the dynamical
+model in detail.  In a game, the animated game objects are effectively
+parallel processes.  In JGame, these are objects of the class JGObject.
+JGObjects can be created and deleted during the course of the game, and they
+will animate according to the methods defined in the objects themselves.  Each
+object has move(), hit(), and hit_bg() methods that define how it should resp.
+be updated, and react to collisions.  A collision occurs when two objects
+physically overlap.  Object-object collision is calculated using bounding
+boxes, which are approximations of the object's physical occupation of space.
+The bounding box of an object may be specified in several ways, for example,
+it may be dependent on the image, or fixed.  The ideal dimensions of a
+bounding box depend on factors such as perceived fairness or difficulty
+level.
+
+The JGObjects' move, hit, and hit_bg methods are only called when you tell the
+engine to do so.  From within the doFrame method, you can call moveObjects(),
+checkCollision(), and checkBGCollision(), which in turn call the move, hit,
+and hit_bg objects in the game objects as appropriate.  In most action games,
+each frame involves the following things: move all objects one step (usually a
+few pixels), check if certain types of objects collide with each other, and
+check if objects bump into features in the environment (i.e. walls,
+platforms, doors, pickups).  So typically you want to call moveObjects() once,
+then call checkCollision/checkBGCollision several times with different
+parameters, handling the collision of the different types of object in turn.
+You can also choose not to call these methods during some frames, or call them
+multiple times, or in different order, as you see fit for your particular game
+or in-game sequences.
+
+The move and hit methods typically change something in the state of the object
+(such as its position, speed or animation), or may delete the object, create
+new ones, modify the state of others, or modify the global game state.  These
+methods should just do their updates as necessary for this frame, then return
+immediately.  When moveObjects or check...Collision are called, the engine
+will call each appropriate method of each object in turn, in a round-robin
+fashion.  Even though the objects are conceptually parallel, one should keep
+in mind that they are in reality updated one at a time.  At the moment that
+one object updates itself, it should be aware that part of the objects have
+already been updated, and part of them haven't.  This is important when the
+object reads or writes the state of other objects.  There are several ways to
+ensure precisely consistent behaviour.  One way is to ensure that the object
+variables in question are only updated by a single "master object", another is
+to use the getLast...() methods to get the object's previous state, yet
+another is to split object movement into multiple moveObjects() calls with
+different parameters, ensuring one type of object is updated after the other.
+
+More issues emerge when objects are created and removed.  One issue is whether
+newly created objects should already participate in the remaining action of
+the current frame, or should start updating only after the frame ends.  In
+JGame we chose the latter, because this results in more controllable
+behaviour.  In particular, this guarantees a uniform lifecycle of all objects:
+the order in which the objects' methods are called is always the one defined
+in the doFrame method.  For example, we can ensure that an object will always
+move() first before it can be hit() and is painted on the screen, even if it
+was created when doFrame was already halfway through its updating steps.
+Removing objects using remove() is handled differently.  Typically you want
+objects marked for removal to be removed as soon as possible.  We chose to
+delay actual removal until the end of the current moveObjects or
+check...Collision action, in case the remove was issued by one of the objects
+during either of these parallel actions.  This ensures that any object that is
+removed during the current parallel action always has the chance to do its
+own work for that action before it is removed, which is conceptually the most
+compatible with the parallelism concept of these actions.  For example, if two
+objects of the same type collide, and their hit methods remove the other
+object (i.e. they try to remove each other), then both will always get the
+chance to remove the other.  In contrast, if an object is removed directly by
+the doFrame method, it will be removed immediately.  The removeObjects()
+(remove multiple objects) method is special: it specifies an object query,
+which may match both existing objects and objects which are still pending to
+be added.  This means we can use it to completely clear the playfield of a
+certain type of object at the beginning of the next frame.  For the rest, the
+query and its corresponding remove action are executed at the same moments as
+remove().  Note that this causes counter-intuitive behaviour in one important
+case: if one calls removeObjects() from inside an object during a moveObjects
+or checkCollision action, then add an object during that same action, the
+newly added object will be deleted at the end of the action if it matches the
+removeObjects query.  One can circumvent this problem by, for example, doing
+the removeObjects/new sequence in the doFrame main loop, or setting a timer to
+do the remove/add sequence at the end of the frame.
+
+In most games, the game's progress can be considered to go through a number of
+distinct states.  There is a title screen, then the game begins, then there's
+a "level finished" message, a death sequence, or a "game over" message.  JGame
+supports this typical state-based dynamics by defining game states.  A game
+state can be set by means of setGameState().  A game state is represented by a
+String.  In addition to the regular doFrame and paintFrame, the engine will
+also call doFrame<gamestate> and paintFrame<gamestate> methods, in case
+these methods exist.  Here, you can specify state-specific action and
+painting.  In addition, a method start<gamestate> is called once at the
+beginning of the frame, where you can specify state initialisation code.  Game
+states are based on the frame update cycle, hence a game state always lasts an
+entire frame, and state changes only take effect on the next frame.
+
+JGame also has timers, represented by the JGTimer class.  A JGTimer defines an
+alarm method, which is called when the timer expires.  Timers always tick and
+alarm at the very beginning of a frame, and any objects they remove or add
+will be removed and added before that frame begins.  They may be used to
+specify special global or local events (just make the JGTimer an inner class
+of the desired object to be updated).  Initialising a timer to 0 means it will
+alarm() right after the current frame ends.  This can be used to define
+special actions to be done at the end of the current frame, such as
+initialisation before a game state transition.  JGTimers can be made dependent
+on either a game state or a JGObject (their parent), which means they will
+remove themselves as soon as the state or object expires.
+
+Principles of tile-based background
+-----------------------------------
+
+As in many games, JGame uses a tile-based scheme to manage the (relatively
+stationary) physical environment in which the animated objects move around.
+This environment is also called the background.  Tiles simplify the issues
+involved in defining a background, representing it graphically, and managing
+object-background interaction.  The background is defined as a matrix of
+equal-sized tiles, with tiles being typically square and 10-40 pixels in size.
+An object collides with a tile when its tile bounding box overlaps it.  So,
+an object with a size between 2 pixels and the tile size may overlap between 1
+and 4 tiles at a given moment, depending on its alignment with the tile grid.
+Each tile shows up as a specific graphic (an image), and has a specific
+identity, which can be queried when necessary.  In a game, the background
+typically consists of elements with a specific purpose, such as walls (to bump
+into), floors (to walk over), ladders (to climb onto), bonuses (to pick up),
+doors (to open or close), etc.  With a tile-based background, each of these
+elements is represented by a specific type of tile.  Often, one element
+corresponds to one tile (for example, a door or a bonus).  In other cases, one
+element corresponds to an array of tiles (a floor may be represented by a
+horizontal array of tiles, and a ladder by a vertical one), or to any other
+arrangement (such as block of tiles that represents a wall).  Typically, the
+animated objects have approximately the same size as one tile, so they "fit"
+quite neatly into the environment.  So, a player, sized 1 tile, is precisely
+large enough to move through a 1-tile wide tunnel, or climb up a 1-tile wide
+ladder.  Alternatively, a more fine-grained background consisting of smaller
+tiles may be defined, with an object being two or more tiles in size.  This is
+generally more difficult to handle, but may be preferred for aesthetic or
+playability reasons.
+
+Designing tile-based graphics has special issues.  Typically, tile graphics
+are drawn so that they can be seamlessly juxtaposed horizontally or vertically
+(i.e. they are "tileable") so that they have a natural appearance.  Sometimes,
+multiple graphical variations are used for one tile type for the sake of
+visual variety.  In some cases, larger background objects are formed by
+forming blocks of tiles, such as a 2x2 object made of 4 different tiles, which
+correspond to the corners of the object.  In JGame, tiles may be transparent,
+so that a backdrop image can be made to show through the tiles.  The backdrop
+image has no other purpose than decoration.
+
+Handling object-object and object-background interaction
+--------------------------------------------------------
+
+Handling collisions and objects' other reactions to their environment is often
+the trickiest part of game programming.  The simplest are the cases when an
+object should simply be destroyed or picked up when it collides with an object
+or a tile.  Often though, objects should avoid and steer around tiles or
+objects, bounce off them, move differently when on a specific type of tile,
+etc.  Doing this properly without the object getting stuck or exhibiting
+unnatural or unwanted behaviour is the tricky part.  A classic example is
+having balls bounce around an environment and off each other.  Anyone who has
+tried to program this knows that balls tend to get stuck into walls, into each
+other, may start to oscillate and move erratically through walls, etc.  In the
+case of balls, this usually results from the fact that the balls can't make
+out in what direction to bounce, and they may bounce off one wall right into
+another, or into another approaching ball.  This general problem is found in
+both the oldest and the most modern games, and there doesn't seem to be a
+universal method that's reasonably simple and works in all cases.  Particular
+solutions to particular problems can be devised by analysing the problem,
+simplifying the situations if possible, and using known guidelines.
+
+A basic method for handling object-background interaction is "looking around".
+One looks at the tiles surrounding the object to decide what to do.  This may
+be done prospectively, having the object look around every step, or
+retrospectively, having the object look around only after it bumps into
+something.  In the latter case, one usually takes a step backwards to the
+previous step, when the object still hadn't collided with anything.  You can
+use the getLast... methods for this.
+
+A basic method for simplifying object-tile interaction is tile alignment.
+Here, one ensures that an object is mostly aligned with the tile grid, so that
+it overlaps only one or two tiles at a time.  In its very simplest form, the
+object moves around in steps of a whole tile at a time.  This looks very
+jumpy however.  This kind of primitive "board game" style motion was popular
+with home computers which used character screens to draw graphics.  A more
+appealing "smooth" version of this can be made by having objects move smoothly
+from one tile-aligned position to another.  This technique is very appropriate
+for maze games, such as Pac-man.  In JGame, one can use the is...Aligned
+methods to determine when an object is approaching tile alignment, and
+snapToGrid to ensure that it becomes exactly tile-aligned, and is ready to
+decide which way to move next.  Typically, one wants to snap an object to the
+tile grid if it is closer to tile alignment than its speed.  Note that
+rounding errors may play a role here, as the objects' positions are floating
+point values, and often move at non-integer speeds.  In this respect,
+is...Aligned and snapToGrid have default behaviour that should work well most
+of the time.
+
+Tile alignment can also be used to handle special cases for objects which are
+not normally tile-aligned.  For example, if an object bumps into a wall, one
+can snap it to the tile grid to bump it back to a valid position, and look
+from there what to do.
+
+Examples of solutions to "tricky" interaction can be found in the example
+games. The WaterWorld game is a prime example of handling different kinds of
+object-background interaction.
+
+Sound
+-----
+
+JGame has a simple sound system based on applet AudioClips.  You can play Wav
+(sample) and Midi (music) files, and possibly, if you don't mind being
+platform-specific, other formats.  A clip is identified by a clipid, which is
+associated with an appropriate file using defineAudioClip.  Simply playing a
+clip (playAudio) will play the sample or tune regardless of how much sound is
+already playing.  In some cases you want to stop a previous clip when you
+start a new one.  For example, you only want to play one tune at a time!  This
+can be achieved by using channels.  You can play an audio clip on a specific
+channel (specified by an arbitrary name of your choice), which means that any
+clip already playing on that channel will be stopped.  It is also possible to
+stop a channel (stopAudio) so that any clip still playing will be stopped.
+Limiting the playing of a certain clip to only one sound at a time may also be
+desirable for clips other than music.  For example, I found it's unnatural
+when you hear two pairs of scissors snip simultaneously in Munchies while you
+only have one, so I limited the snip sound to a channel "scissors".
+
+It is also possible to loop a clip so it continues playing until you stop it.
+Naturally, this is only possible if you play it on a channel.  If you play a
+looped sound while the same looped sound is already playing, it will not be
+restarted but will simply continue.  This is specially designed so that you
+can call playAudio or stopAudio every frame depending on resp. an "on" or
+"off" state of your game, without having to know whether you already started
+or stopped looping.
+
+There is a global switch for enabling and disabling audio.  This is useful if
+you want the user to enable/disable game sound.  The StdGame class has a
+settings option for enabling and disabling audio.  When audio is disabled, the
+audio administration is handled as usual, except that actual audio calls are
+skipped.  If you re-enable it the system does its best to restart the audio as
+it would have sounded as if you never disabled it.  In practice, only looping
+clips are restarted.  For future versions, we want to have an enable/disable
+for music and other sounds separately.  We wish to reserve the channel "music"
+for that purpose.
+
+Java has a serious sound latency problem, which is gradually being resolved
+though.  I experienced latencies ranging from 0.05 to 0.7 seconds on different
+platforms.  I thought of providing a getAudioLatency function to query the
+latency so that you can do something creative with it (such as delay an
+animation in some way until a sound starts playing) but as yet I find it too
+hard to figure out which platform has what latency.  I noticed most Windows
+javas have a latency of around 0.1-0.15 second, and in java 1.5 the latency is
+apparently less.  On Linux the new Sun-java also has pretty low latency, but
+there's a bug (on my machine at least) that freezes the thread when trying to
+stop a looping clip.  Blackdown Java works well, but has a latency around
+0.3s.
+
+The StdGame framework
+---------------------
+
+JGame now comes with a StdGame engine that pre-defines some typical game
+functionality.  StdGame is a subclass of JGEngine, and basically defines a
+standard state machine for games, comprising of states such as Title,
+StartLevel, InGame, LifeLost, and GameOver, along with some handy timers and
+special events on certain transitions.  Furthermore it defines some basic
+variables, such as lives, level, game keys, and game fonts.  The game has
+default behaviour for the game states and events that serve as a "raw"
+framework for a game, which means you can have a working game prototype in no
+time at all, and define a nicer look and feel for your game later on.  The
+SpaceRun and SpaceRunII examples demonstrate how to use and configure the
+game framework.  StdGame is found in the jgame package.
+
+Also present are several standard game objects, all starting with Std...,
+which are found in the examples package, along with the example games.  These
+objects do some of the typical "tricky" interaction, and can be subclassed or
+modified to fit in your own games.  The example games should demonstrate the
+usage of StdGame and the standard objects well.
+
+Performance issues
+------------------
+
+There are some practical issues considering performance.  While JGame should
+run pretty well on modern machines, there are a number of things to consider
+to get optimal results.  My overall experience is that proper graphics
+acceleration makes the biggest difference.  When it is available, the games
+run several times faster.  For instance, on one FreeBSD 1.2 Ghz machine, a
+typical game runs at 10% CPU, while on another NetBSD 3 Ghz machine, the same
+game takes about 40% CPU (all of it is X11 drawing).  Curiously, the same game
+could be run on a 233Mhz NetBSD machine with only little slowing down.  Screen
+size matters a lot.  Each step that you increase resolution will increase the
+number of pixels to be processed quadratically.  So, an 800x600 screen has
+nearly 1.6 times as many pixels as a 640x480 screen.
+
+In some cases, there may be delays in the input: keyboard and mouse actions
+may be delayed by up to a second.  This typically happens when the CPU is
+seriously hogged, and appears to be caused by the input thread not getting
+enough time for handling input events.  The problem can usually be solved by
+lowering the resolution or frame rate.  I found it may also be solved by using
+another threading implementation in some cases.  Generally, just ensure that
+your target system has enough CPU cycles left to handle the input properly.
+
+Large images are generally slow to load (especially from the internet) and
+scale, and take up a lot of memory.  So, when you want to have large
+background images for instance, you should be aware that it's not a good idea
+to load them all into memory if you're only going to display only one per
+level.  Then it's better to load an image only when it's needed, and discard
+it afterwards.  This can be done by re-using the same image id for the
+different background images.  One just loads each new image with defineImage
+just before the level begins.  The old one is removed from memory.  This saves
+memory and chunks the waiting time into smaller, more user friendly pieces.
+
+Drawing transparent tiles in combination with a background image is rather
+slow in the current implementation.  This will give a performance hit when
+setting a lot of tiles each frame.  Once the tiles are set though, there is
+no performance penalty compared to any other background.
+
+Sound may also give a performance hit.  I found that midi is pretty fast, but
+playing a lot of samples at a time may hog slower machines some.
+

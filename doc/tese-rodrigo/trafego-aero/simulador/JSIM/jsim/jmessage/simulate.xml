@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='java.lang.Double' uid='-9172774392245257468' super='java.lang.Number'>
+<field name='value' type='double'/>
+</class>
+<class name='java.lang.Number' uid='-8742448824652078965'>
+</class>
+<class name='jsim.jmessage.Simulate' uid='675650800527491650' super='jsim.jmessage.Message'>
+<field name='agentName' type='java.lang.String'/>
+<field name='batchSize' type='java.lang.Integer'/>
+<field name='confidenceLevel' type='java.lang.Double'/>
+<field name='numOfBatches' type='java.lang.Integer'/>
+<field name='numOfReplications' type='java.lang.Integer'/>
+<field name='relativePrecision' type='java.lang.Double'/>
+<field name='replicationSize' type='java.lang.Integer'/>
+<field name='transientPeriod' type='java.lang.Double'/>
+</class>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+<class name='java.lang.Integer' uid='1360826667806852920' super='java.lang.Number'>
+<field name='value' type='int'/>
+</class>
+</classes>
+<object class='jsim.jmessage.Simulate' id='i5'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>start</value>
+</super>
+<value type='java.lang.String' name='agentName'>BatchMeansAgent</value>
+<object class='java.lang.Integer' id='i10' name='batchSize'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>4</value>
+</object>
+<object class='java.lang.Double' id='i12' name='confidenceLevel'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.95</value>
+</object>
+<object class='java.lang.Integer' id='i13' name='numOfBatches'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>8</value>
+</object>
+<null name='numOfReplications'/>
+<object class='java.lang.Double' id='i14' name='relativePrecision'>
+<super class='java.lang.Number'>
+</super>
+<value type='double' name='value'>0.1</value>
+</object>
+<null name='replicationSize'/>
+<null name='transientPeriod'/>
+</object>
+</koml>

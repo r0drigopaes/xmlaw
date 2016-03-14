@@ -1,0 +1,209 @@
+---------------------------------------
+JGame - a Java game engine for 2D games
+---------------------------------------
+
+By: Boris van Schooten, schooten@cs.utwente.nl
+
+Website: www.13thmonkey.org/~boris/jgame/
+
+Version: 1.3, 30 march 2007 (20070330)
+
+Platforms: Java 1.2 or higher; 250Mhz+ with 2d graphics acceleration
+           recommended for the example games.
+Tested on: Linux, FreeBSD, NetBSD, Windows, MacOS X,
+           Java 1.2.2, 1.3.1, 1.4.2, 1.5.0
+
+Distribution license: Revised BSD license (see LICENSE)
+
+Description: JGame is a small 2D game engine that runs on any Java 1.2+
+platform. It provides a very high-level framework, enabling "classic" type
+arcade games to be developed with a minimum of code and effort. It is based on
+sprites with automatic animation and collision detection, and a tile-based
+background with easy sprite-tile interaction facilities. JGame games can be
+run as both applications and applets, and can be scaled to any resolution or
+run full-screen.
+
+
+Features:
+* Built-in animated "sprite" engine, with easy animation definition.
+* Tile-based background handling, with decorative backdrop.
+* Automatic collision detection with sprites and background tiles, and 
+  easy background tile interaction.
+* Easy to use channel-based sound system with sound enable/disable built in
+* You can program a game at one resolution, but it can be scaled to any
+  desired resolution when run.
+* Load sprites, tiles, and colour fonts directly from sprite sheets.
+* Define images, animations, and sounds in a text file.
+* A state machine model for in-game sequences.
+* A standard game state machine and some standard game objects are provided.
+* Tested on various platforms; can easily be run as applet or from a jar.
+* Ensures optimised and accelerated graphics for a variety of displays without
+  requiring extra packages; even works well on remote X11 displays.
+* Debugging facilities, which include: visualising bounding boxes, printing
+  debug messages next to an object on the playfield.
+* A web-based game generator for generating prototype games without any
+  programming (under development).
+
+To do / problems:
+* shorthands for handling sequences in the sprite table file
+* a way to make fonts more readable on a busy background
+* fix or remove the audiolatency methods
+* There is no warning in dbgShowBoundingBoxes that a bbox is not defined
+* perhaps change semantics in JGObject constructor to define bboxes rather
+  than tile bboxes?
+* image maps are loaded every time an image is extracted??
+* appletviewer may give security exceptions when loading a jar from the local
+  filesystem
+* screen is not updated when displaying exit error message
+* make a nicer way to quit the applications
+
+To do, long term:
+* scrolling
+* highscores in StdGame
+* animated tiles
+* further extend the library of standard objects
+* add scaling to image definition operations
+
+----------
+Installing
+----------
+
+The installation comes with pre-compiled java 1.4 classes.  People using Java
+1.2 or 1.3 may have to recompile the classes (see also the notes below).
+Otherwise you can run the games from the main directory (the directory in
+which this readme resides).  The easiest way to do this is to start the
+launcher:
+
+  java examples.Launcher
+
+Here's an overview of the individual example games:
+
+* java examples.NebulaAlpha   - minimal game using base classes only
+  java examples.Insecticide   - example tile-based game using base classes only
+  java examples.ChainReaction - example mouse-based game using base classes
+  java examples.SpaceRun      - minimal game using StdGame framework w/ defaults
+  java examples.SpaceRunII    - minimal game using StdGame with customisation
+* java examples.Munchies      - example game using StdGame framework
+* java examples.WaterWorld    - example game using StdGame framework
+  java examples.CavernsOfFire - example game using StdGame framework
+* java examples.Ramjet        - example game using StdGame framework
+  java examples.MatrixMiner   - example game using StdGame and Std... objects
+  java examples.PubMan        - example game using StdGame and Std... objects
+  java examples.DungeonsOfHack- example game using StdGame and Std... objects
+
+(*) - game has (some) sound
+
+The desired screen size can be supplied as command line parameters to most of
+the applications.  If no size is specified, full-screen is assumed.  The
+applications can be quit by pressing Shift-Esc (this is a standard JGame
+feature).
+
+They can also be run as applets.  Try:
+
+  appletviewer html/applet-<THE_GAME>-<YOUR_RESOLUTION>.html
+
+
+To recompile, use:
+
+  make
+or:
+  javac examples/*.java jgame/*.java gamegen/*.java
+
+
+To re-generate the javadocs, use:
+
+  make docs  (unix)
+or:
+  make-docs  (dos)
+or:
+  javadoc -d javadoc -public jgame examples/Std*.java
+
+
+To generate some useful Jars, use:
+
+  make jars  (unix)
+or:
+  make-jars  (dos)
+
+This will generate:
+
+* jgame-all.jar: all example games, which can be run using
+  java -jar jgame-all.jar.
+
+* jgame-base.jar: all base classes for developing your own games.  When you
+  wrote your own game class for example, you can compile and run it using:
+
+  javac -classpath jgame-base.jar:. MyGame.java
+  java  -cp jgame-base.jar:. MyGame
+
+* jgame-gamegen.jar: the (web-based) game generator.  For more information
+  about this program see the subdirectory gamegen/
+
+--------------------
+Software development
+--------------------
+
+For an experienced Java developer, starting software development should be
+easy.  If you are new to Java, here are some suggestions.  You can start
+writing your own JGame games by first putting the jgame package in your
+classpath.  You can do it by adapting the CLASSPATH variable, so that it
+points to the JGame classes.  You can either point to the JGame main
+directory, or point to jgame-base.jar.  For example, using BASH, stand in the
+JGame main directory and use:
+
+  export CLASSPATH=$CLASSPATH:`pwd`
+or:
+  export CLASSPATH=$CLASPATH:`pwd`/jgame-base.jar
+
+In Windows, try:
+  set CLASSPATH=.;<put the path to jgame-base.jar here>
+
+You can also specify the classpath using the -classpath or -cp option:
+
+  java (or javac) -classpath .:<put the path to jgame-base.jar here>
+
+Always remember to put ".", the current directory, in your classpath.  The
+examples/Std*... game object classes are included in jgame-base, but it may be
+useful to copy them to your own project directory, since it's likely you're
+going to adapt them some in the later stages of your game project.  These
+game objects are also subject to change in future versions of JGame.  You may
+want to move them to another directory in your own project; remember to change
+the 'package examples;' lines in the java files if you do this.
+
+Full API documentation is found in the javadoc/ directory; general
+documentation about game development and practical issues of working with
+JGame are found in the MANUAL file.  The example games should also illustrate
+well how a game may be built with JGame.  More general information about
+java, games, graphics, etc. you can find on the JGame website.
+
+--------------
+Game generator
+--------------
+
+JGame now comes with a (prototype) game generator (Gamegen).  This is a tool
+for generating a prototype game without any programming.  Basically you fill
+in a set of parameters, which together determine the dynamics of the game.  It
+is based on the JGame basic concepts, such as tiles and object types, which
+means you may need to read the docs to understand precisely what every
+parameter does.  Gamegen is meant for web-based deployment.  There is PHP code
+for filling in the parameters in a neat form, but it is also possible (but not
+as easy) to use it without PHP or a web server.  This tool is still in
+development stages, as it isn't very robust or polished, and should in the
+future generate neat Java code, which can be used to generate quick templates
+to jump start game development.  It is available online on the JGame website;
+check out the website if you want to take a look at this tool.  If you want to
+use it in any other way, see the gamegen/README file.
+
+---------------
+Java 1.2 or 1.3
+---------------
+
+JGame should work perfectly well with Jdk 1.2, as it is periodically tested on
+a Java 1.2 system.  However, the Java 1.4 install that I have is not capable
+of producing Java 1.2 classes, as the "-source 1.2" and "-target 1.2" compiler
+options do not work as they should.  Sun refuses to look at the bugs, as Java
+1.2 is considered "retired" (btw, 1.3 still isn't).  So, if you really want to
+run it on Java 1.2 because you can't upgrade for some reason, you have to
+recompile the classes and regenerate the Jar.  If there is a problem with your
+1.2 or 1.3 install, please contact me.
+

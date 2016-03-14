@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE koml SYSTEM "http://www.inria.fr/koala/XML/koml12.dtd">
+<koml version='1.21'>
+<classes>
+<class name='jsim.jmessage.Message' uid='3251745410512505265'>
+<field name='actionType' type='java.lang.String'/>
+</class>
+<class name='jsim.jmessage.Instruct' uid='2749693026728532532' super='jsim.jmessage.Message'>
+<field name='scenarioID' type='java.lang.Integer'/>
+</class>
+<class name='java.lang.Integer' uid='1360826667806852920' super='java.lang.Number'>
+<field name='value' type='int'/>
+</class>
+<class name='java.lang.Number' uid='-8742448824652078965'>
+</class>
+</classes>
+<object class='jsim.jmessage.Instruct' id='i4'>
+<super class='jsim.jmessage.Message'>
+<value type='java.lang.String' name='actionType'>Instruct</value>
+</super>
+<object class='java.lang.Integer' id='i8' name='scenarioID'>
+<super class='java.lang.Number'>
+</super>
+<value type='int' name='value'>11</value>
+</object>
+</object>
+</koml>
